@@ -233,7 +233,7 @@ namespace SteamLibrary
             List<IntPtr> windowList = windows.ToList();
 
             // If Steam wasn't open do nothing -> the launch dialog will be focused by default
-            if (windowList.Count == 0)
+            if (steamProcessID == 0 || windowList.Count == 0)
             {
                 return;
             }
