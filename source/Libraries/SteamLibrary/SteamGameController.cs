@@ -220,7 +220,7 @@ namespace SteamLibrary
             // Retrieve all launch windows (default and dialog) created by Steam (may contain other windows with Steam at the end of their title)
             var windows = FindWindowsEndingWithText(" Steam");
 
-            // Get Steam's process ID for comparison with child process parent IDs
+            // Get Steam's process ID for comparison with child windows parent IDs
             var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
             uint steamProcessID = 0;
             if (steamProcess != null)
@@ -235,6 +235,7 @@ namespace SteamLibrary
             // If Steam wasn't open do nothing -> the launch dialog will be focused by default
             if (steamProcessID == 0 || windowList.Count == 0)
             {
+                logger.Info($"Steam isn't open.");
                 return;
             }
 
@@ -250,35 +251,24 @@ namespace SteamLibrary
                 }
             }
 
-            // Consider users opening more than one Steam launch dialog
-            if (filteredWindowList.Count > 2)
+            // Confirm at least one Steam launch window / dialog is open
+            if (filteredWindowList.Count > 0)
             {
                 // Reversed order is always back/bottom (default) - lower middle (dialog) - higher middle (default) - front/top (dialog)
                 filteredWindowList.Reverse();
                 // Start from end to bring the most recently launched dialog to top
                 for (int i = 0; i < filteredWindowList.Count; i++)
                 {
-                    if (i % 2 == 0)
-                    {
-                        // Even entries = 0 back/bottom (default), 2 higher middle (default)
-
-                        // Skip default launch windows
-                    }
-                    else
-                    {
-                        // Odd entries = 1 lower middle (dialog), 3 front/top (dialog)
-
-                        // Multiple games launched = focus every dialog with the most recently launched being top most
-                        logger.Trace($"Setting foreground window: {filteredWindowList[i]}");
-                        SetForegroundWindow(filteredWindowList[i]);
-                    }
+                    // Focus every launch window / dialog with the most recently launched dialog being top most
+                    // Order might be slightly ambiguous for already open launch windows / dialogs if user interacted with them
+                    logger.Info($"Setting foreground window: {filteredWindowList[i]}");
+                    SetForegroundWindow(filteredWindowList[i]);
+                    Thread.Sleep(10);
                 }
             }
             else
             {
-                // Only one game launched = focus single dialog
-                logger.Trace($"Setting foreground window: {filteredWindowList[0]}");
-                SetForegroundWindow(filteredWindowList[0]);
+                logger.Info($"No launch window / dialog open.");
             }
         }
 
