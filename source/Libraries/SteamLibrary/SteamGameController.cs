@@ -222,7 +222,11 @@ namespace SteamLibrary
 
             // Get Steam's process ID for comparison with child process parent IDs
             var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
-            uint steamProcessID = (uint)steamProcess?.Id;
+            uint steamProcessID = 0;
+            if (steamProcess != null)
+            {
+                steamProcessID = (uint)steamProcess?.Id;
+            }
             uint currentWindowID;
 
             // Returned order is always front/top (dialog) - higher middle (default) - lower middle (dialog) - back/bottom (default)
