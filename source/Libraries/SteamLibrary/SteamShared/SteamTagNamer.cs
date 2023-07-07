@@ -37,7 +37,7 @@ namespace SteamLibrary.SteamShared
 
         private string GetPackedTagNameFilePath()
         {
-            return $@"{extensionFolder}\SteamShared\TagLocalization\{settings?.LanguageKey}.json";
+            return $@"{extensionFolder}\TagLocalization\{settings?.LanguageKey}.json";
         }
 
         public Dictionary<int, string> GetTagNames()

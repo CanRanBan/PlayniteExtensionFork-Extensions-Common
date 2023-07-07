@@ -201,8 +201,8 @@
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="..\..\Libraries\SteamLibrary\SteamShared\TagLocalization\**\*.*">
-      <Link>SteamShared\TagLocalization\%(RecursiveDir)%(FileName)%(Extension)</Link>
+    <Content Include="..\..\Libraries\SteamLibrary\TagLocalization\*.json">
+      <Link>TagLocalization\%(FileName).json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
