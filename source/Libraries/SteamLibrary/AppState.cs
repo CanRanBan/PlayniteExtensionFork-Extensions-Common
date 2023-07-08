@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SteamLibrary
+﻿namespace SteamLibrary
 {
     /// <summary>
     /// Represents overall game installation and running state.

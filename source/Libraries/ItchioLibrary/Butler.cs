@@ -1,14 +1,11 @@
 ﻿using ItchioLibrary.Models;
 using ItchioLibrary.Models.Butler;
-using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -104,7 +101,7 @@ namespace ItchioLibrary
             /// <summary>
             /// List user collections
             /// </summary>
-            public const string FetchGameRecords= "Fetch.GameRecords";
+            public const string FetchGameRecords = "Fetch.GameRecords";
         }
 
         public static string ExecutablePath
@@ -345,7 +342,7 @@ namespace ItchioLibrary
         public FetchCollections GetCollection(long id)
         {
             var prms = new Dictionary<string, object>();
-            prms.Add("profileId",id);
+            prms.Add("profileId", id);
             var collections = client.SendRequest<FetchCollections>(Methods.FetchCollections, prms);
             if (collections.stale)
             {

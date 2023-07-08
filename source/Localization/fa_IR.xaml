@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0"?>
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LOCSettingsImportInstalledLabel">وارد کردن بازی های نصب شده</sys:String>
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">واردات بازی های نصب نشده</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">اتصال حساب</sys:String>

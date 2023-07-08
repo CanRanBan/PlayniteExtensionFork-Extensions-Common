@@ -1,11 +1,5 @@
-﻿using Playnite.Common;
-using Playnite.SDK.Data;
-using System;
-using System.Collections.Generic;
+﻿using Playnite.SDK.Data;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OriginLibrary
 {

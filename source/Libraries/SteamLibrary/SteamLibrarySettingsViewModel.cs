@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.Commands;
+﻿using Playnite.SDK;
 using SteamLibrary.Models;
-using Playnite.SDK;
-using System.Windows.Media;
+using SteamLibrary.SteamShared;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using Steam;
-using System.Collections.ObjectModel;
-using SteamLibrary.SteamShared;
+using System.Windows.Media;
 
 namespace SteamLibrary
 {
@@ -193,7 +187,7 @@ namespace SteamLibrary
         {
             if (Settings.IsPrivateAccount && Settings.ApiKey.IsNullOrEmpty())
             {
-                errors = new List<string>{ "Steam API key must be specified when using private accounts!" };
+                errors = new List<string> { "Steam API key must be specified when using private accounts!" };
                 return false;
             }
 

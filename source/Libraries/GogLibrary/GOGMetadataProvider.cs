@@ -1,16 +1,10 @@
-﻿using Playnite.SDK.Models;
+﻿using GogLibrary.Models;
+using GogLibrary.Services;
+using Playnite.SDK;
+using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.SDK;
-using GogLibrary.Models;
-using System.IO;
-using Playnite;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using GogLibrary.Services;
 
 namespace GogLibrary
 {
@@ -71,7 +65,7 @@ namespace GogLibrary
                     storeData.InstallSize = (ulong)storeData.StoreDetails.size * 1024UL * 1024UL;
                 }
 
-                if(settings.UseVerticalCovers && storeData.StoreDetails.boxArtImage != null)
+                if (settings.UseVerticalCovers && storeData.StoreDetails.boxArtImage != null)
                 {
                     storeData.CoverImage = new MetadataFile(storeData.StoreDetails.boxArtImage);
                 }

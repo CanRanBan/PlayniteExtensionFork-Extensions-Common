@@ -1,11 +1,5 @@
 ﻿using Playnite.SDK;
-using Steam;
 using SteamLibrary.SteamShared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniversalSteamMetadata
 {

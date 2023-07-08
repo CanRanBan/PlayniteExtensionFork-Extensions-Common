@@ -72,7 +72,7 @@ namespace SteamLibrary.SteamShared
                 case "zh_TW": return "schinese";
                 case "en_US":
                 default: return "english";
-                //no cultures for latam, thai, bulgarian, tchinese
+                    //no cultures for latam, thai, bulgarian, tchinese
             }
         }
 

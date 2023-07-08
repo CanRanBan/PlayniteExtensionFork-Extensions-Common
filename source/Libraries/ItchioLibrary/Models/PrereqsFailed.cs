@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ItchioLibrary.Models
+﻿namespace ItchioLibrary.Models
 {
     /// <summary>
     /// Sent during Launch, when one or more prerequisites have failed to install.

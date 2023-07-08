@@ -1,18 +1,7 @@
 ﻿using EpicLibrary.Services;
-using Playnite;
 using Playnite.SDK;
-using Playnite.Commands;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Media;
-using Playnite.SDK.Data;
 
 namespace EpicLibrary
 {

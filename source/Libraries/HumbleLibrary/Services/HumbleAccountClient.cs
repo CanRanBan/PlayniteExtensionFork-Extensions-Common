@@ -1,16 +1,10 @@
 ﻿using AngleSharp.Parser.Html;
 using HumbleLibrary.Models;
-using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace HumbleLibrary.Services
 {

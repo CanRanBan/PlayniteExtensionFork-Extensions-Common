@@ -1,12 +1,7 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Playnite.SDK.Models;
-using System.Globalization;
 using PlayniteExtensions.Common;
+using System.Globalization;
 
 namespace Common.Tests
 {

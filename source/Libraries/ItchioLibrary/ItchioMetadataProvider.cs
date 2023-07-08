@@ -4,13 +4,8 @@ using Playnite.SDK;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ItchioLibrary
 {
@@ -101,7 +96,7 @@ namespace ItchioLibrary
                             }
                             else
                             {
-                               tags.Add(new MetadataNameProperty(item.TextContent));
+                                tags.Add(new MetadataNameProperty(item.TextContent));
                             }
                         }
 

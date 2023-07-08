@@ -1,5 +1,4 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
+﻿using Playnite.SDK;
 using Playnite.SDK.Data;
 using PlayniteExtensions.Common;
 using System;
@@ -275,10 +274,10 @@ namespace XboxLibrary.Services
                 {
                     arrangebyfield = "xuid",
                     stats = titleIds.Select(titleId => new UserStatsRequest.Stats
-                        {
-                            name = "MinutesPlayed",
-                            titleid = titleId
-                        }
+                    {
+                        name = "MinutesPlayed",
+                        titleid = titleId
+                    }
                     ).ToList(),
                     xuids = new List<string> { tokens.DisplayClaims.xui[0].xid }
                 };

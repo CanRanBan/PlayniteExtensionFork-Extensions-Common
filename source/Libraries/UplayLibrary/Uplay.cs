@@ -1,5 +1,4 @@
-﻿using Playnite;
-using Playnite.Common;
+﻿using Playnite.Common;
 using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using ProtoBuf;
@@ -8,8 +7,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using UplayLibrary.Models;
 
 namespace UplayLibrary

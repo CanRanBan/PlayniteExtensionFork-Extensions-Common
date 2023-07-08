@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0"?>
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LOCSettingsImportInstalledLabel">Telepített játékok importálása</sys:String>
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">Nem telepített játékok importálása</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">Összekapcsolás a fiókkal</sys:String>

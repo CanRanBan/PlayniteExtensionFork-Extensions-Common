@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ItchioLibrary.Models
+﻿namespace ItchioLibrary.Models
 {
     public class GameRecord
     {

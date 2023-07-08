@@ -1,7 +1,6 @@
 ﻿using Microsoft.Win32;
 using OriginLibrary.Models;
 using OriginLibrary.Services;
-using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
@@ -12,15 +11,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Web;
-using System.Windows.Controls;
 using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace OriginLibrary

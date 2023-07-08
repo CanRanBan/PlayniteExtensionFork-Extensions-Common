@@ -1,13 +1,11 @@
 ﻿using AmazonGamesLibrary.Models;
 using Microsoft.Win32;
-using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using PlayniteExtensions.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Security.Principal;
 using System.Text;

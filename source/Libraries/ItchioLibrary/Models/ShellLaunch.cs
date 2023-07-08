@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ItchioLibrary.Models
+﻿namespace ItchioLibrary.Models
 {
     /// <summary>
     /// Ask the client to perform a shell launch, ie. open an item with the operating system’s default handler (File explorer).

@@ -1,15 +1,7 @@
-﻿using Playnite;
+﻿using GogLibrary.Services;
+using Playnite.SDK;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.Commands;
-using Playnite.SDK;
-using GogLibrary.Services;
-using Playnite.SDK.Data;
 
 namespace GogLibrary
 {
@@ -21,7 +13,7 @@ namespace GogLibrary
         public bool ImportUninstalledGames { get; set; } = false;
         public bool StartGamesUsingGalaxy { get; set; } = false;
         public bool UseAutomaticGameInstalls { get; set; } = false;
-        public bool UseVerticalCovers { get; set;} = true;
+        public bool UseVerticalCovers { get; set; } = true;
         public string Locale { get; set; } = "en";
     }
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
