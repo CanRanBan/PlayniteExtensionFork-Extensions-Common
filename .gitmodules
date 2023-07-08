@@ -1,10 +1,3 @@
-[submodule "PlayniteRepo"]
-	path = PlayniteRepo
-	url = https://github.com/JosefNemec/Playnite.git
-	branch = master
-[submodule "PlayniteBackendRepo"]
-	path = PlayniteBackendRepo
-	url = https://github.com/JosefNemec/PlayniteBackend.git
 [submodule "include/PlayniteSource"]
 	path = include/PlayniteSource
 	url = https://github.com/CanRanBan/PlayniteFork.git
