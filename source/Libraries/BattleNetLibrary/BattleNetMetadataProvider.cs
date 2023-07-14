@@ -1,6 +1,7 @@
 ﻿using Playnite.SDK;
 using Playnite.SDK.Models;
 using System.Collections.Generic;
+using System.IO;
 
 namespace BattleNetLibrary
 {
