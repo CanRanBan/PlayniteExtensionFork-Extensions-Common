@@ -3,45 +3,45 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{80CE6DFD-BE10-4777-8005-80F696AFBF4A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "source\Metadata", "{80CE6DFD-BE10-4777-8005-80F696AFBF4A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "source\Libraries", "{A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "Generic", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "source\Generic", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "source\Tests", "{E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonGamesLibrary", "Libraries\AmazonGamesLibrary\AmazonGamesLibrary.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonGamesLibrary", "source\Libraries\AmazonGamesLibrary\AmazonGamesLibrary.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamLibrary", "Libraries\SteamLibrary\SteamLibrary.csproj", "{0A13CBC8-ECD4-4B9F-961E-E6462F7D2DC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamLibrary", "source\Libraries\SteamLibrary\SteamLibrary.csproj", "{0A13CBC8-ECD4-4B9F-961E-E6462F7D2DC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGDBMetadata", "Metadata\IGDBMetadata\IGDBMetadata.csproj", "{75BE5285-6C7C-48FD-A88A-DF1F51B4E955}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGDBMetadata", "source\Metadata\IGDBMetadata\IGDBMetadata.csproj", "{75BE5285-6C7C-48FD-A88A-DF1F51B4E955}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleNetLibrary", "Libraries\BattleNetLibrary\BattleNetLibrary.csproj", "{E74F843D-39EF-409A-B3FB-341F486A4F97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleNetLibrary", "source\Libraries\BattleNetLibrary\BattleNetLibrary.csproj", "{E74F843D-39EF-409A-B3FB-341F486A4F97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicLibrary", "Libraries\EpicLibrary\EpicLibrary.csproj", "{2FD110FE-F936-4768-AE66-55EC7A60989A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicLibrary", "source\Libraries\EpicLibrary\EpicLibrary.csproj", "{2FD110FE-F936-4768-AE66-55EC7A60989A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GogLibrary", "Libraries\GogLibrary\GogLibrary.csproj", "{2E4F6F47-C3AC-4650-936A-09E675B9B3B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GogLibrary", "source\Libraries\GogLibrary\GogLibrary.csproj", "{2E4F6F47-C3AC-4650-936A-09E675B9B3B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleLibrary", "Libraries\HumbleLibrary\HumbleLibrary.csproj", "{2351B5C1-6E28-4B79-A1D9-90FDA53B5417}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleLibrary", "source\Libraries\HumbleLibrary\HumbleLibrary.csproj", "{2351B5C1-6E28-4B79-A1D9-90FDA53B5417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItchioLibrary", "Libraries\ItchioLibrary\ItchioLibrary.csproj", "{27A6E49E-F769-4709-8B43-FF60B8A882BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItchioLibrary", "source\Libraries\ItchioLibrary\ItchioLibrary.csproj", "{27A6E49E-F769-4709-8B43-FF60B8A882BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginLibrary", "Libraries\OriginLibrary\OriginLibrary.csproj", "{D0EFC813-C836-4167-A120-2DE785E140A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginLibrary", "source\Libraries\OriginLibrary\OriginLibrary.csproj", "{D0EFC813-C836-4167-A120-2DE785E140A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UplayLibrary", "Libraries\UplayLibrary\UplayLibrary.csproj", "{7DC1512C-5C82-434B-9675-12AD94B74C56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UplayLibrary", "source\Libraries\UplayLibrary\UplayLibrary.csproj", "{7DC1512C-5C82-434B-9675-12AD94B74C56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxLibrary", "Libraries\XboxLibrary\XboxLibrary.csproj", "{108638B7-D926-4311-9249-651A1CCAA742}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxLibrary", "source\Libraries\XboxLibrary\XboxLibrary.csproj", "{108638B7-D926-4311-9249-651A1CCAA742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalSteamMetadata", "Metadata\UniversalSteamMetadata\UniversalSteamMetadata.csproj", "{A54423D1-8E7A-4339-B0D5-24E7CEFE469B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalSteamMetadata", "source\Metadata\UniversalSteamMetadata\UniversalSteamMetadata.csproj", "{A54423D1-8E7A-4339-B0D5-24E7CEFE469B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockstarGamesLibrary", "Libraries\RockstarLibrary\RockstarGamesLibrary.csproj", "{183FAF1B-0385-469D-8465-6F21076BF7B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockstarGamesLibrary", "source\Libraries\RockstarLibrary\RockstarGamesLibrary.csproj", "{183FAF1B-0385-469D-8465-6F21076BF7B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayniteExtensions.Common", "Generic\PlayniteExtensions.Common\PlayniteExtensions.Common.csproj", "{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayniteExtensions.Common", "source\Generic\PlayniteExtensions.Common\PlayniteExtensions.Common.csproj", "{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "Tests\Common.Tests\Common.Tests.csproj", "{17784809-C96D-473E-8D99-3A543BF5E375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "source\Tests\Common.Tests\Common.Tests.csproj", "{17784809-C96D-473E-8D99-3A543BF5E375}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "Localization", "{234F63E3-CCAB-4118-A233-C35C6AE72160}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "source\Localization", "{234F63E3-CCAB-4118-A233-C35C6AE72160}"
 	ProjectSection(SolutionItems) = preProject
 		Localization\af_ZA.xaml = Localization\af_ZA.xaml
 		Localization\ar_SA.xaml = Localization\ar_SA.xaml
