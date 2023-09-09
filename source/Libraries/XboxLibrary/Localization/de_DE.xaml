@@ -22,6 +22,6 @@
     <sys:String x:Key="LOCXboxAccountID">Konto-ID</sys:String>
     <sys:String x:Key="LOCXboxMetadataLanguageLabel">Metadatensprache:</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Beim Öffen des Clients App für Xbox Game Pass anstatt Microsoft Store starten</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Beim Öffnen des Clients App für Xbox Game Pass anstatt Microsoft Store starten</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">XBox-Konsolen-Spiele importieren</sys:String>
 </ResourceDictionary>
