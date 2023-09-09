@@ -188,7 +188,7 @@ namespace Steam
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/library_600x900_2x.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
-                if (HttpDownloader.GetResponseCode(imageUrl, out var _).IsSuccess())
+                if (HttpDownloader.GetResponseCode(imageUrl, CancellationToken.None, out var _).IsSuccess())
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
@@ -197,7 +197,7 @@ namespace Steam
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/header.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
-                if (HttpDownloader.GetResponseCode(imageUrl, out var _).IsSuccess())
+                if (HttpDownloader.GetResponseCode(imageUrl, CancellationToken.None, out var _).IsSuccess())
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
@@ -227,13 +227,13 @@ namespace Steam
                     }
                     break;
                 case BackgroundSource.StoreBackground:
-                    if (HttpDownloader.GetResponseCode(storeBk, out var _).IsSuccess())
+                    if (HttpDownloader.GetResponseCode(storeBk, CancellationToken.None, out var _).IsSuccess())
                     {
                         metadata.BackgroundImage = new MetadataFile(storeBk);
                     }
                     break;
                 case BackgroundSource.Banner:
-                    if (HttpDownloader.GetResponseCode(bannerBk, out var _).IsSuccess())
+                    if (HttpDownloader.GetResponseCode(bannerBk, CancellationToken.None, out var _).IsSuccess())
                     {
                         metadata.BackgroundImage = new MetadataFile(bannerBk);
                     }
@@ -515,7 +515,7 @@ namespace Steam
             foreach (var url in backgroundUrls)
             {
                 var bk = string.Format(url, appId);
-                if (HttpDownloader.GetResponseCode(bk, out var headers).IsSuccess())
+                if (HttpDownloader.GetResponseCode(bk, CancellationToken.None, out var headers).IsSuccess())
                 {
                     // One of these sources sometimes returns images that are badly encoded and are 20MBs and more.
                     // 10MBs should be safe limit.
