@@ -32,9 +32,26 @@ namespace IGDBMetadata
         public static string GetSearchItemDescription(Igdb.Game game)
         {
             var desc = string.Empty;
+            void addDescPart(string part)
+            {
+                if (desc.IsNullOrWhiteSpace())
+                {
+                    desc = part;
+                }
+                else
+                {
+                    desc += $" - {part}";
+                }
+            }
+
 #if DEBUG
-            desc += $"{game.id} - ";
+            addDescPart(game.id.ToString());
 #endif
+
+            if (game.category == Igdb.GameCategoryEnum.PORT)
+            {
+                addDescPart($"{game.platforms_expanded?.FirstOrDefault()?.name} port");
+            }
 
             var developers = game.involved_companies_expanded?.
                 Where(a => a.developer && !a.supporting && !a.porting && a.company_expanded != null).
@@ -43,7 +60,7 @@ namespace IGDBMetadata
                 ToList();
             if (developers.HasItems())
             {
-                desc += string.Join(", ", developers!);
+                addDescPart(string.Join(", ", developers!));
             }
 
             return desc;

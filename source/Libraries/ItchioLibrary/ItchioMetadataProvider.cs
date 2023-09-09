@@ -25,8 +25,6 @@ namespace ItchioLibrary
             butler.Dispose();
         }
 
-        #region IMetadataProvider
-
         public override GameMetadata GetMetadata(Game game)
         {
             var tags = new HashSet<MetadataProperty>();
@@ -56,6 +54,13 @@ namespace ItchioLibrary
                 var gamePageSrc = HttpDownloader.DownloadString(itchGame.url);
                 var parser = new HtmlParser();
                 var gamePage = parser.Parse(gamePageSrc);
+
+                // Icon
+                var icon = gamePage.QuerySelector("head>link[rel=icon]");
+                if (icon != null && icon.HasAttribute("href"))
+                {
+                    gameData.Icon = new MetadataFile(icon.Attributes["href"].Value);
+                }
 
                 // Description
                 gameData.Description = gamePage.QuerySelector(".formatted_description").InnerHtml;
@@ -131,7 +136,5 @@ namespace ItchioLibrary
 
             return gameData;
         }
-
-        #endregion IMetadataProvider
     }
 }

@@ -54,6 +54,8 @@ namespace SteamLibrary
         internal SteamServicesClient ServicesClient;
         internal TopPanelItem TopPanelFriendsButton;
 
+        private static readonly string[] firstPartyModPrefixes = new string[] { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
+
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
             Guid.Parse("CB91DFC9-B977-43BF-8E70-55F46E410FAB"),
@@ -202,10 +204,9 @@ namespace SteamLibrary
         internal static List<GameMetadata> GetInstalledGoldSrcModsFromFolder(string path)
         {
             var games = new List<GameMetadata>();
-            var firstPartyMods = new string[] { "bshift", "cstrike", "czero", "czeror", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
             var dirInfo = new DirectoryInfo(path);
 
-            foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyMods.Contains(a.Name)).Select(a => a.FullName))
+            foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix))).Select(a => a.FullName))
             {
                 try
                 {
@@ -451,7 +452,7 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.ApiKey, settings.IncludeFreeSubGames)?.response?.games);
+                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
             }
             else
             {
@@ -571,7 +572,11 @@ namespace SteamLibrary
                     }
                 }
 
-                result.Add(gameId, DateTimeOffset.FromUnixTimeSeconds(app["LastPlayed"].AsLong()).LocalDateTime);
+                var dt = DateTimeOffset.FromUnixTimeSeconds(app["LastPlayed"].AsLong()).LocalDateTime;
+                if (dt.Year > 1970)
+                {
+                    result.Add(gameId, dt);
+                }
             }
 
             return result;
@@ -854,7 +859,7 @@ namespace SteamLibrary
                             {
                                 try
                                 {
-                                    var accGames = GetPrivateOwnedGames(id, account.ApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
+                                    var accGames = GetPrivateOwnedGames(id, account.RuntimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
                                     var parsedGames = GetLibraryGames(id, accGames.response.games, account.ImportPlayTime);
                                     foreach (var accGame in parsedGames)
                                     {

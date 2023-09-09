@@ -134,6 +134,9 @@
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\DateHelper.cs">
       <Link>include\PlayniteExtensions\Common\DateHelper.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\Encryption.cs">
+      <Link>include\PlayniteExtensions\Common\Encryption.cs</Link>
+    </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
       <Link>include\PlayniteExtensions\Common\GlobalCommands.cs</Link>
     </Compile>
