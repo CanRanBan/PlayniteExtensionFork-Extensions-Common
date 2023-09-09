@@ -158,7 +158,7 @@ namespace UplayLibrary
                     {
                         // R6 Siege is just weird...
                         var trackingDelay = Game.GameId == "635" ? 10000 : 2000;
-                        procMon.WatchDirectoryProcesses(Game.InstallDirectory, false, false, trackingDelay);
+                        _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, false, false, trackingDelay);
                         return;
                     }
 
@@ -167,7 +167,7 @@ namespace UplayLibrary
             }
             else
             {
-                procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+                _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
             }
         }
 

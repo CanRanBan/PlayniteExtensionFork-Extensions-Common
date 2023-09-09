@@ -191,7 +191,7 @@ namespace SteamLibrary
             procMon.TreeDestroyed += Monitor_TreeDestroyed;
             if (Directory.Exists(installDirectory))
             {
-                procMon.WatchDirectoryProcesses(installDirectory, false);
+                _ = procMon.WatchDirectoryProcesses(installDirectory, false);
             }
             else
             {

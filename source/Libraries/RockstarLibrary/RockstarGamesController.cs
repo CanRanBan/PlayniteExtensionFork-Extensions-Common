@@ -130,7 +130,7 @@ namespace RockstarGamesLibrary
                 procMon.TreeStarted += ProcMon_TreeStarted;
                 procMon.TreeDestroyed += Monitor_TreeDestroyed;
                 ProcessStarter.StartProcess(RockstarGames.ClientExecPath, $"-launchTitleInFolder \"{Game.InstallDirectory}\"");
-                procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+                _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
             }
             else
             {

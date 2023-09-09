@@ -220,7 +220,7 @@ namespace OriginLibrary
                 await Task.Delay(5000);
             }
 
-            procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+            _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
         }
 
         private void ProcMon_TreeStarted(object sender, ProcessMonitor.TreeStartedEventArgs args)

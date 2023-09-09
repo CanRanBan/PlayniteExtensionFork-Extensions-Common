@@ -184,7 +184,7 @@ namespace BattleNetLibrary
                 ProcMon_TreeStarted(this, null);
                 if (Directory.Exists(Game.InstallDirectory))
                 {
-                    procMon.WatchDirectoryProcesses(Game.InstallDirectory, true, true);
+                    _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, true, true);
                 }
                 else
                 {
@@ -221,7 +221,7 @@ namespace BattleNetLibrary
             if (Directory.Exists(Game.InstallDirectory))
             {
                 procMon.TreeStarted += ProcMon_TreeStarted;
-                procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+                _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
             }
             else
             {
