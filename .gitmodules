@@ -1,0 +1,6 @@
+[submodule "Include/Playnite"]
+	path = Include/Playnite
+	url = https://github.com/CanRanBan/PlayniteFork.git
+[submodule "Include/Playnite Backend"]
+	path = Include/Playnite Backend
+	url = https://github.com/CanRanBan/PlayniteBackendFork.git
