@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32630.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "source\Metadata", "{80CE6DFD-BE10-4777-8005-80F696AFBF4A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{80CE6DFD-BE10-4777-8005-80F696AFBF4A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "source\Libraries", "{A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "source\Generic", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "Generic", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "source\Tests", "{E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonGamesLibrary", "source\Libraries\AmazonGamesLibrary\AmazonGamesLibrary.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
 EndProject
@@ -41,48 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayniteExtensions.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "source\Tests\Common.Tests\Common.Tests.csproj", "{17784809-C96D-473E-8D99-3A543BF5E375}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "source\Localization", "{234F63E3-CCAB-4118-A233-C35C6AE72160}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "Localization", "{234F63E3-CCAB-4118-A233-C35C6AE72160}"
 	ProjectSection(SolutionItems) = preProject
-		Localization\af_ZA.xaml = Localization\af_ZA.xaml
-		Localization\ar_SA.xaml = Localization\ar_SA.xaml
-		Localization\ca_ES.xaml = Localization\ca_ES.xaml
-		Localization\cs_CZ.xaml = Localization\cs_CZ.xaml
-		Localization\da_DK.xaml = Localization\da_DK.xaml
 		Localization\de_DE.xaml = Localization\de_DE.xaml
-		Localization\el_GR.xaml = Localization\el_GR.xaml
 		Localization\en_US.xaml = Localization\en_US.xaml
-		Localization\eo_UY.xaml = Localization\eo_UY.xaml
-		Localization\es_ES.xaml = Localization\es_ES.xaml
-		Localization\et_EE.xaml = Localization\et_EE.xaml
-		Localization\fa_IR.xaml = Localization\fa_IR.xaml
-		Localization\fi_FI.xaml = Localization\fi_FI.xaml
-		Localization\fr_FR.xaml = Localization\fr_FR.xaml
-		Localization\gl_ES.xaml = Localization\gl_ES.xaml
-		Localization\he_IL.xaml = Localization\he_IL.xaml
-		Localization\hr_HR.xaml = Localization\hr_HR.xaml
-		Localization\hu_HU.xaml = Localization\hu_HU.xaml
-		Localization\id_ID.xaml = Localization\id_ID.xaml
-		Localization\it_IT.xaml = Localization\it_IT.xaml
-		Localization\ja_JP.xaml = Localization\ja_JP.xaml
-		Localization\ko_KR.xaml = Localization\ko_KR.xaml
-		Localization\lt_LT.xaml = Localization\lt_LT.xaml
-		Localization\nl_NL.xaml = Localization\nl_NL.xaml
-		Localization\no_NO.xaml = Localization\no_NO.xaml
-		Localization\pl_PL.xaml = Localization\pl_PL.xaml
-		Localization\pt_BR.xaml = Localization\pt_BR.xaml
-		Localization\pt_PT.xaml = Localization\pt_PT.xaml
-		Localization\ro_RO.xaml = Localization\ro_RO.xaml
-		Localization\ru_RU.xaml = Localization\ru_RU.xaml
-		Localization\si_LK.xaml = Localization\si_LK.xaml
-		Localization\sk_SK.xaml = Localization\sk_SK.xaml
-		Localization\sl_SI.xaml = Localization\sl_SI.xaml
-		Localization\sr_SP.xaml = Localization\sr_SP.xaml
-		Localization\sv_SE.xaml = Localization\sv_SE.xaml
-		Localization\tr_TR.xaml = Localization\tr_TR.xaml
-		Localization\uk_UA.xaml = Localization\uk_UA.xaml
-		Localization\vi_VN.xaml = Localization\vi_VN.xaml
-		Localization\zh_CN.xaml = Localization\zh_CN.xaml
-		Localization\zh_TW.xaml = Localization\zh_TW.xaml
 	EndProjectSection
 EndProject
 Global
