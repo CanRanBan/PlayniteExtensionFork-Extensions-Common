@@ -10,6 +10,12 @@ namespace OriginLibrary.Models
             public string displayName;
         }
 
+        public class I18n
+        {
+            public string longDescription;
+            public string displayName;
+        }
+
         public class Publishing
         {
             public class Software
@@ -38,5 +44,7 @@ namespace OriginLibrary.Models
         public string offerType;
         public Publishing publishing;
         public LocalizableAttributes localizableAttributes;
+        public I18n i18n;
+        public string itemName;
     }
 }

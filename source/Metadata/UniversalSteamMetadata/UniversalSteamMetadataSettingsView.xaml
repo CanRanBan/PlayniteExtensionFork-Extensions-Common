@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:steam="clr-namespace:Steam"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:steammetadata="clr-namespace:UniversalSteamMetadata"
              mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=steammetadata:UniversalSteamMetadataSettingsViewModel}"
              d:DesignWidth="600" d:DesignHeight="400">
 
     <UserControl.Resources>
@@ -46,10 +48,27 @@
                         <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
                     </StackPanel>
+                    <CheckBox x:Name="cbTagCategoryPrefix" IsChecked="{Binding Settings.SetTagCategoryAsPrefix}"
+                              Content="{DynamicResource LOCSteamSetTagCategoryAsPrefixLabel}"
+                              ToolTip="{DynamicResource LOCSteamSetTagCategoryAsPrefixTooltip}"
+                              VerticalAlignment="Center" Margin="0,12,4,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=cbTagCategoryPrefix}" Value="True">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}"/>
+                        <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}" SelectedValue="{Binding Settings.SteamDeckCompatibilityField}" DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0"/>
+                </StackPanel>
                 </StackPanel>
             </ScrollViewer>
         </TabItem>

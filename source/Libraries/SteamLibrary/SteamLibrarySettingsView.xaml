@@ -9,6 +9,7 @@
              xmlns:steam="clr-namespace:SteamLibrary"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=steam:SteamLibrarySettingsViewModel}"
              d:DesignWidth="600" d:DesignHeight="450">
 
     <UserControl.Resources>
@@ -207,10 +208,27 @@
                         <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
                     </StackPanel>
+                    <CheckBox x:Name="cbTagCategoryPrefix" IsChecked="{Binding Settings.SetTagCategoryAsPrefix}"
+                              Content="{DynamicResource LOCSteamSetTagCategoryAsPrefixLabel}"
+                              ToolTip="{DynamicResource LOCSteamSetTagCategoryAsPrefixTooltip}"
+                              VerticalAlignment="Center" Margin="0,12,4,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=cbTagCategoryPrefix}" Value="True">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}"/>
+                        <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}" SelectedValue="{Binding Settings.SteamDeckCompatibilityField}" DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0"/>
+                </StackPanel>
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
@@ -262,24 +280,6 @@
         <TabItem Header="{DynamicResource LOCSettingsAdvancedLabel}"
                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
             <StackPanel Margin="20">
-                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal"
-                            Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
-                    <TextBlock Text="{DynamicResource LOCSettingsSteamImportMetadata}"
-                               VerticalAlignment="Center"/>
-                    <ComboBox IsReadOnly="True" Margin="10,0,0,0"
-                              Name="ComboSteamMetadataImport"
-                              DisplayMemberPath="AccountName" SelectedValuePath="Id" SelectedIndex="0"
-                              ItemsSource="{Binding SteamUsers}" />
-                </StackPanel>
-                <StackPanel DockPanel.Dock="Top" Margin="40,10,5,5" Orientation="Horizontal"
-                            Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
-                    <Button Content="{DynamicResource LOCImportSteamCategoriesLabel}" Name="ButtonImportSteamCategories"
-                            Margin="0,0,10,0" Command="{Binding ImportSteamCategoriesCommand}"
-                            CommandParameter="{Binding SelectedItem, ElementName=ComboSteamMetadataImport}"/>
-                    <Button Content="{DynamicResource LOCImportSteamLastActivityLabel}" Name="ButtonImportSteamLastActivity"
-                            Command="{Binding ImportSteamLastActivityCommand}"
-                            CommandParameter="{Binding SelectedItem, ElementName=ComboSteamMetadataImport}"/>
-                </StackPanel>
                 <CheckBox Content="{DynamicResource LOCSteamShowFriendsButton}"
                           IsChecked="{Binding Settings.ShowFriendsButton}" Margin="0,10,0,10" />
                 <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInDesktopMode}"

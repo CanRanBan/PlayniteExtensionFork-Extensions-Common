@@ -199,12 +199,12 @@ namespace BattleNetLibrary
             {
                 logger.Info("Battle.net is not running, starting it first.");
                 BattleNet.StartClient();
-                while (BattleNet.RunningProcessesCount < 4)
+                while (BattleNet.RunningProcessesCount < 5)
                 {
-                    await Task.Delay(500);
+                    await Task.Delay(1000);
                 }
 
-                await Task.Delay(4000);
+                await Task.Delay(5000);
             }
 
             try
@@ -232,7 +232,7 @@ namespace BattleNetLibrary
         private void ProcMon_TreeStarted(object sender, ProcessMonitor.TreeStartedEventArgs args)
         {
             stopWatch = Stopwatch.StartNew();
-            InvokeOnStarted(new GameStartedEventArgs());
+            InvokeOnStarted(new GameStartedEventArgs() { StartedProcessId = args.StartedId });
         }
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)

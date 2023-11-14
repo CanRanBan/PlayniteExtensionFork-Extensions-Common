@@ -465,7 +465,7 @@ namespace Steam
 
                         if (!tagNames.TryGetValue(tagId, out string name))
                         {
-                            if (newTagNames == null)
+                            if (newTagNames is null)
                             {
                                 logger.Debug($"Tag {tagId} not found. Fetching new ones.");
                                 newTagNames = tagNamer.UpdateAndGetTagNames();
@@ -476,7 +476,7 @@ namespace Steam
                                 continue;
                             }
                         }
-                        name = tagNamer.GetFinalTagName(name);
+                        name = tagNamer.GetFinalTagName(name, tagId);
                         metadata.Tags.Add(new MetadataNameProperty(name));
                     }
                 }
@@ -507,6 +507,9 @@ namespace Steam
                 }
             }
 
+            var compatibility = GetSteamDeckCompatibility(metadata.ProductDetails);
+            AddProperty(metadata, settings.SteamDeckCompatibilityField, compatibility);
+
             return metadata;
         }
 
@@ -529,6 +532,39 @@ namespace Steam
             }
 
             return null;
+        }
+
+        private string GetSteamDeckCompatibility(KeyValue productDetails)
+        {
+            string categoryStr = productDetails["common"]["steam_deck_compatibility"]["category"].Value;
+            var compatibility = SteamDeckCompatibility.Unknown;
+
+            if (int.TryParse(categoryStr, out int category) && Enum.IsDefined(typeof(SteamDeckCompatibility), category))
+                compatibility = (SteamDeckCompatibility)category;
+
+            return $"Steam Deck {compatibility}";
+        }
+
+        private void AddProperty(GameMetadata game, GameField field, string value)
+        {
+            if (value == null)
+                return;
+
+            switch (field)
+            {
+                case GameField.Features:
+                    if (game.Features == null)
+                        game.Features = new HashSet<MetadataProperty>();
+
+                    game.Features.Add(new MetadataNameProperty(value));
+                    break;
+                case GameField.Tags:
+                    if (game.Tags == null)
+                        game.Tags = new HashSet<MetadataProperty>();
+
+                    game.Tags.Add(new MetadataNameProperty(value));
+                    break;
+            }
         }
     }
 }

@@ -134,24 +134,6 @@ namespace SteamLibrary
 
         public bool IsFirstRunUse { get; set; }
 
-        public List<LocalSteamUser> SteamUsers { get; set; }
-
-        public RelayCommand<LocalSteamUser> ImportSteamCategoriesCommand
-        {
-            get => new RelayCommand<LocalSteamUser>((a) =>
-            {
-                ImportSteamCategories(a);
-            });
-        }
-
-        public RelayCommand<LocalSteamUser> ImportSteamLastActivityCommand
-        {
-            get => new RelayCommand<LocalSteamUser>((a) =>
-            {
-                ImportSteamLastActivity(a);
-            });
-        }
-
         public RelayCommand AddAccountCommand
         {
             get => new RelayCommand(() =>
@@ -237,7 +219,9 @@ namespace SteamLibrary
                 MainAccount = Settings.RuntimeApiKey
             };
 
-            Settings.AdditionalAccounts?.ForEach(a => keys.Accounts.Add(a.AccountId, a.RuntimeApiKey));
+            Settings.AdditionalAccounts?.
+                Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RuntimeApiKey.IsNullOrWhiteSpace()).
+                ForEach(a => keys.Accounts.Add(a.AccountId, a.RuntimeApiKey));
             FileSystem.PrepareSaveFile(ApiKeysPath);
             Encryption.EncryptToFile(
                 ApiKeysPath,
@@ -269,18 +253,6 @@ namespace SteamLibrary
             }
 
             return base.VerifySettings(out errors);
-        }
-
-        public void ImportSteamCategories(LocalSteamUser user)
-        {
-            var accId = user == null ? 0 : user.Id;
-            Plugin.ImportSteamCategories(accId);
-        }
-
-        public void ImportSteamLastActivity(LocalSteamUser user)
-        {
-            var accId = user == null ? 0 : user.Id;
-            Plugin.ImportSteamLastActivity(accId);
         }
 
         private void Login()

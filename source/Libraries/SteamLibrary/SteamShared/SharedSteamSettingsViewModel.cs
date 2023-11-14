@@ -1,4 +1,5 @@
 ﻿using Playnite.SDK;
+using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
@@ -32,12 +33,14 @@ namespace SteamLibrary.SteamShared
                 OnInitSettings();
             }
 
+            InitializeSteamDeckCompatibilitySettings();
             InitializeTagNames();
             Settings.PropertyChanged += (sender, ev) =>
             {
                 if (ev.PropertyName == nameof(Settings.LanguageKey)
                     || ev.PropertyName == nameof(Settings.UseTagPrefix)
-                    || ev.PropertyName == nameof(Settings.TagPrefix))
+                    || ev.PropertyName == nameof(Settings.TagPrefix)
+                    || ev.PropertyName == nameof(Settings.SetTagCategoryAsPrefix))
                 {
                     InitializeTagNames();
                 }
@@ -75,7 +78,7 @@ namespace SteamLibrary.SteamShared
                 case "zh_TW": return "schinese";
                 case "en_US":
                 default: return "english";
-                    //no cultures for latam, thai, bulgarian, tchinese
+                    //no cultures for latam, thai, bulgarian, tchinese, indonesian
             }
         }
 
@@ -97,7 +100,7 @@ namespace SteamLibrary.SteamShared
         {
             var tagNamer = new SteamTagNamer(Plugin, Settings, new Playnite.Common.Web.Downloader());
             var tags = tagNamer.GetTagNames()
-                .Select(t => new TagInfo(t.Key, tagNamer.GetFinalTagName(t.Value)))
+                .Select(t => new TagInfo(t.Key, tagNamer.GetFinalTagName(t.Value, t.Key)))
                 .OrderBy(t => t.Name).ToList();
             OkayTags = tags.Where(t => !Settings.BlacklistedTags.Contains(t.Id)).ToObservable();
             BlacklistedTags = tags.Where(t => Settings.BlacklistedTags.Contains(t.Id)).ToObservable();
@@ -119,6 +122,7 @@ namespace SteamLibrary.SteamShared
             {"latam","Español - Latinoamérica (Spanish - Latin America)"},
             {"greek","Ελληνικά (Greek)"},
             {"french","Français (French)"},
+            {"indonesian","Bahasa Indonesia (Indonesian)"},
             {"italian","Italiano (Italian)"},
             {"hungarian","Magyar (Hungarian)"},
             {"dutch","Nederlands (Dutch)"},
@@ -201,6 +205,29 @@ namespace SteamLibrary.SteamShared
             }
 
             base.EndEdit();
+        }
+
+        public class NamedField
+        {
+            public string Name { get; set; }
+            public GameField Field { get; set; }
+            public NamedField(string name, GameField field)
+            {
+                Name = name;
+                Field = field;
+    }
+}
+
+        public List<NamedField> SteamDeckCompatibilityFieldOptions { get; set; }
+
+        public void InitializeSteamDeckCompatibilitySettings()
+        {
+            SteamDeckCompatibilityFieldOptions = new List<NamedField>
+            {
+                new NamedField(PlayniteApi.Resources.GetString("LOCNone"), GameField.None),
+                new NamedField(PlayniteApi.Resources.GetString("LOCFeatureLabel"), GameField.Features),
+                new NamedField(PlayniteApi.Resources.GetString("LOCTagLabel"), GameField.Tags)
+            };
         }
     }
 }
