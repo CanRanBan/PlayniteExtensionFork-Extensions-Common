@@ -1,4 +1,4 @@
-AddonId: UplayLibrary_Builtin
+AddonId: JosefNemec_Library_UbisoftConnect
 Packages:
   - Version: 2.0
     RequiredApiVersion: 6.0.0
