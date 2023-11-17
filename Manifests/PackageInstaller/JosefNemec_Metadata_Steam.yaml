@@ -1,4 +1,4 @@
-AddonId: Universal_Steam_Metadata
+AddonId: JosefNemec_Metadata_Steam
 Packages:
   - Version: 2.2
     RequiredApiVersion: 6.0.0
