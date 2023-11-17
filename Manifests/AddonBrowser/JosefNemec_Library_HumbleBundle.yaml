@@ -1,4 +1,4 @@
-﻿AddonId: HumbleLibrary_Builtin
+﻿AddonId: JosefNemec_Library_HumbleBundle
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/HumbleLibrary/icon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/HumbleLibrary_Builtin.yaml

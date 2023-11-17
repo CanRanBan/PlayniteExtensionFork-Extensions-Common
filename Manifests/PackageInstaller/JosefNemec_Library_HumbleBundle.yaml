@@ -1,4 +1,4 @@
-AddonId: HumbleLibrary_Builtin
+AddonId: JosefNemec_Library_HumbleBundle
 Packages:
   - Version: 2.0
     RequiredApiVersion: 6.0.0
