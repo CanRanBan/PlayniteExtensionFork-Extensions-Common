@@ -1,4 +1,4 @@
-AddonId: AmazonLibrary_Builtin
+AddonId: JosefNemec_Library_AmazonGames
 Packages:
   - Version: 2.1
     RequiredApiVersion: 6.0.0

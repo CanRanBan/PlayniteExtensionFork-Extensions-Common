@@ -1,4 +1,4 @@
-﻿AddonId: AmazonLibrary_Builtin
+﻿AddonId: JosefNemec_Library_AmazonGames
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/AmazonGamesLibrary/icon.png
 Type: GameLibrary
 InstallerManifestUrl: https://raw.githubusercontent.com/JosefNemec/PlayniteExtensions/master/manifests/AmazonLibrary_Builtin.yaml
