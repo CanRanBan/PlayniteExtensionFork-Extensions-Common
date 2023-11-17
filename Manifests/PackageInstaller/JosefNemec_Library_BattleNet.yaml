@@ -1,4 +1,4 @@
-AddonId: BattlenetLibrary_Builtin
+AddonId: JosefNemec_Library_BattleNet
 Packages:
   - Version: 2.2
     RequiredApiVersion: 6.0.0
