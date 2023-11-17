@@ -1,4 +1,4 @@
-﻿AddonId: Rockstar_Games_Library
+﻿AddonId: JosefNemec_Library_RockstarGames
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/RockstarLibrary/icon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/Rockstar_Games_Library.yaml

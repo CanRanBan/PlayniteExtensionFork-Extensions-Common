@@ -1,7 +1,7 @@
-﻿Id: Rockstar_Games_Library
+﻿Id: JosefNemec_Library_RockstarGames
 Name: Rockstar Games library integration
 Author: Josef Nemec
-Version: 2.8
+Version: 2.8.1
 Module: RockstarGamesLibrary.dll
 Type: GameLibrary
 Icon: icon.png

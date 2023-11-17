@@ -1,4 +1,4 @@
-AddonId: Rockstar_Games_Library
+AddonId: JosefNemec_Library_RockstarGames
 Packages:
   - Version: 2.2
     RequiredApiVersion: 6.0.0
