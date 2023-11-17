@@ -1,4 +1,4 @@
-﻿AddonId: ItchioLibrary_Builtin
+﻿AddonId: JosefNemec_Library_ItchIo
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/ItchioLibrary/Resources/itchioicon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/ItchioLibrary_Builtin.yaml

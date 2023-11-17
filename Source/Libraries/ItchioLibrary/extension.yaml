@@ -1,7 +1,7 @@
-﻿Id: ItchioLibrary_Builtin
+﻿Id: JosefNemec_Library_ItchIo
 Name: itch.io library integration
 Author: Playnite
-Version: 2.6
+Version: 2.6.1
 Module: ItchioLibrary.dll
 Type: GameLibrary
 Icon: Resources\itchioicon.png
