@@ -1,4 +1,4 @@
-﻿AddonId: GogLibrary_Builtin
+﻿AddonId: JosefNemec_Library_GOG
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/GogLibrary/Resources/gogicon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/GogLibrary_Builtin.yaml

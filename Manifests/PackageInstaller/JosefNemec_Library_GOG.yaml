@@ -1,4 +1,4 @@
-AddonId: GogLibrary_Builtin
+AddonId: JosefNemec_Library_GOG
 Packages:
   - Version: 2.2
     RequiredApiVersion: 6.0.0
