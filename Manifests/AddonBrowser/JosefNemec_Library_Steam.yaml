@@ -1,4 +1,4 @@
-﻿AddonId: SteamLibrary_Builtin
+﻿AddonId: JosefNemec_Library_Steam
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/SteamLibrary/Resources/steamicon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/SteamLibrary_Builtin.yaml
