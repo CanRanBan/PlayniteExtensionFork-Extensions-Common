@@ -1,4 +1,4 @@
-﻿AddonId: XboxLibrary_Builtin
+﻿AddonId: JosefNemec_Library_Xbox
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/XboxLibrary/icon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/XboxLibrary_Builtin.yaml

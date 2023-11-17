@@ -1,4 +1,4 @@
-AddonId: XboxLibrary_Builtin
+AddonId: JosefNemec_Library_Xbox
 Packages:
   - Version: 2.2
     RequiredApiVersion: 6.0.0
