@@ -1,4 +1,4 @@
-﻿AddonId: IGDBMetadata_Builtin
+﻿AddonId: JosefNemec_Metadata_IGDB
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Metadata/IGDBMetadata/Resources/igdbicon.png
 Type: MetadataProvider
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/IGDBMetadata_Builtin.yaml
