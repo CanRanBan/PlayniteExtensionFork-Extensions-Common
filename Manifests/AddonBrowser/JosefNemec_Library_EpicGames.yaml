@@ -1,4 +1,4 @@
-﻿AddonId: EpicGamesLibrary_Builtin
+﻿AddonId: JosefNemec_Library_EpicGames
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/EpicLibrary/Resources/epicicon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/EpicGamesLibrary_Builtin.yaml
