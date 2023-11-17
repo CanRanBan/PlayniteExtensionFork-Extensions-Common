@@ -1,7 +1,7 @@
-﻿Id: OriginLibrary_Builtin
+﻿Id: JosefNemec_Library_EA
 Name: EA app library integration
 Author: Playnite
-Version: 2.12
+Version: 2.12.1
 Module: OriginLibrary.dll
 Type: GameLibrary
 Icon: Resources\originicon.png

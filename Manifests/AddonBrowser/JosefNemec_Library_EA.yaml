@@ -1,4 +1,4 @@
-﻿AddonId: OriginLibrary_Builtin
+﻿AddonId: JosefNemec_Library_EA
 IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/OriginLibrary/Resources/originicon.png
 Type: GameLibrary
 InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/OriginLibrary_Builtin.yaml

@@ -1,4 +1,4 @@
-AddonId: OriginLibrary_Builtin
+AddonId: JosefNemec_Library_EA
 Packages:
   - Version: 2.2
     RequiredApiVersion: 6.0.0
