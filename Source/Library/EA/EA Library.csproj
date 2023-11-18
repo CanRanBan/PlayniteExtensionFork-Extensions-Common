@@ -62,68 +62,68 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Extensions\ProcessExtensions.cs">
-      <Link>include\Playnite\Common\Extensions\ProcessExtensions.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Extensions\ProcessExtensions.cs">
+      <Link>Include\Playnite\Common\Extensions\ProcessExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Extensions\StringExtensions.cs">
-      <Link>include\Playnite\Common\Extensions\StringExtensions.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Extensions\StringExtensions.cs">
+      <Link>Include\Playnite\Common\Extensions\StringExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\FileSystem.cs">
-      <Link>include\Playnite\Common\FileSystem.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\FileSystem.cs">
+      <Link>Include\Playnite\Common\FileSystem.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Paths.cs">
-      <Link>include\Playnite\Common\Paths.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Paths.cs">
+      <Link>Include\Playnite\Common\Paths.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\ProcessMonitor.cs">
-      <Link>include\Playnite\Common\ProcessMonitor.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\ProcessMonitor.cs">
+      <Link>Include\Playnite\Common\ProcessMonitor.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\ProcessStarter.cs">
-      <Link>include\Playnite\Common\ProcessStarter.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\ProcessStarter.cs">
+      <Link>Include\Playnite\Common\ProcessStarter.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\SafeFileEnumerator.cs">
-      <Link>include\Playnite\Common\SafeFileEnumerator.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\SafeFileEnumerator.cs">
+      <Link>Include\Playnite\Common\SafeFileEnumerator.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Web\Downloader.cs">
-      <Link>include\Playnite\Common\Web\Downloader.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Web\Downloader.cs">
+      <Link>Include\Playnite\Common\Web\Downloader.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Web\HttpDownloader.cs">
-      <Link>include\Playnite\Common\Web\HttpDownloader.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Web\HttpDownloader.cs">
+      <Link>Include\Playnite\Common\Web\HttpDownloader.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Converters\NegateConverter.cs">
-      <Link>include\Playnite\Converters\NegateConverter.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Converters\NegateConverter.cs">
+      <Link>Include\Playnite\Converters\NegateConverter.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Fileapi.cs">
-      <Link>include\Playnite\Native\Fileapi.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Fileapi.cs">
+      <Link>Include\Playnite\Native\Fileapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Kernel32.cs">
-      <Link>include\Playnite\Native\Kernel32.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Kernel32.cs">
+      <Link>Include\Playnite\Native\Kernel32.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Ntdll.cs">
-      <Link>include\Playnite\Native\Ntdll.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Ntdll.cs">
+      <Link>Include\Playnite\Native\Ntdll.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Processthreadsapi.cs">
-      <Link>include\Playnite\Native\Processthreadsapi.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Processthreadsapi.cs">
+      <Link>Include\Playnite\Native\Processthreadsapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Shlwapi.cs">
-      <Link>include\Playnite\Native\Shlwapi.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Shlwapi.cs">
+      <Link>Include\Playnite\Native\Shlwapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Winbase.cs">
-      <Link>include\Playnite\Native\Winbase.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Winbase.cs">
+      <Link>Include\Playnite\Native\Winbase.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Windef.cs">
-      <Link>include\Playnite\Native\Windef.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Windef.cs">
+      <Link>Include\Playnite\Native\Windef.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\winuser.cs">
-      <Link>include\Playnite\Native\winuser.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\winuser.cs">
+      <Link>Include\Playnite\Native\winuser.cs</Link>
     </Compile>
-    <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
-      <Link>include\PlayniteExtensions\Common\GlobalCommands.cs</Link>
+    <Compile Include="..\..\Common\GlobalCommands.cs">
+      <Link>Include\Common\GlobalCommands.cs</Link>
     </Compile>
-    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
-      <Link>include\PlayniteExtensions\Common\PluginBase.cs</Link>
+    <Compile Include="..\..\Common\PluginBase.cs">
+      <Link>Include\Common\PluginBase.cs</Link>
     </Compile>
-    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
-      <Link>include\PlayniteExtensions\Common\PluginSettingsViewModel.cs</Link>
+    <Compile Include="..\..\Common\PluginSettingsViewModel.cs">
+      <Link>Include\Common\PluginSettingsViewModel.cs</Link>
     </Compile>
     <Compile Include="EAC.cs" />
     <Compile Include="Environment.cs" />
