@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam Metadata", "Source\Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockstar Games Library", "Source\Library\Rockstar Games\Rockstar Games Library.csproj", "{183FAF1B-0385-469D-8465-6F21076BF7B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite Extensions.Common", "Source\Common\Playnite Extensions.Common.csproj", "{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Source\Common\Common.csproj", "{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
