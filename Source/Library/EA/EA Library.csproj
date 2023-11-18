@@ -7,8 +7,8 @@
     <ProjectGuid>{D0EFC813-C836-4167-A120-2DE785E140A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OriginLibrary</RootNamespace>
-    <AssemblyName>OriginLibrary</AssemblyName>
+    <RootNamespace>EALibrary</RootNamespace>
+    <AssemblyName>EALibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
