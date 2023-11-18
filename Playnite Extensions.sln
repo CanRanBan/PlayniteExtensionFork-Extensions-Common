@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOG Library", "Source\Libra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humble Bundle Library", "Source\Library\Humble Bundle\Humble Bundle Library.csproj", "{2351B5C1-6E28-4B79-A1D9-90FDA53B5417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItchioLibrary", "Source\Library\itch.io\ItchioLibrary.csproj", "{27A6E49E-F769-4709-8B43-FF60B8A882BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itch.io Library", "Source\Library\itch.io\itch.io Library.csproj", "{27A6E49E-F769-4709-8B43-FF60B8A882BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EA Library", "Source\Library\EA\EA Library.csproj", "{D0EFC813-C836-4167-A120-2DE785E140A1}"
 EndProject
