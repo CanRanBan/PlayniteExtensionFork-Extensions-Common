@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon Games Library", "Sou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam Library", "Source\Library\Steam\Steam Library.csproj", "{0A13CBC8-ECD4-4B9F-961E-E6462F7D2DC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGDBMetadata", "Source\Metadata\IGDB\IGDBMetadata.csproj", "{75BE5285-6C7C-48FD-A88A-DF1F51B4E955}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGDB Metadata", "Source\Metadata\IGDB\IGDB Metadata.csproj", "{75BE5285-6C7C-48FD-A88A-DF1F51B4E955}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle.net Library", "Source\Library\Battle.net\Battle.net Library.csproj", "{E74F843D-39EF-409A-B3FB-341F486A4F97}"
 EndProject
