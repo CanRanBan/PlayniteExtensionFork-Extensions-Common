@@ -41,12 +41,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayniteExtensions.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "source\Tests\Common.Tests\Common.Tests.csproj", "{17784809-C96D-473E-8D99-3A543BF5E375}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "Localization", "{234F63E3-CCAB-4118-A233-C35C6AE72160}"
-	ProjectSection(SolutionItems) = preProject
-		Localization\de_DE.xaml = Localization\de_DE.xaml
-		Localization\en_US.xaml = Localization\en_US.xaml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
