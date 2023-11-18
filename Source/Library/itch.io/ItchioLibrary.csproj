@@ -164,7 +164,6 @@
     <Compile Include="StartupSelectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="addon.yaml" />
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
