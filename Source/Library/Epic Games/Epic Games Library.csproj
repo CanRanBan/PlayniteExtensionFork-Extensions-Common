@@ -7,8 +7,8 @@
     <ProjectGuid>{2FD110FE-F936-4768-AE66-55EC7A60989A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EpicLibrary</RootNamespace>
-    <AssemblyName>EpicLibrary</AssemblyName>
+    <RootNamespace>EpicGamesLibrary</RootNamespace>
+    <AssemblyName>EpicGamesLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
