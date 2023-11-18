@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamLibrary", "Source\Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGDBMetadata", "Source\Metadata\IGDB\IGDBMetadata.csproj", "{75BE5285-6C7C-48FD-A88A-DF1F51B4E955}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleNetLibrary", "Source\Library\Battle.net\BattleNetLibrary.csproj", "{E74F843D-39EF-409A-B3FB-341F486A4F97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle.net Library", "Source\Library\Battle.net\Battle.net Library.csproj", "{E74F843D-39EF-409A-B3FB-341F486A4F97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicLibrary", "Source\Library\Epic Games\EpicLibrary.csproj", "{2FD110FE-F936-4768-AE66-55EC7A60989A}"
 EndProject
