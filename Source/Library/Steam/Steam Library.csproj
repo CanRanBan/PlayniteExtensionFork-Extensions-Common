@@ -163,7 +163,7 @@
     <Compile Include="Services\SteamServicesClient.cs" />
     <Compile Include="SteamShared\MetadataProvider.cs" />
     <Compile Include="SteamShared\SharedSteamSettingsViewModel.cs" />
-    <Compile Include="SteamShared\TagCategories\TagIdCategory.cs" />
+    <Compile Include="TagCategories\TagIdCategory.cs" />
     <Compile Include="SteamShared\WebApiClient.cs" />
     <Compile Include="SteamShared\SteamApiClient.cs" />
     <Compile Include="SteamGameController.cs" />
@@ -188,7 +188,7 @@
     <Content Include="TagLocalization\*.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="SteamShared\TagCategories\tagsCategories.json">
+    <None Include="TagCategories\tagsCategories.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
