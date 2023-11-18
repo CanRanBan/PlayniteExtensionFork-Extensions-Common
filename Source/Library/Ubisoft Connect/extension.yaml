@@ -2,6 +2,6 @@
 Name: Ubisoft Connect Library
 Author: Josef Nemec
 Version: 2.6.1
-Module: UplayLibrary.dll
+Module: UbisoftConnectLibrary.dll
 Type: GameLibrary
 Icon: Resources\uplayicon.png
