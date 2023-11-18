@@ -7,8 +7,8 @@
     <ProjectGuid>{2E4F6F47-C3AC-4650-936A-09E675B9B3B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GogLibrary</RootNamespace>
-    <AssemblyName>GogLibrary</AssemblyName>
+    <RootNamespace>GOGLibrary</RootNamespace>
+    <AssemblyName>GOGLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
