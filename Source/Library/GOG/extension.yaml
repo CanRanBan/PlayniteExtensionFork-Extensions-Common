@@ -2,6 +2,6 @@
 Name: GOG Library
 Author: Josef Nemec
 Version: 2.18.1
-Module: GogLibrary.dll
+Module: GOGLibrary.dll
 Type: GameLibrary
 Icon: Resources\gogicon.png
