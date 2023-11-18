@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Windows">
       <HintPath>..\..\..\include\PlayniteSource\references\Windows.winmd</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
