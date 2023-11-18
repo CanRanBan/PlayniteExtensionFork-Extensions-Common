@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "Generic", "{C77D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonGamesLibrary", "Source\Library\Amazon Games\AmazonGamesLibrary.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon Games Library", "Source\Library\Amazon Games\Amazon Games Library.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamLibrary", "Source\Library\Steam\SteamLibrary.csproj", "{0A13CBC8-ECD4-4B9F-961E-E6462F7D2DC0}"
 EndProject
