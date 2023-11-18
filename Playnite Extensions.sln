@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{80
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "Generic", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon Games Library", "Source\Library\Amazon Games\Amazon Games Library.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
 EndProject
