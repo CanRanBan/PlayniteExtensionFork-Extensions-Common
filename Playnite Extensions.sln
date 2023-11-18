@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E32AA297
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon Games Library", "Source\Library\Amazon Games\Amazon Games Library.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamLibrary", "Source\Library\Steam\SteamLibrary.csproj", "{0A13CBC8-ECD4-4B9F-961E-E6462F7D2DC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam Library", "Source\Library\Steam\Steam Library.csproj", "{0A13CBC8-ECD4-4B9F-961E-E6462F7D2DC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGDBMetadata", "Source\Metadata\IGDB\IGDBMetadata.csproj", "{75BE5285-6C7C-48FD-A88A-DF1F51B4E955}"
 EndProject
