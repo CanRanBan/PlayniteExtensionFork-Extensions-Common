@@ -7,8 +7,8 @@
     <ProjectGuid>{7DC1512C-5C82-434B-9675-12AD94B74C56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UplayLibrary</RootNamespace>
-    <AssemblyName>UplayLibrary</AssemblyName>
+    <RootNamespace>UbisoftConnectLibrary</RootNamespace>
+    <AssemblyName>UbisoftConnectLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
