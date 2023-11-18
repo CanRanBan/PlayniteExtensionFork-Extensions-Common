@@ -61,86 +61,86 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Extensions\NetExtensions.cs">
-      <Link>include\Playnite\Common\Extensions\NetExtensions.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Extensions\NetExtensions.cs">
+      <Link>Include\Playnite\Common\Extensions\NetExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Extensions\StringExtensions.cs">
-      <Link>include\Playnite\Common\Extensions\StringExtensions.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Extensions\StringExtensions.cs">
+      <Link>Include\Playnite\Common\Extensions\StringExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\FileSystem.cs">
-      <Link>include\Playnite\Common\FileSystem.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\FileSystem.cs">
+      <Link>Include\Playnite\Common\FileSystem.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Paths.cs">
-      <Link>include\Playnite\Common\Paths.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Paths.cs">
+      <Link>Include\Playnite\Common\Paths.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Roman.cs">
-      <Link>include\Playnite\Common\Roman.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Roman.cs">
+      <Link>Include\Playnite\Common\Roman.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Web\Downloader.cs">
-      <Link>include\Playnite\Common\Web\Downloader.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Web\Downloader.cs">
+      <Link>Include\Playnite\Common\Web\Downloader.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Common\Web\HttpDownloader.cs">
-      <Link>include\Playnite\Common\Web\HttpDownloader.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Web\HttpDownloader.cs">
+      <Link>Include\Playnite\Common\Web\HttpDownloader.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Fileapi.cs">
-      <Link>include\Playnite\Native\Fileapi.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Fileapi.cs">
+      <Link>Include\Playnite\Native\Fileapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Kernel32.cs">
-      <Link>include\Playnite\Native\Kernel32.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Kernel32.cs">
+      <Link>Include\Playnite\Native\Kernel32.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Ntdll.cs">
-      <Link>include\Playnite\Native\Ntdll.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Ntdll.cs">
+      <Link>Include\Playnite\Native\Ntdll.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Processthreadsapi.cs">
-      <Link>include\Playnite\Native\Processthreadsapi.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Processthreadsapi.cs">
+      <Link>Include\Playnite\Native\Processthreadsapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Shlwapi.cs">
-      <Link>include\Playnite\Native\Shlwapi.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Shlwapi.cs">
+      <Link>Include\Playnite\Native\Shlwapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Winbase.cs">
-      <Link>include\Playnite\Native\Winbase.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Winbase.cs">
+      <Link>Include\Playnite\Native\Winbase.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\Windef.cs">
-      <Link>include\Playnite\Native\Windef.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\Windef.cs">
+      <Link>Include\Playnite\Native\Windef.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\include\PlayniteSource\source\Playnite\Native\winuser.cs">
-      <Link>include\Playnite\Native\winuser.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Native\winuser.cs">
+      <Link>Include\Playnite\Native\winuser.cs</Link>
     </Compile>
-    <Compile Include="..\..\Generic\PlayniteExtensions.Common\DateHelper.cs">
-      <Link>include\PlayniteExtensions\Common\DateHelper.cs</Link>
+    <Compile Include="..\..\Common\DateHelper.cs">
+      <Link>Include\Common\DateHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
-      <Link>include\PlayniteExtensions\Common\PluginBase.cs</Link>
+    <Compile Include="..\..\Common\PluginBase.cs">
+      <Link>Include\Common\PluginBase.cs</Link>
     </Compile>
-    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
-      <Link>include\PlayniteExtensions\Common\PluginSettingsViewModel.cs</Link>
+    <Compile Include="..\..\Common\PluginSettingsViewModel.cs">
+      <Link>Include\Common\PluginSettingsViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\MetadataProvider.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\MetadataProvider.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\MetadataProvider.cs">
+      <Link>Include\Library\Steam\SteamShared\MetadataProvider.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SharedSteamSettings.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\SharedSteamSettings.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\SharedSteamSettings.cs">
+      <Link>Include\Library\Steam\SteamShared\SharedSteamSettings.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SharedSteamSettingsViewModel.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\SharedSteamSettingsViewModel.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\SharedSteamSettingsViewModel.cs">
+      <Link>Include\Library\Steam\SteamShared\SharedSteamSettingsViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SteamApiClient.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\SteamApiClient.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\SteamApiClient.cs">
+      <Link>Include\Library\Steam\SteamShared\SteamApiClient.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SteamGameMetadata.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\SteamGameMetadata.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\SteamGameMetadata.cs">
+      <Link>Include\Library\Steam\SteamShared\SteamGameMetadata.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SteamTagNamer.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\SteamTagNamer.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\SteamTagNamer.cs">
+      <Link>Include\Library\Steam\SteamShared\SteamTagNamer.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\StoreAppDetailsResult.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\StoreAppDetailsResult.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\StoreAppDetailsResult.cs">
+      <Link>Include\Library\Steam\SteamShared\StoreAppDetailsResult.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\WebApiClient.cs">
-      <Link>include\PlayniteExtensions\Libraries\SteamLibrary\SteamShared\WebApiClient.cs</Link>
+    <Compile Include="..\..\Library\Steam\SteamShared\WebApiClient.cs">
+      <Link>Include\Library\Steam\SteamShared\WebApiClient.cs</Link>
     </Compile>
-    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\TagCategories\TagIdCategory.cs">
-      <Link>SteamShared\TagCategories\TagIdCategory.cs</Link>
+    <Compile Include="..\..\Library\Steam\TagCategories\TagIdCategory.cs">
+      <Link>TagCategories\TagIdCategory.cs</Link>
     </Compile>
     <Compile Include="LocalizationKeys.cs" />
     <Compile Include="UniversalSteamMetadata.cs" />
@@ -152,14 +152,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Libraries\SteamLibrary\SteamShared\TagCategories\tagsCategories.json">
-      <Link>SteamShared\TagCategories\tagsCategories.json</Link>
+    <None Include="..\..\Library\Steam\TagCategories\tagsCategories.json">
+      <Link>TagCategories\tagsCategories.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="..\..\Libraries\SteamLibrary\TagLocalization\*.json">
+    <Content Include="..\..\Library\Steam\TagLocalization\*.json">
       <Link>TagLocalization\%(FileName).json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
