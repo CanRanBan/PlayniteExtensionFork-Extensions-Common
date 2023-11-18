@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ubisoft Connect Library", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xbox Library", "Source\Library\Xbox\Xbox Library.csproj", "{108638B7-D926-4311-9249-651A1CCAA742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalSteamMetadata", "Source\Metadata\Steam\UniversalSteamMetadata.csproj", "{A54423D1-8E7A-4339-B0D5-24E7CEFE469B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam Metadata", "Source\Metadata\Steam\Steam Metadata.csproj", "{A54423D1-8E7A-4339-B0D5-24E7CEFE469B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockstar Games Library", "Source\Library\Rockstar Games\Rockstar Games Library.csproj", "{183FAF1B-0385-469D-8465-6F21076BF7B6}"
 EndProject
