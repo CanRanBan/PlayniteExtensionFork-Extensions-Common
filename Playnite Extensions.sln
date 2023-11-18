@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleLibrary", "Source\Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItchioLibrary", "Source\Library\itch.io\ItchioLibrary.csproj", "{27A6E49E-F769-4709-8B43-FF60B8A882BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginLibrary", "Source\Library\EA\OriginLibrary.csproj", "{D0EFC813-C836-4167-A120-2DE785E140A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EA Library", "Source\Library\EA\EA Library.csproj", "{D0EFC813-C836-4167-A120-2DE785E140A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UplayLibrary", "Source\Library\Ubisoft Connect\UplayLibrary.csproj", "{7DC1512C-5C82-434B-9675-12AD94B74C56}"
 EndProject
