@@ -90,7 +90,7 @@ namespace ItchioLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"ItchIoLibraryIcon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"ItchIoLibraryIcon.ico");
 
         public static void StartClient()
         {
