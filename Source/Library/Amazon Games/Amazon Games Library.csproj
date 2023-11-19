@@ -144,7 +144,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AmazonGamesLibraryIcon.png">
+    <None Include="Resources\AmazonGamesLibraryIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
