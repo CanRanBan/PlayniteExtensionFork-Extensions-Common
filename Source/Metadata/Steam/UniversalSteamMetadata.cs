@@ -1,4 +1,4 @@
-﻿using AngleSharp.Parser.Html;
+﻿using AngleSharp.Html.Parser;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Plugins;
@@ -64,7 +64,7 @@ namespace UniversalSteamMetadata
             {
                 var searchPageSrc = webClient.DownloadString(string.Format(searchUrl, Uri.EscapeDataString(searchTerm)));
                 var parser = new HtmlParser();
-                var searchPage = parser.Parse(searchPageSrc);
+                var searchPage = parser.ParseDocument(searchPageSrc);
                 foreach (var gameElem in searchPage.QuerySelectorAll(".search_result_row"))
                 {
                     var title = gameElem.QuerySelector(".title").InnerHtml;

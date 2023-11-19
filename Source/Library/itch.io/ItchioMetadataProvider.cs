@@ -1,4 +1,4 @@
-﻿using AngleSharp.Parser.Html;
+﻿using AngleSharp.Html.Parser;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
@@ -53,7 +53,7 @@ namespace ItchioLibrary
                     itchGame.url));
                 var gamePageSrc = HttpDownloader.DownloadString(itchGame.url);
                 var parser = new HtmlParser();
-                var gamePage = parser.Parse(gamePageSrc);
+                var gamePage = parser.ParseDocument(gamePageSrc);
 
                 // Icon
                 var icon = gamePage.QuerySelector("head>link[rel=icon]");

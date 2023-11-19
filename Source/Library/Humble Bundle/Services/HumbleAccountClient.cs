@@ -1,4 +1,4 @@
-﻿using AngleSharp.Parser.Html;
+﻿using AngleSharp.Html.Parser;
 using HumbleLibrary.Models;
 using Playnite.SDK;
 using Playnite.SDK.Data;
@@ -48,7 +48,7 @@ namespace HumbleLibrary.Services
         {
             webView.NavigateAndWait(libraryUrl);
             var parser = new HtmlParser();
-            var document = parser.Parse(webView.GetPageSource());
+            var document = parser.ParseDocument(webView.GetPageSource());
             var userInfo = document.QuerySelector("#user-home-json-data");
             if (userInfo == null)
             {

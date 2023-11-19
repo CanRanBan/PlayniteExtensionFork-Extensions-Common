@@ -12,8 +12,8 @@ using Playnite;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using AngleSharp.Parser.Html;
-using AngleSharp.Dom.Html;
+using AngleSharp.Html.Parser;
+using AngleSharp.Html.Dom;
 using AngleSharp.Dom;
 
 namespace GogLibrary
@@ -148,7 +148,7 @@ namespace GogLibrary
             // Get opening element in description. Promos are always at the start of description.
             // It has been seen that descriptions start with <a> or <div> elements
             var parser = new HtmlParser();
-            var document = parser.Parse(originalDescription);
+            var document = parser.ParseDocument(originalDescription);
             var firstChild = document.Body.FirstChild;
             if (firstChild == null || firstChild.NodeType != NodeType.Element || !firstChild.HasChildNodes)
             {
