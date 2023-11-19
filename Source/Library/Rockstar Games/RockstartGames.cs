@@ -149,7 +149,7 @@ namespace RockstarGamesLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"RockstarGamesLibraryIcon.png");
 
         public static void StartClient()
         {
