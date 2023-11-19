@@ -40,7 +40,7 @@ namespace HumbleLibrary
         public string UserAgent { get; }
 
         public HumbleLibrary(IPlayniteAPI api) : base(
-            "Humble",
+            "Humble Bundle",
             Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
             new LibraryPluginProperties { CanShutdownClient = false, HasCustomizedGameImport = true, HasSettings = true },
             new HumbleClient(),
