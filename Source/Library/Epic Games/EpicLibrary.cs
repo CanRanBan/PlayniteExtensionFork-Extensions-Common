@@ -18,7 +18,7 @@ namespace EpicLibrary
         internal readonly string TokensPath;
 
         public EpicLibrary(IPlayniteAPI api) : base(
-            "Epic",
+            "Epic Games",
             Guid.Parse("00000002-DBD1-46C6-B5D0-B1BA559D10E4"),
             new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new EpicClient(),
