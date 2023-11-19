@@ -165,7 +165,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="icon.png">
+    <None Include="Resources\SteamMetadataIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
