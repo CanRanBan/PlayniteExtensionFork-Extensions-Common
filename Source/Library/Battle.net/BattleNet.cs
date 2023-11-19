@@ -59,7 +59,7 @@ namespace BattleNetLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\battleneticon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"BattleNetLibraryIcon.png");
 
         public static void StartClient()
         {
