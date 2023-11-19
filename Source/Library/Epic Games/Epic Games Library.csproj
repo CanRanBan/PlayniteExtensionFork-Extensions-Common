@@ -147,7 +147,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\epicicon.png">
+    <None Include="Resources\EpicGamesLibraryIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

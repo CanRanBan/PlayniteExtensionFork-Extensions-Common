@@ -76,7 +76,7 @@ namespace EpicLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\epicicon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"EpicGamesLibraryIcon.png");
 
         public static void StartClient()
         {
