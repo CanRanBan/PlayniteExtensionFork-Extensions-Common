@@ -4,4 +4,4 @@ Author: Josef Nemec
 Version: 2.14.1
 Module: SteamMetadata.dll
 Type: MetadataProvider
-Icon: Resources\SteamMetadataIcon.png
+Icon: Resources\SteamMetadataIcon.ico
