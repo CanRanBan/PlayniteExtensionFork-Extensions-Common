@@ -11,7 +11,7 @@ namespace GogLibrary
     {
         private static readonly ILogger logger = LogManager.GetLogger();
 
-        public override string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\galaxyIcon.png");
+        public override string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"GOGLibraryIcon.png");
 
         public override bool IsInstalled => Gog.IsInstalled;
 

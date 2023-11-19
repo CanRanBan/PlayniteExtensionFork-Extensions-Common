@@ -76,7 +76,7 @@ namespace GogLibrary
         }
 
         public static string ClientInstallationPath => Path.Combine(InstallationPath, "GalaxyClient.exe");
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\gogicon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"GOGLibraryIcon.png");
 
         public static string GetLoginUrl()
         {
