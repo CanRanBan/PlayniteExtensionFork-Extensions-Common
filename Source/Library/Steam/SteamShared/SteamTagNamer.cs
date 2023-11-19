@@ -31,7 +31,7 @@ namespace SteamLibrary.SteamShared
             this.settings = settings;
             this.downloader = downloader;
 
-            var tagCategoriesFilePath = Path.Combine(extensionFolder, steamSharedFolder, "TagCategories", "tagsCategories.json");
+            var tagCategoriesFilePath = Path.Combine(extensionFolder, "TagCategories", "tagsCategories.json");
             var tagsIdsWithCategories = Serialization.FromJsonFile<List<TagIdCategory>>(tagCategoriesFilePath);
             tagCategoriesDictionary = new Dictionary<int, TagCategory>();
             foreach (var tag in tagsIdsWithCategories)
@@ -41,7 +41,7 @@ namespace SteamLibrary.SteamShared
                     // Some tags are in multiple categories, for example "Experimental"
                     // which is a Top-Level Genre and Genre.
                     continue;
-        }
+                }
 
                 tagCategoriesDictionary[tag.Id] = tag.Category;
             }
@@ -145,11 +145,11 @@ namespace SteamLibrary.SteamShared
                 if (!tagCategoriesDictionary.TryGetValue(tagId, out var tagCategory))
                 {
                     tagCategory = TagCategory.OtherTags;
-        }
+                }
 
                 var categoryName = tagCategoryStringMapping[tagCategory];
                 tagName = $"{categoryName}: {tagName}";
-    }
+            }
             else if (settings.UseTagPrefix && !settings.TagPrefix.IsNullOrEmpty())
             {
                 tagName = $"{settings.TagPrefix}{tagName}";
