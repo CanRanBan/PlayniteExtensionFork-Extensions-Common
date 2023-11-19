@@ -147,7 +147,7 @@ namespace HumbleLibrary
                                 Description = troveGame.description_text,
                                 Publishers = troveGame.publishers?.Select(a => new MetadataNameProperty(a.publisher_name)).Cast<MetadataProperty>().ToHashSet(),
                                 Developers = troveGame.developers?.Select(a => new MetadataNameProperty(a.developer_name)).Cast<MetadataProperty>().ToHashSet(),
-                                Source = new MetadataNameProperty("Humble"),
+                                Source = new MetadataNameProperty("Humble Bundle"),
                                 Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             };
 
@@ -260,7 +260,7 @@ namespace HumbleLibrary
                                     Name = product.human_name.RemoveTrademarks(),
                                     GameId = gameId,
                                     Icon = product.icon.IsNullOrEmpty() ? null : new MetadataFile(product.icon),
-                                    Source = new MetadataNameProperty("Humble")
+                                    Source = new MetadataNameProperty("Humble Bundle")
                                 }, this));
                             }
                         }
