@@ -125,7 +125,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\HumbleBundleLibraryIcon.png">
+    <None Include="Resources\HumbleBundleLibraryIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

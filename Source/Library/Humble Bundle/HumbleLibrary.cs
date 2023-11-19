@@ -44,7 +44,7 @@ namespace HumbleLibrary
             Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
             new LibraryPluginProperties { CanShutdownClient = false, HasCustomizedGameImport = true, HasSettings = true },
             new HumbleClient(),
-            Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"HumbleBundleLibraryIcon.png"),
+            Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"HumbleBundleLibraryIcon.ico"),
             (_) => new HumbleLibrarySettingsView(),
             api)
         {
