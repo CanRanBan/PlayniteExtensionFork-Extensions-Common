@@ -50,7 +50,7 @@ namespace AmazonGamesLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"AmazonGamesLibraryIcon.png");
 
         public static void StartClient()
         {
