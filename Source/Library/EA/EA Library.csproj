@@ -176,7 +176,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\originicon.png">
+    <None Include="Resources\EALibraryIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
