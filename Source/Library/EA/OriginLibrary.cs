@@ -53,7 +53,7 @@ namespace OriginLibrary
         }
 
         public OriginLibrary(IPlayniteAPI api) : base(
-            "EA app",
+            "EA",
             Guid.Parse("85DD7072-2F20-4E76-A007-41035E390724"),
             new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new OriginClient(),
