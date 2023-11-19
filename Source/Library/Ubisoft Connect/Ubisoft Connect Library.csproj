@@ -141,7 +141,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\UbisoftConnectLibraryIcon.png">
+    <None Include="Resources\UbisoftConnectLibraryIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

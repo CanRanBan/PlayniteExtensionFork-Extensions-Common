@@ -72,7 +72,7 @@ namespace UplayLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"UbisoftConnectLibraryIcon.png");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"UbisoftConnectLibraryIcon.ico");
 
         public static bool GetGameRequiresUplay(Game game)
         {
