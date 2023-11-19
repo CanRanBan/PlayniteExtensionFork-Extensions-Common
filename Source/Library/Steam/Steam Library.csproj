@@ -213,7 +213,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SteamLibraryIcon.png">
+    <None Include="Resources\SteamLibraryIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
