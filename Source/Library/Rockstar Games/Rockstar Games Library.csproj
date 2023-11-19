@@ -129,7 +129,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RockstarGamesLibraryIcon.png">
+    <None Include="Resources\RockstarGamesLibraryIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
