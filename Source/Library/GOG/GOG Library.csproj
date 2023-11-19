@@ -172,7 +172,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GOGLibraryIcon.png">
+    <None Include="Resources\GOGLibraryIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
