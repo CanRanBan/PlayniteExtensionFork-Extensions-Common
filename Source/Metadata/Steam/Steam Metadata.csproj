@@ -139,8 +139,8 @@
     <Compile Include="..\..\Library\Steam\SteamShared\WebApiClient.cs">
       <Link>Include\Library\Steam\SteamShared\WebApiClient.cs</Link>
     </Compile>
-    <Compile Include="..\..\Library\Steam\TagCategories\TagIdCategory.cs">
-      <Link>TagCategories\TagIdCategory.cs</Link>
+    <Compile Include="..\..\Library\Steam\TagData\Categories\TagIdCategory.cs">
+      <Link>TagData\Categories\TagIdCategory.cs</Link>
     </Compile>
     <Compile Include="LocalizationKeys.cs" />
     <Compile Include="UniversalSteamMetadata.cs" />
@@ -152,15 +152,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Library\Steam\TagCategories\tagsCategories.json">
-      <Link>TagCategories\tagsCategories.json</Link>
+    <None Include="..\..\Library\Steam\TagData\Categories\TagIdCategoryData.json">
+      <Link>TagData\Categories\TagIdCategoryData.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="..\..\Library\Steam\TagLocalization\*.json">
-      <Link>TagLocalization\%(FileName).json</Link>
+    <Content Include="..\..\Library\Steam\TagData\Localization\*.json">
+      <Link>TagData\Localization\%(FileName).json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

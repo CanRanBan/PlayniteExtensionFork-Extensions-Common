@@ -31,7 +31,7 @@ namespace SteamLibrary.SteamShared
             this.settings = settings;
             this.downloader = downloader;
 
-            var tagCategoriesFilePath = Path.Combine(extensionFolder, "TagCategories", "tagsCategories.json");
+            var tagCategoriesFilePath = Path.Combine(extensionFolder, "TagData", "Categories", "TagIdCategoryData.json");
             var tagsIdsWithCategories = Serialization.FromJsonFile<List<TagIdCategory>>(tagCategoriesFilePath);
             tagCategoriesDictionary = new Dictionary<int, TagCategory>();
             foreach (var tag in tagsIdsWithCategories)
