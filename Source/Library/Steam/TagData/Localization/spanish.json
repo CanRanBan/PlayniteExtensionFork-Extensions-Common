@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "981926494",
+    "version_hash": "3267178983",
     "tags": [
       {
         "tagid": 9,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Supervivencia en mundo abierto"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Disparos y extracción"
       },
       {
         "tagid": 1220528,
