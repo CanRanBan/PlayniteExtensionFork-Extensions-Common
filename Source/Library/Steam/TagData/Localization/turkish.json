@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1940639855",
+    "version_hash": "2149827597",
     "tags": [
       {
         "tagid": 9,
@@ -352,7 +352,7 @@
       },
       {
         "tagid": 1770,
-        "name": "Masa Üstü Oyunu"
+        "name": "Kutu Oyunu"
       },
       {
         "tagid": 1773,
@@ -912,7 +912,7 @@
       },
       {
         "tagid": 5547,
-        "name": "Arena Nişancı"
+        "name": "Arena Nişancısı"
       },
       {
         "tagid": 5577,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Açık Dünya Hayatta Kalma/İnşa"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extraction Shooter"
       },
       {
         "tagid": 1220528,
