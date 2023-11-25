@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1428240035",
+    "version_hash": "2548287807",
     "tags": [
       {
         "tagid": 9,
@@ -1656,7 +1656,7 @@
       },
       {
         "tagid": 220585,
-        "name": "Giả lập thuộc địa"
+        "name": "Mô phỏng thuộc địa"
       },
       {
         "tagid": 233824,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Chế tác sinh tồn thế giới mở"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Bắn súng đào tẩu"
       },
       {
         "tagid": 1220528,
