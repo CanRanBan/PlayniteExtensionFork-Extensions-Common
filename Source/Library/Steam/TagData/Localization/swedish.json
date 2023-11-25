@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1968602728",
+    "version_hash": "411400646",
     "tags": [
       {
         "tagid": 9,
@@ -216,7 +216,7 @@
       },
       {
         "tagid": 1687,
-        "name": "Smygspel"
+        "name": "Stealth"
       },
       {
         "tagid": 1688,
@@ -360,7 +360,7 @@
       },
       {
         "tagid": 1774,
-        "name": "Skjutare"
+        "name": "Shooter"
       },
       {
         "tagid": 1775,
@@ -864,7 +864,7 @@
       },
       {
         "tagid": 5350,
-        "name": "Barn"
+        "name": "Familjevänligt"
       },
       {
         "tagid": 5363,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Överlevnad och tillverkning i öppen värld"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extraction shooter"
       },
       {
         "tagid": 1220528,
