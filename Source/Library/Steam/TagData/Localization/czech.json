@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "2385008434",
+    "version_hash": "1367469289",
     "tags": [
       {
         "tagid": 9,
@@ -1456,7 +1456,7 @@
       },
       {
         "tagid": 21006,
-        "name": "Undergroundové"
+        "name": "Odehrávající se pod zemí"
       },
       {
         "tagid": 21725,
@@ -1504,7 +1504,7 @@
       },
       {
         "tagid": 29482,
-        "name": "Podobné jako Dark Souls"
+        "name": "Souls-like"
       },
       {
         "tagid": 29855,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Survivalové s otevřeným světem"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extraction shootery"
       },
       {
         "tagid": 1220528,
