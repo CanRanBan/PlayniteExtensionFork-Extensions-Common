@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "3381456272",
+    "version_hash": "1711657401",
     "tags": [
       {
         "tagid": 9,
@@ -960,7 +960,7 @@
       },
       {
         "tagid": 5765,
-        "name": "Dostosowywanie broni"
+        "name": "Dostosowywanie broni palnej"
       },
       {
         "tagid": 5794,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Survivalowe w otwartym świecie"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Strzelanka ewakuacyjna"
       },
       {
         "tagid": 1220528,
