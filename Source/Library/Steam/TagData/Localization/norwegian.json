@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1151989020",
+    "version_hash": "1661680193",
     "tags": [
       {
         "tagid": 9,
@@ -332,7 +332,7 @@
       },
       {
         "tagid": 1753,
-        "name": "Skateboarding"
+        "name": "Skateboard"
       },
       {
         "tagid": 1754,
@@ -1072,7 +1072,7 @@
       },
       {
         "tagid": 6915,
-        "name": "Kampkunst"
+        "name": "Kampsport"
       },
       {
         "tagid": 6948,
@@ -1100,7 +1100,7 @@
       },
       {
         "tagid": 7178,
-        "name": "Gruppespill"
+        "name": "Selskapsspill"
       },
       {
         "tagid": 7208,
@@ -1720,7 +1720,7 @@
       },
       {
         "tagid": 745697,
-        "name": "Sosialt deduksjonsspill"
+        "name": "Sosial deduksjon"
       },
       {
         "tagid": 769306,
@@ -1756,7 +1756,7 @@
       },
       {
         "tagid": 1091588,
-        "name": "Roguelike-deckbuilder"
+        "name": "Roguelike-deckbuilding"
       },
       {
         "tagid": 1100686,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Overlevelse og konstruksjon i åpen verden"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Fluktskytespill"
       },
       {
         "tagid": 1220528,
