@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1153489804",
+    "version_hash": "2666005899",
     "tags": [
       {
         "tagid": 9,
@@ -692,7 +692,7 @@
       },
       {
         "tagid": 4520,
-        "name": "Agrícola"
+        "name": "Agricultura"
       },
       {
         "tagid": 4559,
@@ -1148,7 +1148,7 @@
       },
       {
         "tagid": 7622,
-        "name": "Todo terreno"
+        "name": "Todoterreno"
       },
       {
         "tagid": 7702,
@@ -1588,7 +1588,7 @@
       },
       {
         "tagid": 87918,
-        "name": "Simulador agrícola"
+        "name": "Simulador de agricultura"
       },
       {
         "tagid": 91114,
@@ -1696,7 +1696,7 @@
       },
       {
         "tagid": 379975,
-        "name": "Juegos de clics"
+        "name": "Clics"
       },
       {
         "tagid": 454187,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Fabricación y supervivencia en mundo abierto"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Disparos y extracción"
       },
       {
         "tagid": 1220528,
