@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "4266806865",
+    "version_hash": "3145276975",
     "tags": [
       {
         "tagid": 9,
@@ -496,7 +496,7 @@
       },
       {
         "tagid": 4018,
-        "name": "Vampiro"
+        "name": "Vampiros"
       },
       {
         "tagid": 4026,
@@ -1056,7 +1056,7 @@
       },
       {
         "tagid": 6730,
-        "name": "Jogador x Inimigo (PvE)"
+        "name": "Jogador X Ambiente (PvE)"
       },
       {
         "tagid": 6815,
@@ -1528,7 +1528,7 @@
       },
       {
         "tagid": 32322,
-        "name": "Montagem de Baralhos"
+        "name": "Montagem de Decks"
       },
       {
         "tagid": 33572,
@@ -1716,7 +1716,7 @@
       },
       {
         "tagid": 620519,
-        "name": "Tiro Fantasioso"
+        "name": "Tiro de Heróis"
       },
       {
         "tagid": 745697,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Sobrevivência em Mundo Aberto"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Tiro de Extração"
       },
       {
         "tagid": 1220528,
