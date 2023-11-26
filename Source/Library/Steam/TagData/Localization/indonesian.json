@@ -1,0 +1,1795 @@
+{
+  "response": {
+    "version_hash": "2836993591",
+    "tags": [
+      {
+        "tagid": 9,
+        "name": "Strategi"
+      },
+      {
+        "tagid": 19,
+        "name": "Aksi"
+      },
+      {
+        "tagid": 21,
+        "name": "Petualangan"
+      },
+      {
+        "tagid": 84,
+        "name": "Desain & Ilustrasi"
+      },
+      {
+        "tagid": 87,
+        "name": "Utilitas"
+      },
+      {
+        "tagid": 113,
+        "name": "F2P"
+      },
+      {
+        "tagid": 122,
+        "name": "RPG"
+      },
+      {
+        "tagid": 128,
+        "name": "MMO"
+      },
+      {
+        "tagid": 492,
+        "name": "Indie"
+      },
+      {
+        "tagid": 493,
+        "name": "Akses Dini"
+      },
+      {
+        "tagid": 597,
+        "name": "Kasual"
+      },
+      {
+        "tagid": 599,
+        "name": "Simulasi"
+      },
+      {
+        "tagid": 699,
+        "name": "Balapan"
+      },
+      {
+        "tagid": 701,
+        "name": "Olahraga"
+      },
+      {
+        "tagid": 784,
+        "name": "Produksi Video"
+      },
+      {
+        "tagid": 809,
+        "name": "Pengeditan Foto"
+      },
+      {
+        "tagid": 872,
+        "name": "Animasi & Pemodelan"
+      },
+      {
+        "tagid": 1027,
+        "name": "Produksi Audio"
+      },
+      {
+        "tagid": 1036,
+        "name": "Pendidikan"
+      },
+      {
+        "tagid": 1038,
+        "name": "Penerbit Web"
+      },
+      {
+        "tagid": 1445,
+        "name": "Software Pelatihan"
+      },
+      {
+        "tagid": 1616,
+        "name": "Kereta"
+      },
+      {
+        "tagid": 1621,
+        "name": "Musik"
+      },
+      {
+        "tagid": 1625,
+        "name": "Platformer"
+      },
+      {
+        "tagid": 1628,
+        "name": "Metroidvania"
+      },
+      {
+        "tagid": 1638,
+        "name": "Anjing"
+      },
+      {
+        "tagid": 1643,
+        "name": "Pembangunan"
+      },
+      {
+        "tagid": 1644,
+        "name": "Mengemudi"
+      },
+      {
+        "tagid": 1645,
+        "name": "Pertahanan Menara"
+      },
+      {
+        "tagid": 1646,
+        "name": "Hack dan Slash"
+      },
+      {
+        "tagid": 1647,
+        "name": "Western"
+      },
+      {
+        "tagid": 1649,
+        "name": "GameMaker"
+      },
+      {
+        "tagid": 1651,
+        "name": "Satir"
+      },
+      {
+        "tagid": 1654,
+        "name": "Menenangkan"
+      },
+      {
+        "tagid": 1659,
+        "name": "Zombi"
+      },
+      {
+        "tagid": 1662,
+        "name": "Survival"
+      },
+      {
+        "tagid": 1663,
+        "name": "FPS"
+      },
+      {
+        "tagid": 1664,
+        "name": "Teka-Teki"
+      },
+      {
+        "tagid": 1665,
+        "name": "Match 3"
+      },
+      {
+        "tagid": 1666,
+        "name": "Game Kartu"
+      },
+      {
+        "tagid": 1667,
+        "name": "Horor"
+      },
+      {
+        "tagid": 1669,
+        "name": "Dapat Dimodifikasi"
+      },
+      {
+        "tagid": 1670,
+        "name": "4X"
+      },
+      {
+        "tagid": 1671,
+        "name": "Superhero"
+      },
+      {
+        "tagid": 1673,
+        "name": "Alien"
+      },
+      {
+        "tagid": 1674,
+        "name": "Mengetik"
+      },
+      {
+        "tagid": 1676,
+        "name": "RTS"
+      },
+      {
+        "tagid": 1677,
+        "name": "Berbasis Giliran"
+      },
+      {
+        "tagid": 1678,
+        "name": "Perang"
+      },
+      {
+        "tagid": 1680,
+        "name": "Pencurian"
+      },
+      {
+        "tagid": 1681,
+        "name": "Bajak Laut"
+      },
+      {
+        "tagid": 1684,
+        "name": "Fantasi"
+      },
+      {
+        "tagid": 1685,
+        "name": "Co-op"
+      },
+      {
+        "tagid": 1687,
+        "name": "Stealth"
+      },
+      {
+        "tagid": 1688,
+        "name": "Ninja"
+      },
+      {
+        "tagid": 1693,
+        "name": "Klasik"
+      },
+      {
+        "tagid": 1695,
+        "name": "Dunia Terbuka"
+      },
+      {
+        "tagid": 1697,
+        "name": "Third-Person"
+      },
+      {
+        "tagid": 1698,
+        "name": "Tunjuk & Klik"
+      },
+      {
+        "tagid": 1702,
+        "name": "Kerajinan"
+      },
+      {
+        "tagid": 1708,
+        "name": "Taktis"
+      },
+      {
+        "tagid": 1710,
+        "name": "Sureal"
+      },
+      {
+        "tagid": 1714,
+        "name": "Psikedelik"
+      },
+      {
+        "tagid": 1716,
+        "name": "Roguelike"
+      },
+      {
+        "tagid": 1717,
+        "name": "Kolom Heksagonal"
+      },
+      {
+        "tagid": 1718,
+        "name": "MOBA"
+      },
+      {
+        "tagid": 1719,
+        "name": "Komedi"
+      },
+      {
+        "tagid": 1720,
+        "name": "Penjelajah Dungeon"
+      },
+      {
+        "tagid": 1721,
+        "name": "Horor Psikologis"
+      },
+      {
+        "tagid": 1723,
+        "name": "Aksi RTS"
+      },
+      {
+        "tagid": 1730,
+        "name": "Sokoban"
+      },
+      {
+        "tagid": 1732,
+        "name": "Voxel"
+      },
+      {
+        "tagid": 1733,
+        "name": "Tak Ada Ampun"
+      },
+      {
+        "tagid": 1734,
+        "name": "Tempo Cepat"
+      },
+      {
+        "tagid": 1736,
+        "name": "LEGO"
+      },
+      {
+        "tagid": 1738,
+        "name": "Objek Tersembunyi"
+      },
+      {
+        "tagid": 1741,
+        "name": "Strategi Berbasis Giliran"
+      },
+      {
+        "tagid": 1742,
+        "name": "Padat Cerita"
+      },
+      {
+        "tagid": 1743,
+        "name": "Pertarungan"
+      },
+      {
+        "tagid": 1746,
+        "name": "Basket"
+      },
+      {
+        "tagid": 1751,
+        "name": "Komik"
+      },
+      {
+        "tagid": 1752,
+        "name": "Ritme"
+      },
+      {
+        "tagid": 1753,
+        "name": "Skateboard"
+      },
+      {
+        "tagid": 1754,
+        "name": "MMORPG"
+      },
+      {
+        "tagid": 1755,
+        "name": "Ruang Angkasa"
+      },
+      {
+        "tagid": 1756,
+        "name": "Soundtrack Keren"
+      },
+      {
+        "tagid": 1759,
+        "name": "Permadeath"
+      },
+      {
+        "tagid": 1770,
+        "name": "Game Papan"
+      },
+      {
+        "tagid": 1773,
+        "name": "Arkade"
+      },
+      {
+        "tagid": 1774,
+        "name": "Penembak"
+      },
+      {
+        "tagid": 1775,
+        "name": "PvP"
+      },
+      {
+        "tagid": 1777,
+        "name": "Steampunk"
+      },
+      {
+        "tagid": 3796,
+        "name": "Berdasarkan Novel"
+      },
+      {
+        "tagid": 3798,
+        "name": "Sidescroller"
+      },
+      {
+        "tagid": 3799,
+        "name": "Novel Visual"
+      },
+      {
+        "tagid": 3810,
+        "name": "Sandbox"
+      },
+      {
+        "tagid": 3813,
+        "name": "Taktis Real-Time"
+      },
+      {
+        "tagid": 3814,
+        "name": "Third-Person Shooter"
+      },
+      {
+        "tagid": 3834,
+        "name": "Eksplorasi"
+      },
+      {
+        "tagid": 3835,
+        "name": "Pasca-apokaliptik"
+      },
+      {
+        "tagid": 3839,
+        "name": "First-Person"
+      },
+      {
+        "tagid": 3841,
+        "name": "Co-Op Lokal"
+      },
+      {
+        "tagid": 3843,
+        "name": "Co-Op Online"
+      },
+      {
+        "tagid": 3854,
+        "name": "Padat Lore"
+      },
+      {
+        "tagid": 3859,
+        "name": "Multipemain"
+      },
+      {
+        "tagid": 3871,
+        "name": "2D"
+      },
+      {
+        "tagid": 3877,
+        "name": "Platformer Presisi"
+      },
+      {
+        "tagid": 3878,
+        "name": "Kompetitif"
+      },
+      {
+        "tagid": 3916,
+        "name": "Old School"
+      },
+      {
+        "tagid": 3920,
+        "name": "Memasak"
+      },
+      {
+        "tagid": 3934,
+        "name": "Imersif"
+      },
+      {
+        "tagid": 3942,
+        "name": "Fiksi Ilmiah"
+      },
+      {
+        "tagid": 3952,
+        "name": "Gothic"
+      },
+      {
+        "tagid": 3954,
+        "name": "Rail Shooter"
+      },
+      {
+        "tagid": 3955,
+        "name": "Karakter Game Aksi"
+      },
+      {
+        "tagid": 3959,
+        "name": "Roguelite"
+      },
+      {
+        "tagid": 3964,
+        "name": "Grafis Piksel"
+      },
+      {
+        "tagid": 3965,
+        "name": "Epik"
+      },
+      {
+        "tagid": 3968,
+        "name": "Ilmu Fisika"
+      },
+      {
+        "tagid": 3978,
+        "name": "Horor Survival"
+      },
+      {
+        "tagid": 3987,
+        "name": "Bersejarah"
+      },
+      {
+        "tagid": 3993,
+        "name": "Pertempuran"
+      },
+      {
+        "tagid": 4004,
+        "name": "Retro"
+      },
+      {
+        "tagid": 4018,
+        "name": "Vampir"
+      },
+      {
+        "tagid": 4026,
+        "name": "Sulit"
+      },
+      {
+        "tagid": 4036,
+        "name": "Parkour"
+      },
+      {
+        "tagid": 4046,
+        "name": "Dragons"
+      },
+      {
+        "tagid": 4057,
+        "name": "Sihir"
+      },
+      {
+        "tagid": 4064,
+        "name": "Thriller"
+      },
+      {
+        "tagid": 4085,
+        "name": "Anime"
+      },
+      {
+        "tagid": 4094,
+        "name": "Minimalis"
+      },
+      {
+        "tagid": 4102,
+        "name": "Balap Tempur"
+      },
+      {
+        "tagid": 4106,
+        "name": "Aksi - Petualangan"
+      },
+      {
+        "tagid": 4115,
+        "name": "Cyberpunk"
+      },
+      {
+        "tagid": 4136,
+        "name": "Lucu"
+      },
+      {
+        "tagid": 4137,
+        "name": "Transhumanisme"
+      },
+      {
+        "tagid": 4145,
+        "name": "Sinematik"
+      },
+      {
+        "tagid": 4150,
+        "name": "Perang Dunia II"
+      },
+      {
+        "tagid": 4155,
+        "name": "Berbasis Peringkat"
+      },
+      {
+        "tagid": 4158,
+        "name": "Beat 'em up"
+      },
+      {
+        "tagid": 4161,
+        "name": "Real-Time"
+      },
+      {
+        "tagid": 4162,
+        "name": "Kids"
+      },
+      {
+        "tagid": 4166,
+        "name": "Suasana"
+      },
+      {
+        "tagid": 4168,
+        "name": "Militer"
+      },
+      {
+        "tagid": 4172,
+        "name": "Abad Pertengahan"
+      },
+      {
+        "tagid": 4175,
+        "name": "Realistis"
+      },
+      {
+        "tagid": 4182,
+        "name": "Pemain Tunggal"
+      },
+      {
+        "tagid": 4184,
+        "name": "Catur"
+      },
+      {
+        "tagid": 4190,
+        "name": "Adiktif"
+      },
+      {
+        "tagid": 4191,
+        "name": "3D"
+      },
+      {
+        "tagid": 4195,
+        "name": "Bergaya Kartun"
+      },
+      {
+        "tagid": 4202,
+        "name": "Trading"
+      },
+      {
+        "tagid": 4231,
+        "name": "RPG Aksi"
+      },
+      {
+        "tagid": 4234,
+        "name": "Pendek"
+      },
+      {
+        "tagid": 4236,
+        "name": "Loot"
+      },
+      {
+        "tagid": 4242,
+        "name": "Episodik"
+      },
+      {
+        "tagid": 4252,
+        "name": "Bergaya"
+      },
+      {
+        "tagid": 4255,
+        "name": "Shoot 'Em Up"
+      },
+      {
+        "tagid": 4291,
+        "name": "Pesawat Ruang Angkasa"
+      },
+      {
+        "tagid": 4295,
+        "name": "Futuristis"
+      },
+      {
+        "tagid": 4305,
+        "name": "Penuh Warna"
+      },
+      {
+        "tagid": 4325,
+        "name": "Pertempuran Berbasis Giliran"
+      },
+      {
+        "tagid": 4328,
+        "name": "Pembangunan Kota"
+      },
+      {
+        "tagid": 4342,
+        "name": "Kelam"
+      },
+      {
+        "tagid": 4345,
+        "name": "Gore"
+      },
+      {
+        "tagid": 4364,
+        "name": "Strategi Skala Besar"
+      },
+      {
+        "tagid": 4376,
+        "name": "Assassin"
+      },
+      {
+        "tagid": 4400,
+        "name": "Abstrak"
+      },
+      {
+        "tagid": 4434,
+        "name": "JRPG"
+      },
+      {
+        "tagid": 4474,
+        "name": "CRPG"
+      },
+      {
+        "tagid": 4486,
+        "name": "Pilih Petualanganmu"
+      },
+      {
+        "tagid": 4508,
+        "name": "Kampanye Co-Op"
+      },
+      {
+        "tagid": 4520,
+        "name": "Bertani"
+      },
+      {
+        "tagid": 4559,
+        "name": "Event Quick-Time"
+      },
+      {
+        "tagid": 4562,
+        "name": "Kartun"
+      },
+      {
+        "tagid": 4598,
+        "name": "Sejarah Alternatif"
+      },
+      {
+        "tagid": 4604,
+        "name": "Fantasi Kelam"
+      },
+      {
+        "tagid": 4608,
+        "name": "Pedang"
+      },
+      {
+        "tagid": 4637,
+        "name": "Top-Down Shooter"
+      },
+      {
+        "tagid": 4667,
+        "name": "Kekerasan"
+      },
+      {
+        "tagid": 4684,
+        "name": "Game Perang"
+      },
+      {
+        "tagid": 4695,
+        "name": "Ekonomi"
+      },
+      {
+        "tagid": 4700,
+        "name": "Movie"
+      },
+      {
+        "tagid": 4711,
+        "name": "Dimainkan Berulang"
+      },
+      {
+        "tagid": 4726,
+        "name": "Imut"
+      },
+      {
+        "tagid": 4736,
+        "name": "Pertaruangan 2D"
+      },
+      {
+        "tagid": 4747,
+        "name": "Kustomisasi Karakter"
+      },
+      {
+        "tagid": 4754,
+        "name": "Politik"
+      },
+      {
+        "tagid": 4758,
+        "name": "Twin Stick Shooter"
+      },
+      {
+        "tagid": 4777,
+        "name": "Pertunjukan Pertarungan"
+      },
+      {
+        "tagid": 4791,
+        "name": "Top-Down"
+      },
+      {
+        "tagid": 4821,
+        "name": "Mecha"
+      },
+      {
+        "tagid": 4835,
+        "name": "6DOF"
+      },
+      {
+        "tagid": 4840,
+        "name": "Lokal 4 Pemain"
+      },
+      {
+        "tagid": 4845,
+        "name": "Kapitalisme"
+      },
+      {
+        "tagid": 4853,
+        "name": "Politis"
+      },
+      {
+        "tagid": 4878,
+        "name": "Parodi"
+      },
+      {
+        "tagid": 4885,
+        "name": "Bullet Hell"
+      },
+      {
+        "tagid": 4947,
+        "name": "Romansa"
+      },
+      {
+        "tagid": 4975,
+        "name": "2,5D"
+      },
+      {
+        "tagid": 4994,
+        "name": "Pertempuran Laut"
+      },
+      {
+        "tagid": 5030,
+        "name": "Distopia"
+      },
+      {
+        "tagid": 5055,
+        "name": "eSports"
+      },
+      {
+        "tagid": 5094,
+        "name": "Narasi"
+      },
+      {
+        "tagid": 5125,
+        "name": "Generasi Prosedural"
+      },
+      {
+        "tagid": 5153,
+        "name": "Kickstarter"
+      },
+      {
+        "tagid": 5154,
+        "name": "Skor Serangan"
+      },
+      {
+        "tagid": 5160,
+        "name": "Dinosaurus"
+      },
+      {
+        "tagid": 5179,
+        "name": "Perang Dingin"
+      },
+      {
+        "tagid": 5186,
+        "name": "Psikologis"
+      },
+      {
+        "tagid": 5228,
+        "name": "Berdarah-darah"
+      },
+      {
+        "tagid": 5230,
+        "name": "Sekuel"
+      },
+      {
+        "tagid": 5300,
+        "name": "Game Dewa"
+      },
+      {
+        "tagid": 5310,
+        "name": "Workshop Game"
+      },
+      {
+        "tagid": 5348,
+        "name": "Mod"
+      },
+      {
+        "tagid": 5350,
+        "name": "Ramah Keluarga"
+      },
+      {
+        "tagid": 5363,
+        "name": "Kehancuran"
+      },
+      {
+        "tagid": 5372,
+        "name": "Konspirasi"
+      },
+      {
+        "tagid": 5379,
+        "name": "Platformer 2D"
+      },
+      {
+        "tagid": 5382,
+        "name": "Perang Dunia I"
+      },
+      {
+        "tagid": 5390,
+        "name": "Time Attack"
+      },
+      {
+        "tagid": 5395,
+        "name": "Platformer 3D"
+      },
+      {
+        "tagid": 5407,
+        "name": "Benchmark"
+      },
+      {
+        "tagid": 5411,
+        "name": "Indah"
+      },
+      {
+        "tagid": 5432,
+        "name": "Pemrograman"
+      },
+      {
+        "tagid": 5502,
+        "name": "Hacking"
+      },
+      {
+        "tagid": 5537,
+        "name": "Platformer Teka-Teki"
+      },
+      {
+        "tagid": 5547,
+        "name": "Penembak Arena"
+      },
+      {
+        "tagid": 5577,
+        "name": "RPG Maker"
+      },
+      {
+        "tagid": 5608,
+        "name": "Emosional"
+      },
+      {
+        "tagid": 5611,
+        "name": "Dewasa"
+      },
+      {
+        "tagid": 5613,
+        "name": "Detektif"
+      },
+      {
+        "tagid": 5652,
+        "name": "Collectathon"
+      },
+      {
+        "tagid": 5673,
+        "name": "Modern"
+      },
+      {
+        "tagid": 5708,
+        "name": "Remake"
+      },
+      {
+        "tagid": 5711,
+        "name": "Berbasis Tim"
+      },
+      {
+        "tagid": 5716,
+        "name": "Misteri"
+      },
+      {
+        "tagid": 5727,
+        "name": "Bisbol"
+      },
+      {
+        "tagid": 5752,
+        "name": "Robot"
+      },
+      {
+        "tagid": 5765,
+        "name": "Kustomisasi Senjata"
+      },
+      {
+        "tagid": 5794,
+        "name": "Sains"
+      },
+      {
+        "tagid": 5796,
+        "name": "Bullet Time"
+      },
+      {
+        "tagid": 5851,
+        "name": "Isometrik"
+      },
+      {
+        "tagid": 5900,
+        "name": "Simulator Berjalan"
+      },
+      {
+        "tagid": 5914,
+        "name": "Tenis"
+      },
+      {
+        "tagid": 5923,
+        "name": "Humor Gelap"
+      },
+      {
+        "tagid": 5941,
+        "name": "Reboot"
+      },
+      {
+        "tagid": 5981,
+        "name": "Pertambangan"
+      },
+      {
+        "tagid": 5984,
+        "name": "Drama"
+      },
+      {
+        "tagid": 6041,
+        "name": "Kuda"
+      },
+      {
+        "tagid": 6052,
+        "name": "Noir"
+      },
+      {
+        "tagid": 6129,
+        "name": "Logika"
+      },
+      {
+        "tagid": 6214,
+        "name": "Burung"
+      },
+      {
+        "tagid": 6276,
+        "name": "Manajemen Inventaris"
+      },
+      {
+        "tagid": 6310,
+        "name": "Diplomasi"
+      },
+      {
+        "tagid": 6378,
+        "name": "Kejahatan"
+      },
+      {
+        "tagid": 6426,
+        "name": "Pilihan"
+      },
+      {
+        "tagid": 6506,
+        "name": "Pertarungan 3D"
+      },
+      {
+        "tagid": 6621,
+        "name": "Pinball"
+      },
+      {
+        "tagid": 6625,
+        "name": "Manipulasi Waktu"
+      },
+      {
+        "tagid": 6650,
+        "name": "Ketelanjangan"
+      },
+      {
+        "tagid": 6691,
+        "name": "1990-an"
+      },
+      {
+        "tagid": 6702,
+        "name": "Mars"
+      },
+      {
+        "tagid": 6730,
+        "name": "PvE"
+      },
+      {
+        "tagid": 6815,
+        "name": "Digambar Tangan"
+      },
+      {
+        "tagid": 6869,
+        "name": "Nonlinear"
+      },
+      {
+        "tagid": 6910,
+        "name": "Naval"
+      },
+      {
+        "tagid": 6915,
+        "name": "Bela Diri"
+      },
+      {
+        "tagid": 6948,
+        "name": "Roma"
+      },
+      {
+        "tagid": 6971,
+        "name": "Beragam Akhir Cerita"
+      },
+      {
+        "tagid": 7038,
+        "name": "Golf"
+      },
+      {
+        "tagid": 7107,
+        "name": "Real-Time dengan Jeda"
+      },
+      {
+        "tagid": 7108,
+        "name": "Pesta"
+      },
+      {
+        "tagid": 7113,
+        "name": "Urun Dana"
+      },
+      {
+        "tagid": 7178,
+        "name": "Game Pesta"
+      },
+      {
+        "tagid": 7208,
+        "name": "Protagonis Wanita"
+      },
+      {
+        "tagid": 7250,
+        "name": "Linear"
+      },
+      {
+        "tagid": 7309,
+        "name": "Ski"
+      },
+      {
+        "tagid": 7328,
+        "name": "Boling"
+      },
+      {
+        "tagid": 7332,
+        "name": "Membangun Base"
+      },
+      {
+        "tagid": 7368,
+        "name": "Multipemain Lokal"
+      },
+      {
+        "tagid": 7423,
+        "name": "Sniper"
+      },
+      {
+        "tagid": 7432,
+        "name": "Lovecraft"
+      },
+      {
+        "tagid": 7478,
+        "name": "Illuminati"
+      },
+      {
+        "tagid": 7481,
+        "name": "Kontroler"
+      },
+      {
+        "tagid": 7569,
+        "name": "Gerakan Berbasis Kolom"
+      },
+      {
+        "tagid": 7622,
+        "name": "Offroad"
+      },
+      {
+        "tagid": 7702,
+        "name": "Naratif"
+      },
+      {
+        "tagid": 7743,
+        "name": "1980-an"
+      },
+      {
+        "tagid": 7782,
+        "name": "Populer Klasik"
+      },
+      {
+        "tagid": 7926,
+        "name": "AI"
+      },
+      {
+        "tagid": 7948,
+        "name": "Soundtrack"
+      },
+      {
+        "tagid": 8013,
+        "name": "Software"
+      },
+      {
+        "tagid": 8075,
+        "name": "TrackIR"
+      },
+      {
+        "tagid": 8093,
+        "name": "Game Mini"
+      },
+      {
+        "tagid": 8122,
+        "name": "Editor Level"
+      },
+      {
+        "tagid": 8253,
+        "name": "Generasi Prosedural Berbasis Musik"
+      },
+      {
+        "tagid": 8369,
+        "name": "Investigasi"
+      },
+      {
+        "tagid": 8461,
+        "name": "Ditulis dengan Baik"
+      },
+      {
+        "tagid": 8666,
+        "name": "Runner"
+      },
+      {
+        "tagid": 8945,
+        "name": "Manajemen Sumber Daya"
+      },
+      {
+        "tagid": 9130,
+        "name": "Hentai"
+      },
+      {
+        "tagid": 9157,
+        "name": "Dalam Air"
+      },
+      {
+        "tagid": 9204,
+        "name": "Simulasi Imersif"
+      },
+      {
+        "tagid": 9271,
+        "name": "Game Trading Card"
+      },
+      {
+        "tagid": 9541,
+        "name": "Iblis"
+      },
+      {
+        "tagid": 9551,
+        "name": "Simulasi Kencan"
+      },
+      {
+        "tagid": 9564,
+        "name": "Berburu"
+      },
+      {
+        "tagid": 9592,
+        "name": "Narasi Dinamis"
+      },
+      {
+        "tagid": 9803,
+        "name": "Salju"
+      },
+      {
+        "tagid": 9994,
+        "name": "Pengalaman"
+      },
+      {
+        "tagid": 10235,
+        "name": "Simulasi Kehidupan"
+      },
+      {
+        "tagid": 10383,
+        "name": "Transportasi"
+      },
+      {
+        "tagid": 10397,
+        "name": "Meme"
+      },
+      {
+        "tagid": 10437,
+        "name": "Trivia"
+      },
+      {
+        "tagid": 10679,
+        "name": "Penjelajahan Waktu"
+      },
+      {
+        "tagid": 10695,
+        "name": "RPG Berbasis Tim"
+      },
+      {
+        "tagid": 10808,
+        "name": "Supernatural"
+      },
+      {
+        "tagid": 10816,
+        "name": "Layar Terpisah"
+      },
+      {
+        "tagid": 11014,
+        "name": "Fiksi Interaktif"
+      },
+      {
+        "tagid": 11095,
+        "name": "Boss Rush"
+      },
+      {
+        "tagid": 11104,
+        "name": "Kendaraan Tempur"
+      },
+      {
+        "tagid": 11123,
+        "name": "Hanya Mouse"
+      },
+      {
+        "tagid": 11333,
+        "name": "Protagonis Penjahat"
+      },
+      {
+        "tagid": 11634,
+        "name": "Vikings"
+      },
+      {
+        "tagid": 12057,
+        "name": "Tutorial"
+      },
+      {
+        "tagid": 12095,
+        "name": "Konten Seksual"
+      },
+      {
+        "tagid": 12190,
+        "name": "Tinju"
+      },
+      {
+        "tagid": 12286,
+        "name": "Warhammer 40K"
+      },
+      {
+        "tagid": 12472,
+        "name": "Manajemen"
+      },
+      {
+        "tagid": 13070,
+        "name": "Solitaire"
+      },
+      {
+        "tagid": 13190,
+        "name": "Amerika"
+      },
+      {
+        "tagid": 13276,
+        "name": "Tank"
+      },
+      {
+        "tagid": 13382,
+        "name": "Panahan"
+      },
+      {
+        "tagid": 13577,
+        "name": "Berlayar"
+      },
+      {
+        "tagid": 13782,
+        "name": "Eksperimental"
+      },
+      {
+        "tagid": 13906,
+        "name": "Pengembangan Game"
+      },
+      {
+        "tagid": 14139,
+        "name": "Taktis Berbasis Giliran"
+      },
+      {
+        "tagid": 14153,
+        "name": "Dungeon & Naga"
+      },
+      {
+        "tagid": 14720,
+        "name": "Nostalgia"
+      },
+      {
+        "tagid": 14906,
+        "name": "Kontrol Aneh"
+      },
+      {
+        "tagid": 15045,
+        "name": "Penerbangan"
+      },
+      {
+        "tagid": 15172,
+        "name": "Obrolan"
+      },
+      {
+        "tagid": 15277,
+        "name": "Filosofis"
+      },
+      {
+        "tagid": 15339,
+        "name": "Dokumenter"
+      },
+      {
+        "tagid": 15564,
+        "name": "Memancing"
+      },
+      {
+        "tagid": 15868,
+        "name": "Motocross"
+      },
+      {
+        "tagid": 15954,
+        "name": "Protagonis Hening"
+      },
+      {
+        "tagid": 16094,
+        "name": "Mitologi"
+      },
+      {
+        "tagid": 16250,
+        "name": "Judi"
+      },
+      {
+        "tagid": 16598,
+        "name": "Simulasi Ruang Angkasa"
+      },
+      {
+        "tagid": 16689,
+        "name": "Manajemen Waktu"
+      },
+      {
+        "tagid": 17015,
+        "name": "Manusia Serigala"
+      },
+      {
+        "tagid": 17305,
+        "name": "RPG Strategi"
+      },
+      {
+        "tagid": 17337,
+        "name": "Lemmings"
+      },
+      {
+        "tagid": 17389,
+        "name": "Tabletop"
+      },
+      {
+        "tagid": 17770,
+        "name": "Multipemain  Asinkron"
+      },
+      {
+        "tagid": 17894,
+        "name": "Kucing"
+      },
+      {
+        "tagid": 17927,
+        "name": "Biliar"
+      },
+      {
+        "tagid": 18594,
+        "name": "FMV"
+      },
+      {
+        "tagid": 19568,
+        "name": "Bersepeda"
+      },
+      {
+        "tagid": 19780,
+        "name": "Kapal Selam"
+      },
+      {
+        "tagid": 19995,
+        "name": "Komedi Gelap"
+      },
+      {
+        "tagid": 21006,
+        "name": "Bawah Tanah"
+      },
+      {
+        "tagid": 21725,
+        "name": "RPG Taktis"
+      },
+      {
+        "tagid": 21978,
+        "name": "VR"
+      },
+      {
+        "tagid": 22602,
+        "name": "Agrikultur"
+      },
+      {
+        "tagid": 22955,
+        "name": "Golf Mini"
+      },
+      {
+        "tagid": 24003,
+        "name": "Game Kata"
+      },
+      {
+        "tagid": 24904,
+        "name": "NSFW"
+      },
+      {
+        "tagid": 25085,
+        "name": "Ramah Sentuhan"
+      },
+      {
+        "tagid": 26921,
+        "name": "Simulasi Politik"
+      },
+      {
+        "tagid": 27758,
+        "name": "Kontrol Suara"
+      },
+      {
+        "tagid": 28444,
+        "name": "Seluncur Salju"
+      },
+      {
+        "tagid": 29363,
+        "name": "3D Vision"
+      },
+      {
+        "tagid": 29482,
+        "name": "Souls-like"
+      },
+      {
+        "tagid": 29855,
+        "name": "Nuansa"
+      },
+      {
+        "tagid": 30358,
+        "name": "Alam"
+      },
+      {
+        "tagid": 30927,
+        "name": "Rubah"
+      },
+      {
+        "tagid": 31275,
+        "name": "Berbasis Teks"
+      },
+      {
+        "tagid": 31579,
+        "name": "Otome"
+      },
+      {
+        "tagid": 32322,
+        "name": "Deckbuilding"
+      },
+      {
+        "tagid": 33572,
+        "name": "Mahjong"
+      },
+      {
+        "tagid": 35079,
+        "name": "Simulasi Pekerjaan"
+      },
+      {
+        "tagid": 37799,
+        "name": "Combat Flight Simulator"
+      },
+      {
+        "tagid": 40500,
+        "name": "Sexual Themes"
+      },
+      {
+        "tagid": 42089,
+        "name": "Mengagetkan"
+      },
+      {
+        "tagid": 42329,
+        "name": "Pengkodean"
+      },
+      {
+        "tagid": 42804,
+        "name": "Roguelike Aksi"
+      },
+      {
+        "tagid": 44868,
+        "name": "LGBTQ+"
+      },
+      {
+        "tagid": 47827,
+        "name": "Gulat"
+      },
+      {
+        "tagid": 49213,
+        "name": "Rugbi"
+      },
+      {
+        "tagid": 51306,
+        "name": "Luar Negeri"
+      },
+      {
+        "tagid": 56690,
+        "name": "Rail Shooter"
+      },
+      {
+        "tagid": 61357,
+        "name": "Musik Elektrik"
+      },
+      {
+        "tagid": 71389,
+        "name": "Mengeja"
+      },
+      {
+        "tagid": 87918,
+        "name": "Simulasi Pertanian"
+      },
+      {
+        "tagid": 91114,
+        "name": "Penjaga Toko"
+      },
+      {
+        "tagid": 92092,
+        "name": "Jet"
+      },
+      {
+        "tagid": 96359,
+        "name": "Skating"
+      },
+      {
+        "tagid": 97376,
+        "name": "Nyaman"
+      },
+      {
+        "tagid": 117648,
+        "name": "Musik 8-bit"
+      },
+      {
+        "tagid": 123332,
+        "name": "Sepeda"
+      },
+      {
+        "tagid": 129761,
+        "name": "ATV"
+      },
+      {
+        "tagid": 143739,
+        "name": "Elektronik"
+      },
+      {
+        "tagid": 150626,
+        "name": "Gaming"
+      },
+      {
+        "tagid": 158638,
+        "name": "Kriket"
+      },
+      {
+        "tagid": 176733,
+        "name": "Pencocokan Ubin"
+      },
+      {
+        "tagid": 176981,
+        "name": "Battle Royale"
+      },
+      {
+        "tagid": 180368,
+        "name": "Keyakinan"
+      },
+      {
+        "tagid": 189941,
+        "name": "Instrumen Musik"
+      },
+      {
+        "tagid": 198631,
+        "name": "Dungeon Misteri"
+      },
+      {
+        "tagid": 198913,
+        "name": "Sepeda Motor"
+      },
+      {
+        "tagid": 220585,
+        "name": "Simulasi Koloni"
+      },
+      {
+        "tagid": 233824,
+        "name": "Feature Film"
+      },
+      {
+        "tagid": 252854,
+        "name": "BMX"
+      },
+      {
+        "tagid": 255534,
+        "name": "Automasi"
+      },
+      {
+        "tagid": 323922,
+        "name": "Musou"
+      },
+      {
+        "tagid": 324176,
+        "name": "Hoki"
+      },
+      {
+        "tagid": 337964,
+        "name": "Musik Rock"
+      },
+      {
+        "tagid": 348922,
+        "name": "Perangkat Steam"
+      },
+      {
+        "tagid": 353880,
+        "name": "Looter Shooter"
+      },
+      {
+        "tagid": 363767,
+        "name": "Snooker"
+      },
+      {
+        "tagid": 379975,
+        "name": "Clicker"
+      },
+      {
+        "tagid": 454187,
+        "name": "Rougelike Klasik"
+      },
+      {
+        "tagid": 552282,
+        "name": "Menyentuh"
+      },
+      {
+        "tagid": 603297,
+        "name": "Hardware"
+      },
+      {
+        "tagid": 615955,
+        "name": "Idler"
+      },
+      {
+        "tagid": 620519,
+        "name": "Pahlawan Penembak"
+      },
+      {
+        "tagid": 745697,
+        "name": "Deduksi Sosial"
+      },
+      {
+        "tagid": 769306,
+        "name": "Escape Room"
+      },
+      {
+        "tagid": 776177,
+        "name": "360 Video"
+      },
+      {
+        "tagid": 791774,
+        "name": "Pertarungan Kartu"
+      },
+      {
+        "tagid": 847164,
+        "name": "Bola Voli"
+      },
+      {
+        "tagid": 856791,
+        "name": "VR Asimetris"
+      },
+      {
+        "tagid": 916648,
+        "name": "Kolektor Makhluk"
+      },
+      {
+        "tagid": 922563,
+        "name": "Roguevania"
+      },
+      {
+        "tagid": 1084988,
+        "name": "Auto Battler"
+      },
+      {
+        "tagid": 1091588,
+        "name": "Roguelike Deckbuilder"
+      },
+      {
+        "tagid": 1100686,
+        "name": "Simulasi Wabah"
+      },
+      {
+        "tagid": 1100687,
+        "name": "Simulasi Mobil"
+      },
+      {
+        "tagid": 1100688,
+        "name": "Simulasi Medis"
+      },
+      {
+        "tagid": 1100689,
+        "name": "Seni Survival Dunia Terbuka"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extraction Shooter"
+      },
+      {
+        "tagid": 1220528,
+        "name": "Simulasi Hobi"
+      },
+      {
+        "tagid": 1254546,
+        "name": "Sepak Bola"
+      },
+      {
+        "tagid": 1254552,
+        "name": "Football (American)"
+      }
+    ]
+  }
+}
