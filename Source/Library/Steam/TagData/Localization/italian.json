@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "599772360",
+    "version_hash": "4055112918",
     "tags": [
       {
         "tagid": 9,
@@ -364,7 +364,7 @@
       },
       {
         "tagid": 1775,
-        "name": "PVP"
+        "name": "PvP"
       },
       {
         "tagid": 1777,
@@ -864,7 +864,7 @@
       },
       {
         "tagid": 5350,
-        "name": "Per bambini"
+        "name": "Per la famiglia"
       },
       {
         "tagid": 5363,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Crafting e sopravvivenza a mondo aperto"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Sparatutto di estrazione"
       },
       {
         "tagid": 1220528,
