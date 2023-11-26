@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "3545862273",
+    "version_hash": "4075741037",
     "tags": [
       {
         "tagid": 9,
@@ -1604,7 +1604,7 @@
       },
       {
         "tagid": 97376,
-        "name": "Meghitt"
+        "name": "Hangulatos"
       },
       {
         "tagid": 117648,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Nyílt világú túlélő-barkácsolós"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Kihozós-lövöldözős"
       },
       {
         "tagid": 1220528,
