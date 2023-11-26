@@ -62,7 +62,7 @@ namespace SteamLibrary.SteamShared
                 case "hu_HU": return "hungarian";
                 case "it_IT": return "italian";
                 case "ja_JP": return "japanese";
-                case "ko_KR": return "korean";
+                case "ko_KR": return "koreana";
                 case "nl_NL": return "dutch";
                 case "no_NO": return "norwegian";
                 case "pl_PL": return "polish";
@@ -215,8 +215,8 @@ namespace SteamLibrary.SteamShared
             {
                 Name = name;
                 Field = field;
-    }
-}
+            }
+        }
 
         public List<NamedField> SteamDeckCompatibilityFieldOptions { get; set; }
 
