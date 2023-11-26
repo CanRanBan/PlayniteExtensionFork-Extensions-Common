@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1431583156",
+    "version_hash": "4139892335",
     "tags": [
       {
         "tagid": 9,
@@ -1772,7 +1772,11 @@
       },
       {
         "tagid": 1100689,
-        "name": "Survie en monde ouvert"
+        "name": "Survie et fabrication en monde ouvert"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Tir et extraction"
       },
       {
         "tagid": 1220528,
