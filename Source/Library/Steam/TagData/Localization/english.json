@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "3951532120",
+    "version_hash": "1771848217",
     "tags": [
       {
         "tagid": 9,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Open World Survival Craft"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extraction Shooter"
       },
       {
         "tagid": 1220528,
