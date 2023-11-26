@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "4004098871",
+    "version_hash": "2658049206",
     "tags": [
       {
         "tagid": 9,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Open wereld met survival"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extractieshooter"
       },
       {
         "tagid": 1220528,
