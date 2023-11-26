@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "2346847519",
+    "version_hash": "1666836636",
     "tags": [
       {
         "tagid": 9,
@@ -1588,7 +1588,7 @@
       },
       {
         "tagid": 87918,
-        "name": "Farmsimulation"
+        "name": "Landwirtschaftssimulation"
       },
       {
         "tagid": 91114,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Open-World-Survival-Craft"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Extraction-Shooter"
       },
       {
         "tagid": 1220528,
