@@ -72,7 +72,7 @@ namespace SteamLibrary.SteamShared
 
         private string GetPackedTagNameFilePath()
         {
-            var path = Path.Combine(extensionFolder, "TagLocalization", $"{settings?.LanguageKey}.json");
+            var path = Path.Combine(extensionFolder, "TagData", "Localization", $"{settings?.LanguageKey}.json");
             return Paths.FixPathLength(path);
         }
 
