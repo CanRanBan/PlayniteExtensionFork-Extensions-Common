@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "1728710655",
+    "version_hash": "4014383641",
     "tags": [
       {
         "tagid": 9,
@@ -28,7 +28,7 @@
       },
       {
         "tagid": 122,
-        "name": "RPG"
+        "name": "Roolipelit"
       },
       {
         "tagid": 128,
@@ -1773,6 +1773,10 @@
       {
         "tagid": 1100689,
         "name": "Avoimen maailman selviytymispeli"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Saalisräiskintä"
       },
       {
         "tagid": 1220528,
