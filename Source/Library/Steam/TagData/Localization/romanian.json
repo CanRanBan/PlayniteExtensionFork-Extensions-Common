@@ -1,6 +1,6 @@
 {
   "response": {
-    "version_hash": "3411093696",
+    "version_hash": "2949274888",
     "tags": [
       {
         "tagid": 9,
@@ -1772,7 +1772,11 @@
       },
       {
         "tagid": 1100689,
-        "name": "Supraviețuire - lume deschisă"
+        "name": "Supraviețuire cu lume deschisă"
+      },
+      {
+        "tagid": 1199779,
+        "name": "Shooter cu extracții"
       },
       {
         "tagid": 1220528,
