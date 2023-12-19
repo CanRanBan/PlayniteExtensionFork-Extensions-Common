@@ -219,9 +219,17 @@ namespace SteamLibrary
                 MainAccount = Settings.RuntimeApiKey
             };
 
-            Settings.AdditionalAccounts?.
-                Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RuntimeApiKey.IsNullOrWhiteSpace()).
-                ForEach(a => keys.Accounts.Add(a.AccountId, a.RuntimeApiKey));
+            if (Settings.AdditionalAccounts.HasItems())
+            {
+                foreach (var account in Settings.AdditionalAccounts.Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RuntimeApiKey.IsNullOrWhiteSpace()))
+                {
+                    if (!keys.Accounts.ContainsKey(account.AccountId))
+                    {
+                        keys.Accounts.Add(account.AccountId, account.RuntimeApiKey);
+                    }
+                }
+            }
+
             FileSystem.PrepareSaveFile(ApiKeysPath);
             Encryption.EncryptToFile(
                 ApiKeysPath,

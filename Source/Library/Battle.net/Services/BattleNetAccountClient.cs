@@ -13,6 +13,7 @@ namespace BattleNetLibrary.Services
         private const string apiStatusUrl = @"https://account.battle.net/api/";
         private const string gamesUrl = @"https://account.battle.net/api/games-and-subs";
         private const string classicGamesUrl = @"https://account.battle.net/api/classic-games";
+        private const string defaultLogoutUri = @"https://account.battle.net:443/api/logout";
         private static ILogger logger = LogManager.GetLogger();
         private IWebView webView;
 
@@ -49,7 +50,7 @@ namespace BattleNetLibrary.Services
                 }
             };
 
-            webView.Navigate(apiUrls.logoutUri);
+            webView.Navigate(apiUrls.logoutUri ?? defaultLogoutUri);
             webView.OpenDialog();
         }
 
@@ -85,8 +86,14 @@ namespace BattleNetLibrary.Services
                         }
                     }
 
-                    var deserialized = Serialization.FromJson<BattleNetApiStatus>(responseText);
-                    return deserialized;
+                    if (Serialization.TryFromJson<BattleNetApiStatus>(responseText, out var status))
+                    {
+                        return status;
+                    }
+                    else
+                    {
+                        return new BattleNetApiStatus();
+                    }
                 }
 
                 return null;
@@ -99,7 +106,14 @@ namespace BattleNetLibrary.Services
             webView.NavigateAndWait("https://account.battle.net:443/oauth2/authorization/account-settings");
             webView.NavigateAndWait(apiStatusUrl);
             var textStatus = webView.GetPageText();
-            return Serialization.FromJson<BattleNetApiStatus>(textStatus);
+            if (Serialization.TryFromJson<BattleNetApiStatus>(textStatus, out var status))
+            {
+                return status;
+            }
+            else
+            {
+                return new BattleNetApiStatus();
+            }
         }
     }
 }
