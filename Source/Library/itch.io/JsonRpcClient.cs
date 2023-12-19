@@ -261,8 +261,6 @@ namespace ItchioLibrary
 
                 Thread.Sleep(50);
             }
-
-            throw new JsonRpcException(0, "");
         }
 
         private int SendData(string data)
