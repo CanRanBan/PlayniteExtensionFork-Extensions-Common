@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_HumbleBundle
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/HumbleLibrary/icon.png
+AddonId: JosefNemec_Library_HumbleBundle
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/HumbleLibrary_Builtin.yaml
-ShortDescription: Imports games from Humble store library.
-Name: Humble library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Humble%20Bundle/Resources/HumbleBundleLibraryIcon.ico
+Name: Humble Bundle Library
+ShortDescription: Imports games available on PC from Humble Bundle.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Humble Bundle: https://www.humblebundle.com/
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_HumbleBundle.yaml
+Description: The "Humble Bundle Library" Playnite extension imports games available on PC from Humble Bundle. It optionally requires "Humble App" for additional features. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Humble", "Bundle"]
