@@ -1,7 +1,18 @@
-﻿Id: JosefNemec_Library_BattleNet
+Id: JosefNemec_Library_BattleNet
 Name: Battle.net Library
 Author: Josef Nemec
 Version: 2.16.1
 Module: BattleNetLibrary.dll
 Type: GameLibrary
 Icon: Resources\BattleNetLibraryIcon.ico
+Links:
+  - Name: GitHub (Source code)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+  - Name: Wiki (Introduction and Help)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+  - Name: Battle.net Desktop App
+    Url: https://download.battle.net/desktop
+  - Name: Playnite Discord (#extensions-support)
+    Url: https://discord.com/channels/365863063296933888/808419165311467630
+  - Name: Issues (Feature requests and Bugs)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
