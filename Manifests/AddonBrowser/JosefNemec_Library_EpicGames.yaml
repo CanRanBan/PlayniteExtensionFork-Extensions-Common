@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_EpicGames
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/EpicLibrary/Resources/epicicon.png
+AddonId: JosefNemec_Library_EpicGames
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/EpicGamesLibrary_Builtin.yaml
-ShortDescription: Imports games from Epic store library.
-Name: Epic Store library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Epic%20Games/Resources/EpicGamesLibraryIcon.ico
+Name: Epic Games Library
+ShortDescription: Imports games available on PC from Epic Games.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Epic Games: https://www.epicgames.com/
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_EpicGames.yaml
+Description: The "Epic Games Library" Playnite extension imports games available on PC from Epic Games. It requires "Epic Games Launcher" to be properly installed. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Epic", "Games"]
