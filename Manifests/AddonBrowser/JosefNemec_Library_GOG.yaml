@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_GOG
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/GogLibrary/Resources/gogicon.png
+AddonId: JosefNemec_Library_GOG
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/GogLibrary_Builtin.yaml
-ShortDescription: Imports games from GOG game library.
-Name: GOG library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/GOG/Resources/GOGLibraryIcon.ico
+Name: GOG Library
+ShortDescription: Imports games available on PC from GOG.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    GOG Galaxy: https://www.gog.com/galaxy
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_GOG.yaml
+Description: The "GOG Library" Playnite extension imports games available on PC from GOG. It optionally requires "GOG Galaxy" for additional features. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "GOG", "Galaxy"]
