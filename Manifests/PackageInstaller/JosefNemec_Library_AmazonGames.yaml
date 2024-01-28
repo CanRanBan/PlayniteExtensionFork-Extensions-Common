@@ -1,38 +1,8 @@
 AddonId: JosefNemec_Library_AmazonGames
 Packages:
-  - Version: 2.1
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-09-08
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/AmazonLibrary_Builtin_2_1.pext
+  - Version: 2.6.1
+    RequiredApiVersion: 6.9.0
+    ReleaseDate: 2024-xx-xx
+    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/v2.6.1/JosefNemec_Library_AmazonGames_v2.6.1.pext
     Changelog:
-      - Updated to support Playnite 9 beta 2
-  - Version: 2.0
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-09-03
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/AmazonLibrary_Builtin_2_0.pext
-    Changelog:
-      - Playnite 9 support
-  - Version: 2.3
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-10-04
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_3.pext
-    Changelog:
-      - Fixed import of some installed games not working properly
-  - Version: 2.4
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-12-13
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_4.pext
-    Changelog:
-      - Fixed games not being imported properly
-  - Version: 2.5
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2022-06-02
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_5.pext
-    Changelog:
-      - Fixed import of installed games not working properly
-  - Version: 2.6
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2022-09-30
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_6.pext
-    Changelog:
-      - Fixed ScummVM based games not starting properly
+      - 'Unreleased'
