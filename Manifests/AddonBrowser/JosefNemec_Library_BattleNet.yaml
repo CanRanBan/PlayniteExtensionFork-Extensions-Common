@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_BattleNet
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/BattleNetLibrary/Resources/battleneticon.png
+AddonId: JosefNemec_Library_BattleNet
 Type: GameLibrary
-InstallerManifestUrl: https://raw.githubusercontent.com/JosefNemec/PlayniteExtensions/master/manifests/BattlenetLibrary_Builtin.yaml
-ShortDescription: Imports games from Battle.net library.
-Name: Battle.net library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Battle.net/Resources/BattleNetLibraryIcon.ico
+Name: Battle.net Library
+ShortDescription: Imports games available on PC from Battle.net.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Battle.net Desktop App: https://download.battle.net/desktop
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_BattleNet.yaml
+Description: The "Battle.net Library" Playnite extension imports games available on PC from Battle.net. It requires "Battle.net Desktop App" to be properly installed. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Battle.net", "Blizzard", "Entertainment"]
