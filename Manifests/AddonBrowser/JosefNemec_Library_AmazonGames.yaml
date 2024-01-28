@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_AmazonGames
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/AmazonGamesLibrary/icon.png
+AddonId: JosefNemec_Library_AmazonGames
 Type: GameLibrary
-InstallerManifestUrl: https://raw.githubusercontent.com/JosefNemec/PlayniteExtensions/master/manifests/AmazonLibrary_Builtin.yaml
-ShortDescription: Imports games from Amazon/Twitch game library.
-Name: AmazonGames library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Amazon%20Games/Resources/AmazonGamesLibraryIcon.ico
+Name: Amazon Games Library
+ShortDescription: Imports games available on PC from Amazon Games.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Prime Gaming: https://gaming.amazon.com/
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_AmazonGames.yaml
+Description: The "Amazon Games Library" Playnite extension imports games available on PC from Amazon Games. Amazon Games is part of Prime Gaming. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Amazon", "Games", "Prime", "Gaming"]
