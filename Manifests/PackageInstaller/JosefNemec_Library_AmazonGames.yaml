@@ -3,6 +3,6 @@ Packages:
   - Version: 2.6.1
     RequiredApiVersion: 6.9.0
     ReleaseDate: 2024-xx-xx
-    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/v2.6.1/JosefNemec_Library_AmazonGames_v2.6.1.pext
+    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_AmazonGames_v2.6.1/JosefNemec_Library_AmazonGames_v2.6.1.pext
     Changelog:
       - 'Unreleased'
