@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_EA
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/OriginLibrary/Resources/originicon.png
+AddonId: JosefNemec_Library_EA
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/OriginLibrary_Builtin.yaml
-ShortDescription: Imports games from Origin game library.
-Name: Origin library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/EA/Resources/EALibraryIcon.ico
+Name: EA Library
+ShortDescription: Imports games available on PC from EA.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    EA App: https://www.ea.com/games/library/pc-download
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_EA.yaml
+Description: The "EA Library" Playnite extension imports games available on PC from EA. It requires "EA App" to be properly installed. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "EA", "Electronic", "Arts"]
