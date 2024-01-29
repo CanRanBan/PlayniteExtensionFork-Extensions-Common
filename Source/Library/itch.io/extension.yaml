@@ -1,7 +1,18 @@
-﻿Id: JosefNemec_Library_ItchIo
+Id: JosefNemec_Library_ItchIo
 Name: itch.io Library
 Author: Josef Nemec
 Version: 2.6.1
 Module: ItchIoLibrary.dll
 Type: GameLibrary
 Icon: Resources\ItchIoLibraryIcon.ico
+Links:
+  - Name: GitHub (Source code)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+  - Name: Wiki (Introduction and Help)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+  - Name: itch.io App
+    Url: https://itch.io/app
+  - Name: Playnite Discord (#extensions-support)
+    Url: https://discord.com/channels/365863063296933888/808419165311467630
+  - Name: Issues (Feature requests and Bugs)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
