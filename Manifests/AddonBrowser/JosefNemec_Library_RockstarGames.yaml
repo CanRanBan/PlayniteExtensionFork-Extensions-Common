@@ -1,12 +1,16 @@
-﻿AddonId: JosefNemec_Library_RockstarGames
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/RockstarLibrary/icon.png
+AddonId: JosefNemec_Library_RockstarGames
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/Rockstar_Games_Library.yaml
-ShortDescription: Imports games from Rockstar Games launcher.
-Description: Only imports installed games.
-Name: Rockstar Games library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Rockstar%20Games/Resources/RockstarGamesLibraryIcon.ico
+Name: Rockstar Games Library
+ShortDescription: Imports games available on PC from Rockstar Games.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Rockstar Games Launcher: https://socialclub.rockstargames.com/rockstar-games-launcher
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_RockstarGames.yaml
+Description: The "Rockstar Games Library" Playnite extension imports games available on PC from Rockstar Games. It requires "Rockstar Games Launcher" to be properly installed. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Rockstar", "Games"]
