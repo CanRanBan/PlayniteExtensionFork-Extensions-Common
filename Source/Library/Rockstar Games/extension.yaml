@@ -1,7 +1,18 @@
-﻿Id: JosefNemec_Library_RockstarGames
+Id: JosefNemec_Library_RockstarGames
 Name: Rockstar Games Library
 Author: Josef Nemec
 Version: 2.8.1
 Module: RockstarGamesLibrary.dll
 Type: GameLibrary
 Icon: Resources\RockstarGamesLibraryIcon.ico
+Links:
+  - Name: GitHub (Source code)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+  - Name: Wiki (Introduction and Help)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+  - Name: Rockstar Games Launcher
+    Url: https://socialclub.rockstargames.com/rockstar-games-launcher
+  - Name: Playnite Discord (#extensions-support)
+    Url: https://discord.com/channels/365863063296933888/808419165311467630
+  - Name: Issues (Feature requests and Bugs)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
