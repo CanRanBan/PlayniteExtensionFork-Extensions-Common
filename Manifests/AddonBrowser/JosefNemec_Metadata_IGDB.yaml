@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Metadata_IGDB
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Metadata/IGDBMetadata/Resources/igdbicon.png
+AddonId: JosefNemec_Metadata_IGDB
 Type: MetadataProvider
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/IGDBMetadata_Builtin.yaml
-ShortDescription: Imports game metadata from IGDB.com game database.
-Name: IGDB metadata provider
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Metadata/IGDB/Resources/IGDBMetadataIcon.ico
+Name: IGDB Metadata
+ShortDescription: Imports metadata from IGDB.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    IGDB: https://www.igdb.com/
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Metadata_IGDB.yaml
+Description: The "IGDB Metadata" Playnite extension imports metadata from IGDB. Certain types of games might be missing on IGDB. The "IGDB ID" depicted in the information part of database entries can be used for strict matching of metadata searches.
+Tags: ["Josef Nemec", "Metadata", "IGDB"]
