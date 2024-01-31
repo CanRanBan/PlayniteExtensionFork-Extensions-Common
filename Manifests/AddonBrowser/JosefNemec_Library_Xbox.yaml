@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_Xbox
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/XboxLibrary/icon.png
+AddonId: JosefNemec_Library_Xbox
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/XboxLibrary_Builtin.yaml
-ShortDescription: Imports games from Xbox Live account.
-Name: Xbox library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Xbox/Resources/XboxLibraryIcon.ico
+Name: Xbox Library
+ShortDescription: Imports games available on PC from Xbox / Microsoft Store.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Xbox App: https://www.xbox.com/apps/xbox-app-for-pc
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_Xbox.yaml
+Description: The "Xbox Library" Playnite extension imports games available on PC from Xbox / Microsoft Store. It optionally requires "Xbox App" for additional features. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Xbox", "Microsoft", "Store"]
