@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_Steam
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/SteamLibrary/Resources/steamicon.png
+AddonId: JosefNemec_Library_Steam
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/SteamLibrary_Builtin.yaml
-ShortDescription: Imports games from Steam library.
-Name: Steam library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Steam/Resources/SteamLibraryIcon.ico
+Name: Steam Library
+ShortDescription: Imports games available on PC from Steam.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Steam: https://store.steampowered.com/about/
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_Steam.yaml
+Description: The "Steam Library" Playnite extension imports games available on PC from Steam. It requires "Steam" to be properly installed. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Steam"]
