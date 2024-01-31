@@ -1,7 +1,18 @@
-﻿Id: JosefNemec_Library_Steam
+Id: JosefNemec_Library_Steam
 Name: Steam Library
 Author: Josef Nemec
 Version: 2.23.1
 Module: SteamLibrary.dll
 Type: GameLibrary
 Icon: Resources\SteamLibraryIcon.ico
+Links:
+  - Name: GitHub (Source code)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+  - Name: Wiki (Introduction and Help)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+  - Name: Steam
+    Url: https://store.steampowered.com/about/
+  - Name: Playnite Discord (#extensions-support)
+    Url: https://discord.com/channels/365863063296933888/808419165311467630
+  - Name: Issues (Feature requests and Bugs)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
