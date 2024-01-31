@@ -1,7 +1,18 @@
-﻿Id: JosefNemec_Metadata_Steam
+Id: JosefNemec_Metadata_Steam
 Name: Steam Metadata
 Author: Josef Nemec
 Version: 2.14.1
 Module: SteamMetadata.dll
 Type: MetadataProvider
 Icon: Resources\SteamMetadataIcon.ico
+Links:
+  - Name: GitHub (Source code)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+  - Name: Wiki (Introduction and Help)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+  - Name: Steam
+    Url: https://store.steampowered.com/
+  - Name: Playnite Discord (#extensions-support)
+    Url: https://discord.com/channels/365863063296933888/808419165311467630
+  - Name: Issues (Feature requests and Bugs)
+    Url: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
