@@ -1,11 +1,16 @@
-﻿AddonId: JosefNemec_Library_UbisoftConnect
-IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/UplayLibrary/Resources/uplayicon.png
+AddonId: JosefNemec_Library_UbisoftConnect
 Type: GameLibrary
-InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/UplayLibrary_Builtin.yaml
-ShortDescription: Imports games from Ubisoft Connect game library.
-Name: Ubisoft Connect library integration
-Author: Playnite
+IconUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Source/Library/Ubisoft%20Connect/Resources/UbisoftConnectLibraryIcon.ico
+Name: Ubisoft Connect Library
+ShortDescription: Imports games available on PC from Ubisoft Connect.
+Author: Josef Nemec
+SourceUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
 Links:
-    Website: https://github.com/JosefNemec/PlayniteExtensions
-    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
-SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
+    GitHub (Source code): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common
+    Wiki (Introduction and Help): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/wiki
+    Ubisoft Connect: https://ubisoftconnect.com/
+    Playnite Discord (#extensions-support): https://discord.com/channels/365863063296933888/808419165311467630
+    Issues (Feature requests and Bugs): https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/issues
+InstallerManifestUrl: https://raw.githubusercontent.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/main/Manifests/PackageInstaller/JosefNemec_Library_UbisoftConnect.yaml
+Description: The "Ubisoft Connect Library" Playnite extension imports games available on PC from Ubisoft Connect. It requires "Ubisoft Connect" to be properly installed. Availability and game selection might differ by country.
+Tags: ["Josef Nemec", "Library", "Ubisoft", "Connect"]
