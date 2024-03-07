@@ -1,8 +1,8 @@
 AddonId: JosefNemec_Library_ItchIo
 Packages:
-  - Version: 2.6.1
+  - Version: 2.7.1
     RequiredApiVersion: 6.9.0
     ReleaseDate: 2024-xx-xx
-    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_ItchIo_v2.6.1/JosefNemec_Library_ItchIo_v2.6.1.pext
+    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_ItchIo_v2.7.1/JosefNemec_Library_ItchIo_v2.7.1.pext
     Changelog:
       - 'Unreleased'

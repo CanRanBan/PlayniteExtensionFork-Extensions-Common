@@ -1,10 +1,30 @@
 ﻿using BattleNetLibrary.Models;
 using Playnite.SDK.Models;
+using ProtoBuf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace BattleNetLibrary
 {
+    [ProtoContract]
+    public class InstalledProductInfo
+    {
+        [ProtoContract]
+        public class InstallData
+        {
+            [ProtoMember(1)]
+            public string Path { get; set; }
+        }
+
+        [ProtoMember(1)]
+        public string InternalId { get; set; }
+        [ProtoMember(2)]
+        public string ProductId { get; set; }
+        [ProtoMember(3)]
+        public InstallData Data { get; set; }
+    }
+
     public class BattleNetGames
     {
         public static readonly List<BNetApp> Games = new List<BNetApp>()
@@ -314,7 +334,7 @@ namespace BattleNetLibrary
 
         public static BNetApp GetAppDefinition(string productId)
         {
-            return Games.FirstOrDefault(a => a.ProductId == productId);
+            return Games.FirstOrDefault(a => string.Equals(a.ProductId, productId, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
