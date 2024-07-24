@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Playnite.Common;

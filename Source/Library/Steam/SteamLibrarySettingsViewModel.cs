@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Media;
-using Playnite.Commands;
 using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using PlayniteExtensions.Common;
-using Steam;
-using SteamLibrary.Models;
 using SteamLibrary.SteamShared;
 
 namespace SteamLibrary
