@@ -1,8 +1,8 @@
 AddonId: JosefNemec_Library_EA
 Packages:
-  - Version: 2.12.1
+  - Version: 2.13.1
     RequiredApiVersion: 6.9.0
     ReleaseDate: 2024-xx-xx
-    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_EA_v2.12.1/JosefNemec_Library_EA_v2.12.1.pext
+    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_EA_v2.13.1/JosefNemec_Library_EA_v2.13.1.pext
     Changelog:
       - 'Unreleased'

@@ -1,8 +1,8 @@
 AddonId: JosefNemec_Library_BattleNet
 Packages:
-  - Version: 2.19.1
+  - Version: 2.20.1
     RequiredApiVersion: 6.9.0
     ReleaseDate: 2024-xx-xx
-    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_BattleNet_v2.19.1/JosefNemec_Library_BattleNet_v2.19.1.pext
+    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_BattleNet_v2.20.1/JosefNemec_Library_BattleNet_v2.20.1.pext
     Changelog:
       - 'Unreleased'

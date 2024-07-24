@@ -50,7 +50,7 @@ namespace EpicLibrary
                 }
 
                 // DLC
-                if (manifest.AppName != manifest.MainGameAppName)
+                if (manifest.AppName != manifest.MainGameAppName && (manifest.AppCategories?.Any(a => a == "addons/launchable") == false))
                 {
                     continue;
                 }
@@ -119,11 +119,16 @@ namespace EpicLibrary
                     continue;
                 }
 
-                if (catalogItem?.categories?.Any(a => a.path == "dlc") == true)
+                if ((catalogItem?.mainGameItem != null) && (catalogItem.categories?.Any(a => a.path == "addons/launchable") == false))
                 {
                     continue;
                 }
-                
+
+                if (catalogItem?.categories?.Any(a => a.path == "digitalextras") == true)
+                {
+                    continue;
+                }
+
                 if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
                 {
                     continue;

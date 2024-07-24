@@ -4,6 +4,7 @@ using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,13 +29,13 @@ namespace AmazonGamesLibrary
 
         public override void Install(InstallActionArgs args)
         {
-            if (AmazonGames.IsInstalled)
-            {
-                AmazonGames.StartClient();
-            }
-            else
+            if (!AmazonGames.IsInstalled)
             {
                 ProcessStarter.StartUrl(@"https://www.amazongames.com/en-us/support/prime-gaming/articles/download-and-install-the-amazon-games-app");
+            }
+            else if (!AmazonGames.IsRunning)
+            {
+                AmazonGames.StartClient();
             }
 
             StartInstallWatcher();
@@ -45,6 +46,27 @@ namespace AmazonGamesLibrary
             watcherToken = new CancellationTokenSource();
             await Task.Run(async () =>
             {
+                while (true)
+                {
+                    if (watcherToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
+                    var isServicesInitialized = Process.GetProcessesByName("Amazon Games Services").Length > 0;
+                    var isUiInitialized = Process.GetProcessesByName("Amazon Games UI").Length == 4;
+                    if (isServicesInitialized && isUiInitialized)
+                    {
+                        // The install URI only works when this service is running and
+                        // all the UI processes have been initialized, otherwise it will
+                        // just start the launcher without any further action
+                        ProcessStarter.StartUrl($"amazon-games://install/{Game.GameId}");
+                        break;
+                    }
+
+                    await Task.Delay(1000);
+                }
+
                 while (true)
                 {
                     if (watcherToken.IsCancellationRequested)

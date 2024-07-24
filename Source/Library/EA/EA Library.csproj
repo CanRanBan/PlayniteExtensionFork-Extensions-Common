@@ -85,8 +85,8 @@
     <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\Paths.cs">
       <Link>Include\Playnite\Common\Paths.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\ProcessMonitor.cs">
-      <Link>Include\Playnite\Common\ProcessMonitor.cs</Link>
+    <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\ProcessMonitorOld.cs">
+      <Link>Include\Playnite\Common\ProcessMonitorOld.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Include\Playnite\Source\Playnite\Common\ProcessStarter.cs">
       <Link>Include\Playnite\Common\ProcessStarter.cs</Link>

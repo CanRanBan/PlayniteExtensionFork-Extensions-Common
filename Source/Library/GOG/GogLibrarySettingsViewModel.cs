@@ -1,7 +1,7 @@
-﻿using GogLibrary.Services;
-using Playnite.SDK;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Playnite.SDK;
+using GogLibrary.Services;
 
 namespace GogLibrary
 {
@@ -72,10 +72,11 @@ namespace GogLibrary
         {
             try
             {
-                using (var view = PlayniteApi.WebViews.CreateView(400, 445))
+                using (var view = PlayniteApi.WebViews.CreateView(500, 500))
+                using (var backgroundView = PlayniteApi.WebViews.CreateOffscreenView())
                 {
                     var api = new GogAccountClient(view);
-                    api.Login();
+                    api.Login(backgroundView);
                 }
 
                 OnPropertyChanged(nameof(IsUserLoggedIn));

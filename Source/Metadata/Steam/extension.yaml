@@ -1,7 +1,7 @@
 Id: JosefNemec_Metadata_Steam
 Name: Steam Metadata
 Author: Josef Nemec
-Version: 2.14.1
+Version: 2.15.1
 Module: SteamMetadata.dll
 Type: MetadataProvider
 Icon: Resources\SteamMetadataIcon.ico

@@ -1,7 +1,7 @@
 Id: JosefNemec_Library_BattleNet
 Name: Battle.net Library
 Author: Josef Nemec
-Version: 2.19.1
+Version: 2.20.1
 Module: BattleNetLibrary.dll
 Type: GameLibrary
 Icon: Resources\BattleNetLibraryIcon.ico

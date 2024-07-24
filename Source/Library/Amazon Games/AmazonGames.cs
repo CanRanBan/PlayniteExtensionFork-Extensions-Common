@@ -3,6 +3,7 @@ using Playnite.Common;
 using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -11,6 +12,8 @@ namespace AmazonGamesLibrary
 {
     public class AmazonGames
     {
+        public static bool IsRunning => Process.GetProcessesByName("Amazon Games").Length > 0;
+
         public static string ClientExecPath
         {
             get
