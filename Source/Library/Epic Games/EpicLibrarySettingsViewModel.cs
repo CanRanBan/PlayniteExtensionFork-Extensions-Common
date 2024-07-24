@@ -1,7 +1,7 @@
-﻿using EpicLibrary.Services;
-using Playnite.SDK;
-using System;
+﻿using System;
 using System.Diagnostics;
+using EpicLibrary.Services;
+using Playnite.SDK;
 
 namespace EpicLibrary
 {

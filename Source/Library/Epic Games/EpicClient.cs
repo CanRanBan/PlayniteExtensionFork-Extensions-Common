@@ -1,7 +1,7 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
+using Playnite.Common;
+using Playnite.SDK;
 
 namespace EpicLibrary
 {

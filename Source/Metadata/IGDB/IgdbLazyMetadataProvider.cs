@@ -1,14 +1,14 @@
-﻿using Playnite.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text.RegularExpressions;
+using Playnite.Common;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using PlayniteServices.IGDB;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text.RegularExpressions;
 using static IGDBMetadata.IgdbMetadataPlugin;
 using Igdb = PlayniteServices.IGDB;
 

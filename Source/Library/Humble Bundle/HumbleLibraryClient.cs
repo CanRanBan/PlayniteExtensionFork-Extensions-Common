@@ -1,5 +1,5 @@
-﻿using Playnite.SDK;
-using System;
+﻿using System;
+using Playnite.SDK;
 
 namespace HumbleLibrary
 {

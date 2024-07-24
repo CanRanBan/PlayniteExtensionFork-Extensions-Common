@@ -1,7 +1,7 @@
-﻿using ItchioLibrary.Models;
-using Playnite.SDK;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows;
+using ItchioLibrary.Models;
+using Playnite.SDK;
 
 namespace ItchioLibrary
 {

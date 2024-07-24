@@ -1,9 +1,9 @@
-﻿using GogLibrary.Models;
+﻿using System.Collections.Generic;
+using System.Net;
+using GogLibrary.Models;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Data;
-using System.Collections.Generic;
-using System.Net;
 
 namespace GogLibrary.Services
 {

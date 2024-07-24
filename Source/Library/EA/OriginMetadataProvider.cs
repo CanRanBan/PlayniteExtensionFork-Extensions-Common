@@ -1,10 +1,10 @@
-﻿using OriginLibrary.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using OriginLibrary.Models;
 using OriginLibrary.Services;
 using Playnite.SDK;
 using Playnite.SDK.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace OriginLibrary
 {

@@ -1,13 +1,13 @@
-﻿using EpicLibrary.Services;
-using Playnite.Common;
-using Playnite.SDK;
-using Playnite.SDK.Models;
-using Playnite.SDK.Plugins;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using EpicLibrary.Services;
+using Playnite.Common;
+using Playnite.SDK;
+using Playnite.SDK.Models;
+using Playnite.SDK.Plugins;
 
 namespace EpicLibrary
 {

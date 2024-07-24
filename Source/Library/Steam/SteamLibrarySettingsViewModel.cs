@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
-using System.Threading.Tasks;
-using Playnite.Commands;
-using SteamLibrary.Models;
-using Playnite.SDK;
-using System.Windows.Media;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
-using Steam;
-using System.Collections.ObjectModel;
-using SteamLibrary.SteamShared;
+using System.Threading.Tasks;
+using System.Windows.Media;
+using Playnite.Commands;
+using Playnite.Common;
+using Playnite.SDK;
 using Playnite.SDK.Data;
 using PlayniteExtensions.Common;
-using System.Security.Principal;
-using Playnite.Common;
+using Steam;
+using SteamLibrary.Models;
+using SteamLibrary.SteamShared;
 
 namespace SteamLibrary
 {
@@ -176,7 +176,7 @@ namespace SteamLibrary
                 SaveKeys();
                 Settings.Version = 2;
                 Plugin.SavePluginSettings(Settings);
-        }
+            }
 
             Settings.Version = 2;
             LoadKeys();
@@ -199,7 +199,7 @@ namespace SteamLibrary
                 var keys = Serialization.FromJson<ApiKeyInfo>(str);
                 Settings.RuntimeApiKey = keys.MainAccount;
                 Settings.AdditionalAccounts.ForEach(a =>
-                { 
+                {
                     if (keys.Accounts.TryGetValue(a.AccountId, out var key))
                     {
                         a.RuntimeApiKey = key;

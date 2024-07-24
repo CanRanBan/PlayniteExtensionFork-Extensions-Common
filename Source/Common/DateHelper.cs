@@ -1,6 +1,6 @@
-﻿using Playnite.SDK.Models;
-using System;
+﻿using System;
 using System.Globalization;
+using Playnite.SDK.Models;
 
 namespace PlayniteExtensions.Common
 {

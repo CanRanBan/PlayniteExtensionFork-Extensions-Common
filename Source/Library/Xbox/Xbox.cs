@@ -1,8 +1,8 @@
-﻿using Playnite.Common;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Playnite.Common;
 
 namespace XboxLibrary
 {

@@ -1,7 +1,7 @@
-﻿using HumbleLibrary.Services;
-using Playnite.SDK;
-using System;
+﻿using System;
 using System.Diagnostics;
+using HumbleLibrary.Services;
+using Playnite.SDK;
 
 namespace HumbleLibrary
 {

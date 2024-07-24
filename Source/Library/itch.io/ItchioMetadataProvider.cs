@@ -1,11 +1,11 @@
-﻿using AngleSharp.Html.Parser;
-using Playnite.Common.Web;
-using Playnite.SDK;
-using Playnite.SDK.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using AngleSharp.Html.Parser;
+using Playnite.Common.Web;
+using Playnite.SDK;
+using Playnite.SDK.Models;
 
 namespace ItchioLibrary
 {

@@ -1,9 +1,9 @@
-﻿using Playnite.Common;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Playnite.Common;
 
 namespace RockstarGamesLibrary
 {

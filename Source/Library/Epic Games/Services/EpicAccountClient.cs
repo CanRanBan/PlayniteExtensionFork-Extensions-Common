@@ -1,9 +1,4 @@
-﻿using EpicLibrary.Models;
-using Playnite.Common;
-using Playnite.SDK;
-using Playnite.SDK.Data;
-using PlayniteExtensions.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -14,6 +9,11 @@ using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using EpicLibrary.Models;
+using Playnite.Common;
+using Playnite.SDK;
+using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 
 namespace EpicLibrary.Services
 {

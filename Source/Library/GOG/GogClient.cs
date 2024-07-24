@@ -1,9 +1,9 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Playnite.Common;
+using Playnite.SDK;
 
 namespace GogLibrary
 {

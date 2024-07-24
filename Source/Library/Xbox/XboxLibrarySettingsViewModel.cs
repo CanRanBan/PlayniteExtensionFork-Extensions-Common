@@ -1,7 +1,7 @@
-﻿using Playnite.SDK;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Playnite.SDK;
 using XboxLibrary.Services;
 
 namespace XboxLibrary

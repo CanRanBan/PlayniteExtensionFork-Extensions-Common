@@ -1,8 +1,8 @@
-﻿using ItchioLibrary.Models;
-using Playnite.SDK;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using ItchioLibrary.Models;
+using Playnite.SDK;
 
 namespace ItchioLibrary
 {

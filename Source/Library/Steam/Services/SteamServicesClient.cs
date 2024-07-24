@@ -1,8 +1,8 @@
-﻿using Playnite.SDK;
+﻿using System;
+using System.Collections.Generic;
+using Playnite.SDK;
 using Playnite.Services;
 using SteamLibrary.Models;
-using System;
-using System.Collections.Generic;
 
 namespace SteamLibrary.Services
 {

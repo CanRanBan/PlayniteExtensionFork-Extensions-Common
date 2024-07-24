@@ -1,7 +1,4 @@
-﻿using Playnite.SDK;
-using Playnite.SDK.Data;
-using PlayniteExtensions.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
@@ -12,6 +9,9 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using Playnite.SDK;
+using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 using XboxLibrary.Models;
 
 namespace XboxLibrary.Services

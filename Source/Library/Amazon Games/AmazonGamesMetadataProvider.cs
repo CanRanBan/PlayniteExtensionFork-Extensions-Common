@@ -1,6 +1,6 @@
-﻿using Playnite.SDK;
+﻿using System.Collections.Generic;
+using Playnite.SDK;
 using Playnite.SDK.Models;
-using System.Collections.Generic;
 
 namespace AmazonGamesLibrary
 {

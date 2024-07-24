@@ -1,5 +1,5 @@
-﻿using Playnite.SDK;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Playnite.SDK;
 
 namespace Steam.Models
 {

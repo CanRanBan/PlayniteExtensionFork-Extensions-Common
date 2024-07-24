@@ -1,9 +1,4 @@
-﻿using AmazonGamesLibrary.Models;
-using Microsoft.Win32;
-using Playnite.SDK;
-using Playnite.SDK.Data;
-using PlayniteExtensions.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
@@ -11,6 +6,11 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using AmazonGamesLibrary.Models;
+using Microsoft.Win32;
+using Playnite.SDK;
+using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 
 namespace AmazonGamesLibrary.Services
 {

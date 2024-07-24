@@ -1,8 +1,8 @@
-﻿using AmazonGamesLibrary.Services;
-using Playnite.SDK;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using AmazonGamesLibrary.Services;
+using Playnite.SDK;
 
 namespace AmazonGamesLibrary
 {

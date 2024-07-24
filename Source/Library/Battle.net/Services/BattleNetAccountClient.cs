@@ -1,10 +1,10 @@
-﻿using BattleNetLibrary.Models;
-using Playnite.SDK;
-using Playnite.SDK.Data;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using BattleNetLibrary.Models;
+using Playnite.SDK;
+using Playnite.SDK.Data;
 
 namespace BattleNetLibrary.Services
 {

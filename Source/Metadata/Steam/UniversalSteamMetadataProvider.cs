@@ -1,4 +1,8 @@
-﻿using Playnite.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using Playnite.Common;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Data;
@@ -7,10 +11,6 @@ using Playnite.SDK.Plugins;
 using Steam;
 using Steam.Models;
 using SteamLibrary.SteamShared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace UniversalSteamMetadata
 {

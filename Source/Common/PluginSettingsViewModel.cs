@@ -1,6 +1,6 @@
-﻿using Playnite.SDK.Data;
+﻿using System.Collections.Generic;
+using Playnite.SDK.Data;
 using Playnite.SDK.Plugins;
-using System.Collections.Generic;
 
 namespace Playnite.SDK
 {

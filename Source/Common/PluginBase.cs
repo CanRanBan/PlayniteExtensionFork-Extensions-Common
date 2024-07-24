@@ -1,7 +1,7 @@
-﻿using Playnite.SDK.Plugins;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using Playnite.SDK.Plugins;
 
 namespace Playnite.SDK
 {

@@ -1,11 +1,4 @@
-﻿using Playnite.Common.Web;
-using Playnite.SDK;
-using Playnite.SDK.Models;
-using PlayniteExtensions.Common;
-using Steam.Models;
-using SteamKit2;
-using SteamLibrary.SteamShared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -14,6 +7,13 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
+using Playnite.Common.Web;
+using Playnite.SDK;
+using Playnite.SDK.Models;
+using PlayniteExtensions.Common;
+using Steam.Models;
+using SteamKit2;
+using SteamLibrary.SteamShared;
 
 namespace Steam
 {

@@ -1,6 +1,6 @@
-﻿using BattleNetLibrary.Services;
+﻿using System;
+using BattleNetLibrary.Services;
 using Playnite.SDK;
-using System;
 
 namespace BattleNetLibrary
 {

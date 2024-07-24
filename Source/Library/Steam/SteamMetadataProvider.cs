@@ -1,9 +1,9 @@
-﻿using Playnite.Common.Web;
+﻿using System;
+using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Steam;
 using SteamLibrary.SteamShared;
-using System;
 
 namespace SteamLibrary
 {

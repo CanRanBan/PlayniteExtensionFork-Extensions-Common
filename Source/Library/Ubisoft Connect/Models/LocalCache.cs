@@ -1,5 +1,5 @@
-﻿using ProtoBuf;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ProtoBuf;
 
 namespace UplayLibrary.Models
 {

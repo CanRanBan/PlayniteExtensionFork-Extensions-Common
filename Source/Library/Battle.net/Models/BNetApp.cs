@@ -1,5 +1,5 @@
-﻿using Playnite.SDK.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Playnite.SDK.Models;
 
 namespace BattleNetLibrary.Models
 {

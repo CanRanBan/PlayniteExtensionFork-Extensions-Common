@@ -1,7 +1,7 @@
-﻿using Playnite.SDK.Models;
-using Steam;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Playnite.SDK.Models;
+using Steam;
 
 namespace SteamLibrary.SteamShared
 {
@@ -41,5 +41,5 @@ namespace SteamLibrary.SteamShared
         Unsupported = 1,
         Playable = 2,
         Verified = 3,
-}
+    }
 }

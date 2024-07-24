@@ -1,13 +1,13 @@
-﻿using BattleNetLibrary.Models;
-using Playnite.Common;
-using Playnite.SDK;
-using Playnite.SDK.Models;
-using Playnite.SDK.Plugins;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using BattleNetLibrary.Models;
+using Playnite.Common;
+using Playnite.SDK;
+using Playnite.SDK.Models;
+using Playnite.SDK.Plugins;
 
 namespace BattleNetLibrary
 {

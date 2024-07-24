@@ -1,10 +1,10 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
-using Playnite.SDK.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Playnite.Common;
+using Playnite.SDK;
+using Playnite.SDK.Models;
 
 namespace UplayLibrary
 {

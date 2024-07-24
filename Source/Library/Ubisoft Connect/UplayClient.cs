@@ -1,8 +1,8 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.Threading;
+using Playnite.Common;
+using Playnite.SDK;
 
 namespace UplayLibrary
 {

@@ -1,6 +1,6 @@
-﻿using OriginLibrary.Services;
+﻿using System;
+using OriginLibrary.Services;
 using Playnite.SDK;
-using System;
 
 namespace OriginLibrary
 {

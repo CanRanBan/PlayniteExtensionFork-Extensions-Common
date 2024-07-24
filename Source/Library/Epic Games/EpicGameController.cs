@@ -1,10 +1,10 @@
-﻿using Playnite.Common;
-using Playnite.SDK.Models;
-using Playnite.SDK.Plugins;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Playnite.Common;
+using Playnite.SDK.Models;
+using Playnite.SDK.Plugins;
 
 namespace EpicLibrary
 {

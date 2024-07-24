@@ -1,5 +1,5 @@
-﻿using Playnite.SDK;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using Playnite.SDK;
 
 namespace IGDBMetadata
 {

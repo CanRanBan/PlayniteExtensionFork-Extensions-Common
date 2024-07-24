@@ -1,20 +1,20 @@
-﻿using GogLibrary.Models;
-using GogLibrary.Services;
-using Playnite.SDK;
-using Playnite.SDK.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Playnite;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
-using AngleSharp.Html.Parser;
-using AngleSharp.Html.Dom;
+using System.Threading.Tasks;
 using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
+using AngleSharp.Html.Parser;
+using GogLibrary.Models;
+using GogLibrary.Services;
+using Playnite;
+using Playnite.SDK;
+using Playnite.SDK.Models;
 
 namespace GogLibrary
 {

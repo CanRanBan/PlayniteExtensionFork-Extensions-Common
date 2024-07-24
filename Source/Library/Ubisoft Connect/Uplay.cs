@@ -1,12 +1,12 @@
-﻿using Playnite.Common;
-using Playnite.SDK.Data;
-using Playnite.SDK.Models;
-using ProtoBuf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Playnite.Common;
+using Playnite.SDK.Data;
+using Playnite.SDK.Models;
+using ProtoBuf;
 using UplayLibrary.Models;
 
 namespace UplayLibrary

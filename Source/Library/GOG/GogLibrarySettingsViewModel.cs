@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Playnite.SDK;
 using GogLibrary.Services;
+using Playnite.SDK;
 
 namespace GogLibrary
 {

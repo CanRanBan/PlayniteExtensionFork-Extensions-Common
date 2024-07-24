@@ -1,9 +1,9 @@
-﻿using Playnite.SDK.Data;
-using Steam.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using Playnite.SDK.Data;
+using Steam.Models;
 
 namespace Steam
 {

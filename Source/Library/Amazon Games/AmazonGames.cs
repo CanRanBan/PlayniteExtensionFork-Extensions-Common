@@ -1,12 +1,12 @@
-﻿using AmazonGamesLibrary.Models;
-using Playnite.Common;
-using Playnite.SDK.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using AmazonGamesLibrary.Models;
+using Playnite.Common;
+using Playnite.SDK.Data;
 
 namespace AmazonGamesLibrary
 {

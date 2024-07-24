@@ -1,8 +1,8 @@
-﻿using Playnite.SDK;
-using Steam;
-using System;
+﻿using System;
 using System.Windows.Data;
 using System.Windows.Markup;
+using Playnite.SDK;
+using Steam;
 
 namespace SteamLibrary
 {

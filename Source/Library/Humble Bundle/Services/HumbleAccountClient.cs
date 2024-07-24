@@ -1,10 +1,10 @@
-﻿using AngleSharp.Html.Parser;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AngleSharp.Html.Parser;
 using HumbleLibrary.Models;
 using Playnite.SDK;
 using Playnite.SDK.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace HumbleLibrary.Services
 {

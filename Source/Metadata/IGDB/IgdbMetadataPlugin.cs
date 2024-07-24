@@ -1,8 +1,8 @@
-﻿using Playnite.SDK;
-using Playnite.SDK.Plugins;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Playnite.SDK;
+using Playnite.SDK.Plugins;
 
 namespace IGDBMetadata
 {

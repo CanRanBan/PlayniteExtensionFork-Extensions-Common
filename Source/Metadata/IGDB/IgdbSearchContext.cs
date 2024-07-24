@@ -1,8 +1,8 @@
-﻿using Playnite.SDK.Plugins;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Playnite.SDK.Plugins;
 using Igdb = PlayniteServices.IGDB;
 
 namespace IGDBMetadata

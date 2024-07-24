@@ -1,5 +1,5 @@
-﻿using Playnite.SDK.Data;
-using System.IO;
+﻿using System.IO;
+using Playnite.SDK.Data;
 
 namespace OriginLibrary
 {

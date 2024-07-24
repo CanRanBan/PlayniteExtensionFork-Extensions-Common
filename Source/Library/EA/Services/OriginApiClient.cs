@@ -1,10 +1,10 @@
-﻿using OriginLibrary.Models;
+﻿using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using OriginLibrary.Models;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Data;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
 
 namespace OriginLibrary.Services
 {

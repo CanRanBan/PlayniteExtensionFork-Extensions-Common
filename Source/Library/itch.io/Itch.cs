@@ -1,10 +1,10 @@
-﻿using ItchioLibrary.Models;
-using Playnite.Common;
-using Playnite.SDK.Data;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using ItchioLibrary.Models;
+using Playnite.Common;
+using Playnite.SDK.Data;
 
 namespace ItchioLibrary
 {

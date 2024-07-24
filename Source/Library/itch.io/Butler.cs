@@ -1,13 +1,13 @@
-﻿using ItchioLibrary.Models;
-using ItchioLibrary.Models.Butler;
-using Playnite.SDK;
-using Playnite.SDK.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using ItchioLibrary.Models;
+using ItchioLibrary.Models.Butler;
+using Playnite.SDK;
+using Playnite.SDK.Data;
 
 namespace ItchioLibrary
 {
