@@ -136,8 +136,7 @@ namespace IGDBMetadata
                     {
                         selected = possibleBackgrounds[0];
                     }
-                    else if (settings.ImageSelectionPriority == MultiImagePriority.Random ||
-                        (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Fullscreen))
+                    else if (settings.ImageSelectionPriority == MultiImagePriority.Random)
                     {
                         var index = GlobalRandom.Next(0, possibleBackgrounds.Count - 1);
                         selected = possibleBackgrounds[index];
