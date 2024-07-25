@@ -6,9 +6,12 @@ namespace RockstarGamesLibrary
     {
     }
 
-    public class RockstarGamesLibrarySettingsViewModel : PluginSettingsViewModel<RockstarGamesLibrarySettings, RockstarGamesLibrary>
+    public class
+        RockstarGamesLibrarySettingsViewModel : PluginSettingsViewModel<RockstarGamesLibrarySettings,
+        RockstarGamesLibrary>
     {
-        public RockstarGamesLibrarySettingsViewModel(RockstarGamesLibrary library, IPlayniteAPI api) : base(library, api)
+        public RockstarGamesLibrarySettingsViewModel(RockstarGamesLibrary library, IPlayniteAPI api) : base(library,
+            api)
         {
         }
     }

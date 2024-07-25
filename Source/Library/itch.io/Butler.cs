@@ -194,10 +194,8 @@ namespace ItchioLibrary
             client = new JsonRpcClient(endpoint);
             client.NotificationReceived += Client_NotificationReceived;
             client.RequestReceived += Client_RequestReceived;
-            client.SendRequest<Dictionary<string, object>>(Methods.Meta_Authenticate, new Dictionary<string, object>()
-            {
-                { "secret", secret }
-            });
+            client.SendRequest<Dictionary<string, object>>(Methods.Meta_Authenticate,
+                new Dictionary<string, object>() { { "secret", secret } });
         }
 
         private void Client_RequestReceived(object sender, JsonRpcRequestEventArgs e)
@@ -329,8 +327,8 @@ namespace ItchioLibrary
                 {
                     allCaves.AddRange(caveResult.items);
                 }
-            }
-            while (!string.IsNullOrEmpty(caveResult?.nextCursor));
+            } while (!string.IsNullOrEmpty(caveResult?.nextCursor));
+
             return allCaves;
         }
 
@@ -349,10 +347,12 @@ namespace ItchioLibrary
                 prms.Add("fresh", true);
                 collections = client.SendRequest<FetchCollections>(Methods.FetchCollections, prms);
             }
+
             return collections;
         }
 
-        public FetchGameRecords GetGameRecords(long id, string source, Dictionary<string, object> optionalParameters = null)
+        public FetchGameRecords GetGameRecords(long id, string source,
+            Dictionary<string, object> optionalParameters = null)
         {
             var prms = new Dictionary<string, object>();
             prms.Add("profileId", id);
@@ -364,12 +364,14 @@ namespace ItchioLibrary
                     prms.Add(pair.Key, pair.Value);
                 }
             }
+
             var gameRecords = client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, prms);
             if (gameRecords.stale)
             {
                 prms.Add("fresh", true);
                 gameRecords = client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, prms);
             }
+
             return gameRecords;
         }
 
@@ -383,6 +385,7 @@ namespace ItchioLibrary
                 prms.Add("fresh", true);
                 game = client.SendRequest<FetchGame>(Methods.Fetch_Game, prms);
             }
+
             return game.game;
         }
 
@@ -401,17 +404,15 @@ namespace ItchioLibrary
                 prms.Add("fresh", true);
                 ownedKeys = client.SendRequest<FetchProfileOwnedKeys>(Methods.Fetch_ProfileOwnedKeys, prms);
             }
+
             return ownedKeys.items;
         }
 
         public Task LaunchAsync(string caveId)
         {
             return Task.Run(() =>
-                client.SendRequest(Methods.Launch, new Dictionary<string, object>
-                {
-                    { "caveId", caveId },
-                    { "prereqsDir", Itch.PrereqsPaths }
-                })
+                client.SendRequest(Methods.Launch,
+                    new Dictionary<string, object> { { "caveId", caveId }, { "prereqsDir", Itch.PrereqsPaths } })
             );
         }
 

@@ -11,10 +11,10 @@
         <CheckBox Name="CheckUplayImportInstalled"
                   Margin="0,0,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
-                  Content="{DynamicResource LOCUbisoftSettingsImportInstalledLabel}"/>
+                  Content="{DynamicResource LOCUbisoftSettingsImportInstalledLabel}" />
         <CheckBox Name="CheckUplayImportUninstalled"
                   IsChecked="{Binding Settings.ImportUninstalledGames}"
-                  Content="{DynamicResource LOCUbisoftSettingsImportUninstalledLabel}"/>
+                  Content="{DynamicResource LOCUbisoftSettingsImportUninstalledLabel}" />
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Uplay-troubleshooting"
                        Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"

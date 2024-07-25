@@ -238,6 +238,7 @@ namespace ItchioLibrary
                     {
                         InvokeOnStopped(new GameStoppedEventArgs(0));
                     }
+
                     break;
 
                 case Butler.Methods.HTMLLaunch:
@@ -260,10 +261,7 @@ namespace ItchioLibrary
 
                 case Butler.Methods.PrereqsFailed:
                     var error = e.Request.GetParams<PrereqsFailed>();
-                    butler.SendResponse(e.Request, new Dictionary<string, bool>
-                    {
-                        { "continue",  true }
-                    });
+                    butler.SendResponse(e.Request, new Dictionary<string, bool> { { "continue", true } });
                     break;
             }
         }

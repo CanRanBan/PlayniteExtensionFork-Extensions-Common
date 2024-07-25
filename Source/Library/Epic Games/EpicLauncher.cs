@@ -17,7 +17,8 @@ namespace EpicLibrary
         public const string GameInstallUrlMask = @"com.epicgames.launcher://apps/{0}?action=install";
         public const string LibraryLaunchUrl = @"com.epicgames.launcher://store/library";
 
-        public static string AllUsersPath => Path.Combine(Environment.ExpandEnvironmentVariables("%PROGRAMDATA%"), "Epic");
+        public static string AllUsersPath =>
+            Path.Combine(Environment.ExpandEnvironmentVariables("%PROGRAMDATA%"), "Epic");
 
         public static string ClientExecPath
         {
@@ -33,7 +34,9 @@ namespace EpicLibrary
             get
             {
                 var path = InstallationPath;
-                return string.IsNullOrEmpty(path) ? string.Empty : Path.Combine(path, "Launcher", "Portal", "Config", "DefaultPortalRegions.ini");
+                return string.IsNullOrEmpty(path)
+                    ? string.Empty
+                    : Path.Combine(path, "Launcher", "Portal", "Config", "DefaultPortalRegions.ini");
             }
         }
 
@@ -41,11 +44,10 @@ namespace EpicLibrary
         {
             get
             {
-                var progs = Programs.GetUnistallProgramsList().
-                    FirstOrDefault(a =>
-                        a.DisplayName == "Epic Games Launcher" &&
-                        !a.InstallLocation.IsNullOrEmpty() &&
-                        File.Exists(GetExecutablePath(a.InstallLocation)));
+                var progs = Programs.GetUnistallProgramsList().FirstOrDefault(a =>
+                    a.DisplayName == "Epic Games Launcher" &&
+                    !a.InstallLocation.IsNullOrEmpty() &&
+                    File.Exists(GetExecutablePath(a.InstallLocation)));
                 if (progs == null)
                 {
                     // Try default location. These registry keys sometimes go missing on people's PCs...
@@ -76,7 +78,8 @@ namespace EpicLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"EpicGamesLibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"EpicGamesLibraryIcon.ico");
 
         public static void StartClient()
         {
@@ -121,7 +124,8 @@ namespace EpicLibrary
 
             foreach (var manFile in Directory.GetFiles(installListPath, "*.item"))
             {
-                if (Serialization.TryFromJson<InstalledManifiest>(FileSystem.ReadFileAsStringSafe(manFile), out var manifest))
+                if (Serialization.TryFromJson<InstalledManifiest>(FileSystem.ReadFileAsStringSafe(manFile),
+                        out var manifest))
                 {
                     // Some weird issue causes manifest to be created empty by Epic client
                     if (manifest != null)

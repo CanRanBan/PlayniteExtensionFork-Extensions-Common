@@ -36,7 +36,8 @@ namespace RockstarGamesLibrary
                     continue;
                 }
 
-                var match = Regex.Match(app.UninstallString, @"(?:Launcher|uninstall)\.exe.+uninstall=(.+)$", RegexOptions.IgnoreCase);
+                var match = Regex.Match(app.UninstallString, @"(?:Launcher|uninstall)\.exe.+uninstall=(.+)$",
+                    RegexOptions.IgnoreCase);
                 if (match.Success)
                 {
                     var titleId = match.Groups[1].Value;
@@ -51,7 +52,8 @@ namespace RockstarGamesLibrary
                     var installDirectory = app.InstallLocation;
                     if (!Directory.Exists(installDirectory))
                     {
-                        logger.Error($"Rockstar game {rsGame.Name} installation directory {installDirectory} not detected.");
+                        logger.Error(
+                            $"Rockstar game {rsGame.Name} installation directory {installDirectory} not detected.");
                         isInstalled = false;
                         installDirectory = string.Empty;
                     }

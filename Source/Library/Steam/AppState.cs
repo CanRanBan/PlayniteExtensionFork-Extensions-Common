@@ -5,29 +5,14 @@
     /// </summary>
     public class AppState
     {
-        public bool Installed
-        {
-            get; set;
-        }
+        public bool Installed { get; set; }
 
-        public bool Launching
-        {
-            get; set;
-        }
+        public bool Launching { get; set; }
 
-        public bool Running
-        {
-            get; set;
-        }
+        public bool Running { get; set; }
 
-        public bool Installing
-        {
-            get; set;
-        }
+        public bool Installing { get; set; }
 
-        public bool Uninstalling
-        {
-            get; set;
-        }
+        public bool Uninstalling { get; set; }
     }
 }

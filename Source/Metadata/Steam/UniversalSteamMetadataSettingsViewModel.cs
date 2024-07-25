@@ -8,9 +8,12 @@ namespace UniversalSteamMetadata
     }
 
 
-    public class UniversalSteamMetadataSettingsViewModel : SharedSteamSettingsViewModel<UniversalSteamMetadataSettings, UniversalSteamMetadata>
+    public class
+        UniversalSteamMetadataSettingsViewModel : SharedSteamSettingsViewModel<UniversalSteamMetadataSettings,
+        UniversalSteamMetadata>
     {
-        public UniversalSteamMetadataSettingsViewModel(UniversalSteamMetadata plugin, IPlayniteAPI api) : base(plugin, api)
+        public UniversalSteamMetadataSettingsViewModel(UniversalSteamMetadata plugin, IPlayniteAPI api) : base(plugin,
+            api)
         {
         }
     }

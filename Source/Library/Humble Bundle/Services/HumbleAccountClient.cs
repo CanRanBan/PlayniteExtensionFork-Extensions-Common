@@ -12,7 +12,10 @@ namespace HumbleLibrary.Services
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly IWebView webView;
-        private const string loginUrl = @"https://www.humblebundle.com/login?goto=%2Fhome%2Flibrary&qs=hmb_source%3Dnavbar";
+
+        private const string loginUrl =
+            @"https://www.humblebundle.com/login?goto=%2Fhome%2Flibrary&qs=hmb_source%3Dnavbar";
+
         private const string libraryUrl = @"https://www.humblebundle.com/home/library?hmb_source=navbar";
         private const string logoutUrl = @"https://www.humblebundle.com/logout?goto=/";
         private const string ordersUrlRoot = @"https://www.humblebundle.com/api/v1/orders?all_tpkds=true";

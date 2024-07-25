@@ -41,23 +41,35 @@ namespace GogLibrary
 
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.forum))
             {
-                storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"), storeData.GameDetails.links.forum));
-            };
+                storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"),
+                    storeData.GameDetails.links.forum));
+            }
+
+            ;
 
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.product_card))
             {
-                storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksStorePage"), storeData.GameDetails.links.product_card));
-            };
+                storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksStorePage"),
+                    storeData.GameDetails.links.product_card));
+            }
 
-            storeData.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + storeData.GameDetails.title));
+            ;
+
+            storeData.Links.Add(new Link("PCGamingWiki",
+                @"http://pcgamingwiki.com/w/index.php?search=" + storeData.GameDetails.title));
 
             if (storeData.StoreDetails != null)
             {
-                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
-                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
-                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
-                storeData.Publishers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
-                storeData.Tags = storeData.StoreDetails.gameTags?.Select(t => new MetadataNameProperty(t.name)).ToHashSet<MetadataProperty>();
+                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name))
+                    .ToHashSet<MetadataProperty>();
+                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay")
+                    .Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
+                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name))
+                    .ToHashSet<MetadataProperty>();
+                storeData.Publishers =
+                    new HashSet<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
+                storeData.Tags = storeData.StoreDetails.gameTags?.Select(t => new MetadataNameProperty(t.name))
+                    .ToHashSet<MetadataProperty>();
                 if (storeData.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
                 {
                     storeData.ReleaseDate = new ReleaseDate(storeData.StoreDetails.globalReleaseDate.Value);
@@ -86,7 +98,8 @@ namespace GogLibrary
             {
                 logger.Warn($"Product page for game {game.GameId} not found, using fallback search.");
                 var search = apiClient.GetStoreSearch(game.Name);
-                var match = search?.FirstOrDefault(a => a.title.Equals(game.Name, StringComparison.InvariantCultureIgnoreCase));
+                var match = search?.FirstOrDefault(a =>
+                    a.title.Equals(game.Name, StringComparison.InvariantCultureIgnoreCase));
                 if (match != null)
                 {
                     gameDetail = apiClient.GetGameDetails(match.id.ToString(), settings.Locale);
@@ -97,9 +110,11 @@ namespace GogLibrary
 
             if (gameDetail != null)
             {
-                if (gameDetail.links.product_card != @"https://www.gog.com/" && !string.IsNullOrEmpty(gameDetail.links.product_card))
+                if (gameDetail.links.product_card != @"https://www.gog.com/" &&
+                    !string.IsNullOrEmpty(gameDetail.links.product_card))
                 {
-                    string gamePath = gameDetail.links.product_card.Substring(gameDetail.links.product_card.IndexOf("game/"));
+                    string gamePath =
+                        gameDetail.links.product_card.Substring(gameDetail.links.product_card.IndexOf("game/"));
                     var productUrl = $"https://www.gog.com/{settings.Locale}/{gamePath}";
                     metadata.StoreDetails = apiClient.GetGameStoreData(productUrl);
                 }
@@ -154,7 +169,8 @@ namespace GogLibrary
             var htmlElement = firstChild as IHtmlElement;
             var promoUrlsRegex = @"https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/";
             var containsPromoImage = htmlElement.QuerySelectorAll("img")
-                        .Any(img => img.HasAttribute("src") && Regex.IsMatch(img.GetAttribute("src"), promoUrlsRegex, RegexOptions.IgnoreCase));
+                .Any(img => img.HasAttribute("src") &&
+                            Regex.IsMatch(img.GetAttribute("src"), promoUrlsRegex, RegexOptions.IgnoreCase));
             if (!containsPromoImage)
             {
                 return originalDescription;

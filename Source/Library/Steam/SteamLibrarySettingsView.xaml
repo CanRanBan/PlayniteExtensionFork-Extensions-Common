@@ -18,17 +18,17 @@
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
         <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}"
-                    x:Key="BackgroundSourceEnumValues">
+                            x:Key="BackgroundSourceEnumValues">
             <ObjectDataProvider.MethodParameters>
                 <x:Type TypeName="steamShared:BackgroundSource" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
         <ComboBox x:Key="BackgroundSourceBox" x:Shared="False"
-            SelectedValue="{Binding Settings.BackgroundSource}"
-            ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}">
+                  SelectedValue="{Binding Settings.BackgroundSource}"
+                  ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Converter={steam:BackgroundSourceToStringConverter}}"/>
+                    <TextBlock Text="{Binding Converter={steam:BackgroundSourceToStringConverter}}" />
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
@@ -40,34 +40,35 @@
                 <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportInstalled"
                           Margin="0,0,0,15"
                           IsChecked="{Binding Settings.ImportInstalledGames}"
-                          Content="{DynamicResource LOCSteamSettingsImportInstalledLabel}"/>
+                          Content="{DynamicResource LOCSteamSettingsImportInstalledLabel}" />
 
                 <CheckBox DockPanel.Dock="Top" Name="CheckSteamConnectAccount"
                           IsChecked="{Binding Settings.ConnectAccount}"
-                          Content="{DynamicResource LOCSteamSettingsConnectAccount}"/>
+                          Content="{DynamicResource LOCSteamSettingsConnectAccount}" />
 
-                <DockPanel DockPanel.Dock="Top" Margin="40,5,5,0" IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
+                <DockPanel DockPanel.Dock="Top" Margin="40,5,5,0"
+                           IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
 
                     <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportUninstalled"
                               IsChecked="{Binding Settings.ImportUninstalledGames}"
                               Margin="0,10,0,0"
-                              Content="{DynamicResource LOCSteamSettingsImportUninstalledLabel}"/>
+                              Content="{DynamicResource LOCSteamSettingsImportUninstalledLabel}" />
 
                     <CheckBox DockPanel.Dock="Top"
                               IsChecked="{Binding Settings.IncludeFreeSubGames}"
                               Margin="0,10,0,0"
                               Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
-                              Content="{DynamicResource LOCSteamImportFreeSubGames}"/>
+                              Content="{DynamicResource LOCSteamImportFreeSubGames}" />
 
                     <CheckBox DockPanel.Dock="Top"
                               IsChecked="{Binding Settings.IgnoreOtherInstalled}"
                               Margin="0,10,0,0"
-                              Content="{DynamicResource LOCSteamIgnoreOtherAccountGames}"/>
+                              Content="{DynamicResource LOCSteamIgnoreOtherAccountGames}" />
 
                     <StackPanel Orientation="Horizontal"
                                 DockPanel.Dock="Top" Margin="0,15,5,5" HorizontalAlignment="Left">
                         <Button Content="{DynamicResource LOCSteamAuthenticateLabel}"
-                                Command="{Binding LoginCommand}"/>
+                                Command="{Binding LoginCommand}" />
                         <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">
                             <TextBlock.Tag>
                                 <PriorityBinding>
@@ -103,27 +104,28 @@
                               IsChecked="{Binding Settings.IsPrivateAccount}"
                               DockPanel.Dock="Top" Margin="0,15,0,0"
                               Name="CheckSteamPrivate" VerticalAlignment="Center"
-                              ToolTip="{DynamicResource LOCSettingsApiKeyTooltip}"/>
+                              ToolTip="{DynamicResource LOCSettingsApiKeyTooltip}" />
                     <StackPanel DockPanel.Dock="Top" Margin="25,10,5,5" Orientation="Horizontal"
                                 IsEnabled="{Binding IsChecked, ElementName=CheckSteamPrivate}">
-                        <TextBlock Text="{DynamicResource LOCSteamAPIKey}" VerticalAlignment="Center"/>
+                        <TextBlock Text="{DynamicResource LOCSteamAPIKey}" VerticalAlignment="Center" />
                         <PasswordBox steam:PasswordBoxAssistant.BindPassword="True"
                                      steam:PasswordBoxAssistant.BoundPassword="{Binding Settings.RuntimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=150}"
                                      Width="200" VerticalAlignment="Center" Margin="10,0,10,0" />
                         <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center">
-                    <Hyperlink NavigateUri="https://steamcommunity.com/dev/apikey"
-                               Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
-                               CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
-                        <Run Text="{DynamicResource LOCSettingsApiKeyUrlText}" />
-                    </Hyperlink>
+                            <Hyperlink NavigateUri="https://steamcommunity.com/dev/apikey"
+                                       Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
+                                       CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
+                                <Run Text="{DynamicResource LOCSettingsApiKeyUrlText}" />
+                            </Hyperlink>
                         </TextBlock>
                     </StackPanel>
                 </DockPanel>
 
                 <TextBlock VerticalAlignment="Center" Margin="0,12,0,0">
-                    <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
-                               Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
-                               CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
+                    <Hyperlink
+                        NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
+                        Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
+                        CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
                         <Run Text="{DynamicResource LOCSteamTroubleShootingIssues}" />
                     </Hyperlink>
                 </TextBlock>
@@ -135,27 +137,30 @@
                            Text="{DynamicResource LOCSteamAdditionalAccountsDescription}" />
                 <DockPanel DockPanel.Dock="Bottom" Margin="0,10,0,0">
                     <Button Content="{DynamicResource LOCAddTitle}" DockPanel.Dock="Left"
-                            Command="{Binding AddAccountCommand}"/>
+                            Command="{Binding AddAccountCommand}" />
                     <Button Content="{DynamicResource LOCRemoveTitle}" Margin="10,0,0,0" DockPanel.Dock="Left"
                             Command="{Binding RemoveAccountCommand}"
-                            CommandParameter="{Binding SelectedItem, ElementName=GridAccounts}"/>
-                    <TextBlock VerticalAlignment="Center" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="0,0,10,0">
-                       <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
-                                  Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
-                                  CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
-                           <Run Text="{DynamicResource LOCSteamTroubleShootingIssues}" />
-                       </Hyperlink>
+                            CommandParameter="{Binding SelectedItem, ElementName=GridAccounts}" />
+                    <TextBlock VerticalAlignment="Center" DockPanel.Dock="Right" HorizontalAlignment="Right"
+                               Margin="0,0,10,0">
+                        <Hyperlink
+                            NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
+                            Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
+                            CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
+                            <Run Text="{DynamicResource LOCSteamTroubleShootingIssues}" />
+                        </Hyperlink>
                     </TextBlock>
                 </DockPanel>
                 <DataGrid Name="GridAccounts" Margin="0,10,0,0" DockPanel.Dock="Top"
-                          CanUserAddRows="False" AutoGenerateColumns="False" CanUserResizeRows="False" GridLinesVisibility="None"
+                          CanUserAddRows="False" AutoGenerateColumns="False" CanUserResizeRows="False"
+                          GridLinesVisibility="None"
                           ItemsSource="{Binding Settings.AdditionalAccounts}" SelectionMode="Single">
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="{DynamicResource LOCSteamAccountID}" MinWidth="150">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBox Text="{Binding AccountId, UpdateSourceTrigger=PropertyChanged}"
-                                             Background="{DynamicResource NormalBrushDark}"/>
+                                             Background="{DynamicResource NormalBrushDark}" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
@@ -164,14 +169,15 @@
                                 <DataTemplate>
                                     <PasswordBox steam:PasswordBoxAssistant.BindPassword="True"
                                                  steam:PasswordBoxAssistant.BoundPassword="{Binding RuntimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                                 Background="{DynamicResource NormalBrushDark}"/>
+                                                 Background="{DynamicResource NormalBrushDark}" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridTemplateColumn Header="{DynamicResource LOCSteamImportPlaytime}">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox IsChecked="{Binding ImportPlayTime, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" />
+                                    <CheckBox IsChecked="{Binding ImportPlayTime, UpdateSourceTrigger=PropertyChanged}"
+                                              HorizontalAlignment="Center" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
@@ -185,94 +191,114 @@
                 <StackPanel Margin="20" Width="Auto">
                     <Grid Width="Auto">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition/>
+                            <RowDefinition />
+                            <RowDefinition Height="10" />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
-                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamMetadataLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamMetadataLanguageLabel}"
+                                   Margin="0,0,10,0" Grid.Row="0" Grid.Column="0" />
                         <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
                                   SelectedValue="{Binding Settings.LanguageKey}" ItemsSource="{Binding Path=Languages}"
-                                  IsEditable="false" Grid.Row="0" Grid.Column="1" MinWidth="150"/>
+                                  IsEditable="false" Grid.Row="0" Grid.Column="1" MinWidth="150" />
 
-                        <TextBlock Text="{DynamicResource LOCSteamBackgroundSource}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="2" Grid.Column="0" />
+                        <TextBlock Text="{DynamicResource LOCSteamBackgroundSource}" VerticalAlignment="Center"
+                                   Margin="0,0,10,0" Grid.Row="2" Grid.Column="0" />
                         <ComboBox MinWidth="150" Grid.Row="2" Grid.Column="1"
                                   SelectedValue="{Binding Settings.BackgroundSource}"
                                   ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}" />
                     </Grid>
-                    <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
+                    <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}"
+                              IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0" />
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                        <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                        <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
+                        <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}"
+                                  Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center"
+                                  Margin="0,0,4,0" />
+                        <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center"
+                                 IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
                     </StackPanel>
                     <CheckBox x:Name="cbTagCategoryPrefix" IsChecked="{Binding Settings.SetTagCategoryAsPrefix}"
                               Content="{DynamicResource LOCSteamSetTagCategoryAsPrefixLabel}"
                               ToolTip="{DynamicResource LOCSteamSetTagCategoryAsPrefixTooltip}"
-                              VerticalAlignment="Center" Margin="0,12,4,0"/>
+                              VerticalAlignment="Center" Margin="0,12,4,0" />
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <StackPanel.Style>
                             <Style TargetType="StackPanel">
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding IsChecked, ElementName=cbTagCategoryPrefix}" Value="True">
-                                        <Setter Property="IsEnabled" Value="False"/>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=cbTagCategoryPrefix}"
+                                                 Value="True">
+                                        <Setter Property="IsEnabled" Value="False" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
                         </StackPanel.Style>
-                        <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                        <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
+                        <CheckBox IsChecked="{Binding Settings.UseTagPrefix}"
+                                  Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center"
+                                  Margin="0,0,4,0" />
+                        <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center"
+                                 IsEnabled="{Binding Settings.UseTagPrefix}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}"/>
-                        <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}" SelectedValue="{Binding Settings.SteamDeckCompatibilityField}" DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0"/>
-                </StackPanel>
+                        <TextBlock VerticalAlignment="Center"
+                                   Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}" />
+                        <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}"
+                                  SelectedValue="{Binding Settings.SteamDeckCompatibilityField}"
+                                  DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0" />
+                    </StackPanel>
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
         <TabItem Header="{DynamicResource LOCSteamTagBlacklistTabLabel}"
                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
             <DockPanel Margin="20">
-                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" DockPanel.Dock="Top" Text="{DynamicResource LOCSteamTagBlacklistExplanationLabel}"/>
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" DockPanel.Dock="Top"
+                           Text="{DynamicResource LOCSteamTagBlacklistExplanationLabel}" />
 
                 <Grid VerticalAlignment="Stretch" Margin="0,10,0,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition x:Name="Left" Width="*"/>
-                        <ColumnDefinition x:Name="Middle" Width="95"/>
-                        <ColumnDefinition x:Name="Right" Width="*"/>
+                        <ColumnDefinition x:Name="Left" Width="*" />
+                        <ColumnDefinition x:Name="Middle" Width="95" />
+                        <ColumnDefinition x:Name="Right" Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition x:Name="Header" MaxHeight="20"/>
-                        <RowDefinition x:Name="Body"/>
+                        <RowDefinition x:Name="Header" MaxHeight="20" />
+                        <RowDefinition x:Name="Body" />
                     </Grid.RowDefinitions>
                     <Grid.Resources>
                         <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                            <Setter Property="FontSize" Value="40"/>
-                            <Setter Property="Margin" Value="20,12"/>
-                            <Setter Property="Padding" Value="8,2"/>
-                            <Setter Property="FontFamily" Value="{DynamicResource FontIcoFont}"/>
-                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="FontSize" Value="40" />
+                            <Setter Property="Margin" Value="20,12" />
+                            <Setter Property="Padding" Value="8,2" />
+                            <Setter Property="FontFamily" Value="{DynamicResource FontIcoFont}" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
                         </Style>
                     </Grid.Resources>
-                    <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Text="{DynamicResource LOCSteamTagWhitelistHeader}"/>
-                    <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Text="{DynamicResource LOCSteamTagBlacklistHeader}"/>
+                    <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"
+                               Text="{DynamicResource LOCSteamTagWhitelistHeader}" />
+                    <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0"
+                               Text="{DynamicResource LOCSteamTagBlacklistHeader}" />
                     <ListBox DockPanel.Dock="Top" Name="Whitelist"
                              SelectionMode="Extended" MinHeight="220"
                              VerticalAlignment="Stretch"
                              ItemsSource="{Binding OkayTags}"
                              DisplayMemberPath="Name"
-                             Grid.Column="0" Grid.Row="1"/>
+                             Grid.Column="0" Grid.Row="1" />
                     <ListBox DockPanel.Dock="Top" Name="Blacklist"
                              SelectionMode="Extended" MinHeight="220"
                              VerticalAlignment="Stretch"
                              ItemsSource="{Binding BlacklistedTags}"
                              DisplayMemberPath="Name"
-                             Grid.Column="2" Grid.Row="1"/>
+                             Grid.Column="2" Grid.Row="1" />
                     <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
-                        <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Whitelist}" ToolTip="{DynamicResource LOCSteamTagBlacklistTooltip}"/>
-                        <Button Content="&#xEA93;" Command="{Binding WhitelistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Blacklist}" ToolTip="{DynamicResource LOCSteamTagWhitelistTooltip}"/>
+                        <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}"
+                                CommandParameter="{Binding SelectedItems, ElementName=Whitelist}"
+                                ToolTip="{DynamicResource LOCSteamTagBlacklistTooltip}" />
+                        <Button Content="&#xEA93;" Command="{Binding WhitelistCommand}"
+                                CommandParameter="{Binding SelectedItems, ElementName=Blacklist}"
+                                ToolTip="{DynamicResource LOCSteamTagWhitelistTooltip}" />
                     </StackPanel>
                 </Grid>
             </DockPanel>
@@ -283,9 +309,9 @@
                 <CheckBox Content="{DynamicResource LOCSteamShowFriendsButton}"
                           IsChecked="{Binding Settings.ShowFriendsButton}" Margin="0,10,0,10" />
                 <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInDesktopMode}"
-                          IsChecked="{Binding Settings.ShowSteamLaunchMenuInDesktopMode}"/>
+                          IsChecked="{Binding Settings.ShowSteamLaunchMenuInDesktopMode}" />
                 <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInFullscreenMode}"
-                          IsChecked="{Binding Settings.ShowSteamLaunchMenuInFullscreenMode}" Margin="0,10,0,10"/>
+                          IsChecked="{Binding Settings.ShowSteamLaunchMenuInFullscreenMode}" Margin="0,10,0,10" />
             </StackPanel>
         </TabItem>
     </TabControl>

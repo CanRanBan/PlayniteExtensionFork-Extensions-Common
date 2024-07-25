@@ -30,7 +30,9 @@ namespace GogLibrary.Models
                 {
                     Arguments = arguments,
                     Name = string.IsNullOrEmpty(name) ? "Play" : name,
-                    Path = type == ActionType.FileTask ? Path.Combine(installDirectory, Paths.FixSeparators(path)) : link,
+                    Path = type == ActionType.FileTask
+                        ? Path.Combine(installDirectory, Paths.FixSeparators(path))
+                        : link,
                     Type = type == ActionType.FileTask ? GameActionType.File : GameActionType.URL
                 };
 
@@ -61,10 +63,7 @@ namespace GogLibrary.Models
 
         public Task DefaultTask
         {
-            get
-            {
-                return playTasks.First(a => a.isPrimary);
-            }
+            get { return playTasks.First(a => a.isPrimary); }
         }
     }
 }

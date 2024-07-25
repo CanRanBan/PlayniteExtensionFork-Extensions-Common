@@ -14,6 +14,7 @@ namespace Playnite.SDK
         public TSettings EditingClone { get; set; }
 
         private TSettings settings;
+
         public TSettings Settings
         {
             get => settings;

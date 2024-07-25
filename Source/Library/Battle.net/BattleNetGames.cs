@@ -13,16 +13,12 @@ namespace BattleNetLibrary
         [ProtoContract]
         public class InstallData
         {
-            [ProtoMember(1)]
-            public string Path { get; set; }
+            [ProtoMember(1)] public string Path { get; set; }
         }
 
-        [ProtoMember(1)]
-        public string InternalId { get; set; }
-        [ProtoMember(2)]
-        public string ProductId { get; set; }
-        [ProtoMember(3)]
-        public InstallData Data { get; set; }
+        [ProtoMember(1)] public string InternalId { get; set; }
+        [ProtoMember(2)] public string ProductId { get; set; }
+        [ProtoMember(3)] public InstallData Data { get; set; }
     }
 
     public class BattleNetGames
@@ -35,15 +31,18 @@ namespace BattleNetLibrary
                 ProductId = "WoW",
                 InternalId = "wow",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-wow-3dd2cfe06df74407.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//fe4/e09d3a01538f92686e2d7e30dc89ee1e-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//fab/a25ed0ddd3225929bc3ad5139ebc7483-prod-card-tall.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//fe4/e09d3a01538f92686e2d7e30dc89ee1e-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//fab/a25ed0ddd3225929bc3ad5139ebc7483-prod-card-tall.jpg",
                 Name = "World of Warcraft",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://worldofwarcraft.com/"),
-                    new Link("Forums", "https://battle.net/forums/en/wow/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "https://worldofwarcraft.com/"),
+                        new Link("Forums", "https://battle.net/forums/en/wow/")
+                    }
             },
             new BNetApp()
             {
@@ -51,15 +50,18 @@ namespace BattleNetLibrary
                 ProductId = "D3",
                 InternalId = "diablo3",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-d3-ab08e4045fed09ee.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//fad/6a06a79f8b1134a80d794dc24c9cd2d1-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//fbd/bafaafcfb7c6c620067662a04409ba66-prod-card-tall.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//fad/6a06a79f8b1134a80d794dc24c9cd2d1-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//fbd/bafaafcfb7c6c620067662a04409ba66-prod-card-tall.jpg",
                 Name = "Diablo III",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://www.diablo3.com"),
-                    new Link("Forums", "https://battle.net/forums/en/d3/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "http://www.diablo3.com"),
+                        new Link("Forums", "https://battle.net/forums/en/d3/")
+                    }
             },
             new BNetApp()
             {
@@ -67,15 +69,18 @@ namespace BattleNetLibrary
                 ProductId = "S2",
                 InternalId = "s2",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-sc2-6e33583ba0547b6a.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//fcd/ab0419d498190f5f2ccf69414265b70b-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//fd8/18fb5862b6d5aea418ad4102ed48aa63-prod-card-tall.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//fcd/ab0419d498190f5f2ccf69414265b70b-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//fd8/18fb5862b6d5aea418ad4102ed48aa63-prod-card-tall.jpg",
                 Name = "StarCraft II",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://www.starcraft2.com"),
-                    new Link("Forums", "https://battle.net/forums/en/sc2/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "https://www.starcraft2.com"),
+                        new Link("Forums", "https://battle.net/forums/en/sc2/")
+                    }
             },
             new BNetApp()
             {
@@ -83,15 +88,18 @@ namespace BattleNetLibrary
                 ProductId = "S1",
                 InternalId = "s1",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-scr-fef4f892c20f584c.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//fb2/eb1b3feb5cc03da2d05f3e9e88aaec2a-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//f95/6d9453be1750dbf035f0ee574cff2c25-prod-card-tall.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//fb2/eb1b3feb5cc03da2d05f3e9e88aaec2a-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//f95/6d9453be1750dbf035f0ee574cff2c25-prod-card-tall.jpg",
                 Name = "StarCraft",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://starcraft.com"),
-                    new Link("Forums", "https://us.battle.net/forums/en/starcraft/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "https://starcraft.com"),
+                        new Link("Forums", "https://us.battle.net/forums/en/starcraft/")
+                    }
             },
             new BNetApp()
             {
@@ -99,15 +107,18 @@ namespace BattleNetLibrary
                 ProductId = "WTCG",
                 InternalId = "hs_beta",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-hs-93512467e87f82c6.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//fac/895ca992a21d9c960bd30f9738d7bfb8-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//f89/c074270c5024a5bb627d46cddf024dad-prod-card-tall.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//fac/895ca992a21d9c960bd30f9738d7bfb8-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//f89/c074270c5024a5bb627d46cddf024dad-prod-card-tall.jpg",
                 Name = "Hearthstone",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://playhearthstone.com"),
-                    new Link("Forums", "https://battle.net/forums/en/hearthstone/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "https://playhearthstone.com"),
+                        new Link("Forums", "https://battle.net/forums/en/hearthstone/")
+                    }
             },
             new BNetApp()
             {
@@ -115,15 +126,18 @@ namespace BattleNetLibrary
                 ProductId = "Hero",
                 InternalId = "heroes",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-heroes-78cae505b7a524fb.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//f88/9eaac80f3496502843198b092eb35b84-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//f8c/0f2efeb8d64127edb647a95c236c92ba-prod-card-tall.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//f88/9eaac80f3496502843198b092eb35b84-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//f8c/0f2efeb8d64127edb647a95c236c92ba-prod-card-tall.jpg",
                 Name = "Heroes of the Storm",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://www.heroesofthestorm.com"),
-                    new Link("Forums", "https://battle.net/forums/en/heroes/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "http://www.heroesofthestorm.com"),
+                        new Link("Forums", "https://battle.net/forums/en/heroes/")
+                    }
             },
             new BNetApp()
             {
@@ -133,43 +147,52 @@ namespace BattleNetLibrary
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-ow-4be5755bc0a4cbaf.png",
                 Name = "Overwatch 2",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://playoverwatch.com"),
-                    new Link("Forums", "https://battle.net/forums/en/overwatch/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "https://playoverwatch.com"),
+                        new Link("Forums", "https://battle.net/forums/en/overwatch/")
+                    }
             },
             new BNetApp()
             {
                 ProductId = "D2",
                 InternalId = "Diablo II",
-                IconUrl = @"https://bneteu-a.akamaihd.net/account/static/local-common/images/game-icons/d2dv-32.4PqK2.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//70/23fd57c691805861a899eabaa12f39f5-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//7f/a31777e05911989e7839ea02435c9eb5-prod-card-tall.jpg",
+                IconUrl =
+                    @"https://bneteu-a.akamaihd.net/account/static/local-common/images/game-icons/d2dv-32.4PqK2.png",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//70/23fd57c691805861a899eabaa12f39f5-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//7f/a31777e05911989e7839ea02435c9eb5-prod-card-tall.jpg",
                 Name = "Diablo II",
                 Type = BNetAppType.Classic,
                 ClassicExecutable = "Diablo II.exe",
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://blizzard.com/games/d2/"),
-                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "http://blizzard.com/games/d2/"),
+                        new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
+                    }
             },
             new BNetApp()
             {
                 ProductId = "D2X",
                 InternalId = "Diablo II",
-                IconUrl = @"https://bneteu-a.akamaihd.net/account/static/local-common/images/game-icons/d2xp.1gR7W.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//f9a/3935e198b09577d63a394ee195ddec2e-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//4/cb3a7d551cb3524c5a8c68abacd4fda9-prod-card-tall.jpg",
+                IconUrl =
+                    @"https://bneteu-a.akamaihd.net/account/static/local-common/images/game-icons/d2xp.1gR7W.png",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//f9a/3935e198b09577d63a394ee195ddec2e-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//4/cb3a7d551cb3524c5a8c68abacd4fda9-prod-card-tall.jpg",
                 Name = "Diablo II: Lord of Destruction",
                 Type = BNetAppType.Classic,
                 ClassicExecutable = "Diablo II.exe",
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://blizzard.com/games/d2/"),
-                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "http://blizzard.com/games/d2/"),
+                        new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
+                    }
             },
             new BNetApp()
             {
@@ -177,14 +200,13 @@ namespace BattleNetLibrary
                 ProductId = "VIPR",
                 InternalId = "viper",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-codbo4-7794ee86f3e8be3e.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//5d/411c53766cdf6155fcc952f79f304b4a-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//62/a346ee691a8d0829c5a895200dd17cbf-prod-card-tall-v2.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//5d/411c53766cdf6155fcc952f79f304b4a-prod-mobile-bg.jpg",
+                CoverUrl =
+                    "http://bnetproduct-a.akamaihd.net//62/a346ee691a8d0829c5a895200dd17cbf-prod-card-tall-v2.jpg",
                 Name = "Call of Duty: Black Ops 4",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://www.callofduty.com/")
-                }
+                Links = new List<Link>() { new Link("Homepage", "https://www.callofduty.com/") }
             },
             new BNetApp()
             {
@@ -192,14 +214,13 @@ namespace BattleNetLibrary
                 ProductId = "ODIN",
                 InternalId = "odin",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-codmw-d57b296321d6b444.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//59/326ed260bc958ddd26713761683a4489-_Kronos-Bnet_Game-Shop_Background_Desktop-2280x910.jpg",
-                CoverUrl = "https://bnetproduct-a.akamaihd.net//5e/294eb830c6db1959b3db3b4cbbcfe7fc-_Kronos-Bnet_Game-Card_Product_Vert-700x850.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//59/326ed260bc958ddd26713761683a4489-_Kronos-Bnet_Game-Shop_Background_Desktop-2280x910.jpg",
+                CoverUrl =
+                    "https://bnetproduct-a.akamaihd.net//5e/294eb830c6db1959b3db3b4cbbcfe7fc-_Kronos-Bnet_Game-Card_Product_Vert-700x850.jpg",
                 Name = "Call of Duty: Modern Warfare",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://www.callofduty.com/")
-                }
+                Links = new List<Link>() { new Link("Homepage", "https://www.callofduty.com/") }
             },
             new BNetApp()
             {
@@ -208,11 +229,12 @@ namespace BattleNetLibrary
                 Name = "Warcraft III: Reign of Chaos",
                 Type = BNetAppType.Classic,
                 ClassicExecutable = "Warcraft III.exe",
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://blizzard.com/games/war3/"),
-                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "http://blizzard.com/games/war3/"),
+                        new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
+                    }
             },
             new BNetApp()
             {
@@ -221,11 +243,12 @@ namespace BattleNetLibrary
                 Name = "Warcraft III: The Frozen Throne",
                 Type = BNetAppType.Classic,
                 ClassicExecutable = "Frozen Throne.exe",
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://blizzard.com/games/war3/"),
-                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "http://blizzard.com/games/war3/"),
+                        new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
+                    }
             },
             new BNetApp()
             {
@@ -233,15 +256,18 @@ namespace BattleNetLibrary
                 ProductId = "W3",
                 InternalId = "w3",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-w3r-c8a76eea272dbd55.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//faf/44004fe111706bac3ad1c9a5c7264d1f-WC3R_2020_Orc_Art_Shop_Product_Page_Assets_prod-full-bg_TS03.jpg",
-                CoverUrl = "https://bnetproduct-a.akamaihd.net//5f/3d885e4077747a04a646186a17607769-WC3R_2020_Orc_Art_Shop_Product_Page_Assets_prod-card-vert_TS03.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//faf/44004fe111706bac3ad1c9a5c7264d1f-WC3R_2020_Orc_Art_Shop_Product_Page_Assets_prod-full-bg_TS03.jpg",
+                CoverUrl =
+                    "https://bnetproduct-a.akamaihd.net//5f/3d885e4077747a04a646186a17607769-WC3R_2020_Orc_Art_Shop_Product_Page_Assets_prod-card-vert_TS03.jpg",
                 Name = "Warcraft III: Reforged",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://playwarcraft3.com/"),
-                    new Link("Forums", "https://us.forums.blizzard.com/en/warcraft3/")
-                }
+                Links =
+                    new List<Link>()
+                    {
+                        new Link("Homepage", "https://playwarcraft3.com/"),
+                        new Link("Forums", "https://us.forums.blizzard.com/en/warcraft3/")
+                    }
             },
             new BNetApp()
             {
@@ -249,22 +275,24 @@ namespace BattleNetLibrary
                 ProductId = "LAZR",
                 InternalId = "lazarus",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-codmw2cr-403ff7094aa97396.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//f90/ca5641d89e0495fcd468350d298097d5-Lazarus-Bnet_Placeholder-Shop_Background_Desktop-2280x910-For_20200331.jpg",
-                CoverUrl = "https://bnetproduct-a.akamaihd.net//f/7e875975619de0671dc538c8d85ba550-Lazarus-Bnet_Placeholder-Card_Product_Vert-700x850-For_2020406-Corrected.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//f90/ca5641d89e0495fcd468350d298097d5-Lazarus-Bnet_Placeholder-Shop_Background_Desktop-2280x910-For_20200331.jpg",
+                CoverUrl =
+                    "https://bnetproduct-a.akamaihd.net//f/7e875975619de0671dc538c8d85ba550-Lazarus-Bnet_Placeholder-Card_Product_Vert-700x850-For_2020406-Corrected.jpg",
                 Name = "Call of Duty: Modern Warfare 2 Campaign Remastered",
                 Type = BNetAppType.Default,
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "https://www.callofduty.com/mw2campaignremastered")
-                }
+                Links =
+                    new List<Link>() { new Link("Homepage", "https://www.callofduty.com/mw2campaignremastered") }
             },
             new BNetApp()
             {
                 ApiId = 1514493267,
                 ProductId = "ZEUS",
                 InternalId = "zeus",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//60/d4b6308a9c0ffb51f723462ef1bb73b9-CODBO_CW-Bnet_Product_Desktop-Background-2280x910-UPDATE-For_20200826.jpg",
-                CoverUrl = "https://bnetproduct-a.akamaihd.net//ffd/a8bbbeddae915be62457bc2799f602d0-CODCW-Bnet_Shop_Prod_Card_Vert-700x850-For_20200826.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//60/d4b6308a9c0ffb51f723462ef1bb73b9-CODBO_CW-Bnet_Product_Desktop-Background-2280x910-UPDATE-For_20200826.jpg",
+                CoverUrl =
+                    "https://bnetproduct-a.akamaihd.net//ffd/a8bbbeddae915be62457bc2799f602d0-CODCW-Bnet_Shop_Prod_Card_Vert-700x850-For_20200826.jpg",
                 Name = "Call of Duty: Black Ops Cold War",
                 Type = BNetAppType.Default
             },
@@ -281,8 +309,10 @@ namespace BattleNetLibrary
                 ApiId = 5198665,
                 ProductId = "OSI",
                 InternalId = "osi",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//ff5/06eb0dec3719105deb1a8c5afe460c06-3i_Battle.netShop_CheckoutThumbnail_960x540_MB01.png",
-                CoverUrl = "https://bnetproduct-a.akamaihd.net//ffd/a8bbbeddae915be62457bc2799f602d0-CODCW-Bnet_Shop_Prod_Card_Vert-700x850-For_20200826.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//ff5/06eb0dec3719105deb1a8c5afe460c06-3i_Battle.netShop_CheckoutThumbnail_960x540_MB01.png",
+                CoverUrl =
+                    "https://bnetproduct-a.akamaihd.net//ffd/a8bbbeddae915be62457bc2799f602d0-CODCW-Bnet_Shop_Prod_Card_Vert-700x850-For_20200826.jpg",
                 Name = "Diablo II: Resurrected",
                 Type = BNetAppType.Default
             },
@@ -299,8 +329,10 @@ namespace BattleNetLibrary
                 ApiId = 1179603525,
                 ProductId = "FORE",
                 InternalId = "fore",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//f94/d9d4f33efd0ed10acacf1d032479cd01-CODVG_Reveal_Standard_Keyart_Textless-Bnet-Shop_Background_Desktop-1600x680.jpg",
-                CoverUrl = "https://bnetproduct-a.akamaihd.net//6a/238445d222b2b650eec86a37e4c2ba67-CODVG_Reveal_Ultimate_Keyart_Textless-Bnet-Shop_Card_Product_Vert-700x850_02a.jpg",
+                BackgroundUrl =
+                    @"https://bnetproduct-a.akamaihd.net//f94/d9d4f33efd0ed10acacf1d032479cd01-CODVG_Reveal_Standard_Keyart_Textless-Bnet-Shop_Background_Desktop-1600x680.jpg",
+                CoverUrl =
+                    "https://bnetproduct-a.akamaihd.net//6a/238445d222b2b650eec86a37e4c2ba67-CODVG_Reveal_Ultimate_Keyart_Textless-Bnet-Shop_Card_Product_Vert-700x850_02a.jpg",
                 Name = "Call of Duty: Vanguard",
                 Type = BNetAppType.Default
             },
@@ -309,8 +341,10 @@ namespace BattleNetLibrary
                 ApiId = 1095647827,
                 ProductId = "ANBS",
                 InternalId = "anbs",
-                BackgroundUrl = @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/bltb5cac524dcb261ae/611583c8c8163c2197c3c1f6/di_masthead_desktop-2600.jpg",
-                IconUrl = @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt7b64284fbcdfaa77/60e75dd92d26525ef67ac8c5/nav-icon.png",
+                BackgroundUrl =
+                    @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/bltb5cac524dcb261ae/611583c8c8163c2197c3c1f6/di_masthead_desktop-2600.jpg",
+                IconUrl =
+                    @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt7b64284fbcdfaa77/60e75dd92d26525ef67ac8c5/nav-icon.png",
                 Name = "Diablo Immortal",
                 Type = BNetAppType.Default
             },

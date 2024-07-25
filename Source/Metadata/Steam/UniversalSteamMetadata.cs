@@ -14,12 +14,15 @@ namespace UniversalSteamMetadata
     [LoadPlugin]
     public class UniversalSteamMetadata : MetadataPluginBase<UniversalSteamMetadataSettingsViewModel>
     {
-        private const string searchUrl = @"https://store.steampowered.com/search/?term={0}&ignore_preferences=1&category1=998&ndl=1";
+        private const string searchUrl =
+            @"https://store.steampowered.com/search/?term={0}&ignore_preferences=1&category1=998&ndl=1";
+
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
+
         private IDownloader downloader;
 
         public UniversalSteamMetadata(IPlayniteAPI api) : base(
@@ -62,7 +65,8 @@ namespace UniversalSteamMetadata
             var results = new List<StoreSearchResult>();
             using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
             {
-                var searchPageSrc = webClient.DownloadString(string.Format(searchUrl, Uri.EscapeDataString(searchTerm)));
+                var searchPageSrc =
+                    webClient.DownloadString(string.Format(searchUrl, Uri.EscapeDataString(searchTerm)));
                 var parser = new HtmlParser();
                 var searchPage = parser.ParseDocument(searchPageSrc);
                 foreach (var gameElem in searchPage.QuerySelectorAll(".search_result_row"))

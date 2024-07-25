@@ -42,8 +42,9 @@ namespace AmazonGamesLibrary
         {
             get
             {
-                var program = Programs.GetUnistallProgramsList().
-                    FirstOrDefault(a => a.DisplayName == "Amazon Games" && a.UninstallString?.Contains("Uninstall Amazon Games.exe") == true);
+                var program = Programs.GetUnistallProgramsList().FirstOrDefault(a =>
+                    a.DisplayName == "Amazon Games" &&
+                    a.UninstallString?.Contains("Uninstall Amazon Games.exe") == true);
                 if (program == null)
                 {
                     return null;
@@ -53,12 +54,14 @@ namespace AmazonGamesLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"AmazonGamesLibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"AmazonGamesLibraryIcon.ico");
 
         public static void StartClient()
         {
             ProcessStarter.StartProcess(ClientExecPath, string.Empty);
         }
+
         public static GameConfiguration GetGameConfiguration(string gameDir)
         {
             var configFile = Path.Combine(gameDir, GameConfiguration.ConfigFileName);
@@ -73,7 +76,7 @@ namespace AmazonGamesLibrary
         public static bool GetGameRequiresClient(GameConfiguration config)
         {
             return !config.Main.ClientId.IsNullOrEmpty() &&
-                    config.Main.AuthScopes.HasItems();
+                   config.Main.AuthScopes.HasItems();
         }
     }
 }

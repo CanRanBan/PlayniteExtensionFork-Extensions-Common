@@ -11,8 +11,13 @@ namespace OriginLibrary.Services
     {
         private const string loginUrl = @"https://www.ea.com/login";
         private const string profileUrl = @"https://myaccount.ea.com/cp-ui/aboutme/index";
-        private const string logoutUrl = @"https://accounts.ea.com/connect/logout?client_id=EADOTCOM-WEB-SERVER&locale=en_US&redirect_uri=https%3A%2F%2Fwww.ea.com";
-        private const string tokenUrl = @"https://accounts.ea.com/connect/auth?client_id=ORIGIN_JS_SDK&response_type=token&redirect_uri=nucleus:rest&prompt=none";
+
+        private const string logoutUrl =
+            @"https://accounts.ea.com/connect/logout?client_id=EADOTCOM-WEB-SERVER&locale=en_US&redirect_uri=https%3A%2F%2Fwww.ea.com";
+
+        private const string tokenUrl =
+            @"https://accounts.ea.com/connect/auth?client_id=ORIGIN_JS_SDK&response_type=token&redirect_uri=nucleus:rest&prompt=none";
+
         private ILogger logger = LogManager.GetLogger();
         private IWebView webView;
 
@@ -27,7 +32,9 @@ namespace OriginLibrary.Services
             client.Headers.Add("authtoken", token.access_token);
             client.Headers.Add("accept", "application/vnd.origin.v3+json; x-cache/force-write");
 
-            var stringData = client.DownloadString(string.Format(@"https://api1.origin.com/ecommerce2/consolidatedentitlements/{0}?machine_hash=1", userId));
+            var stringData =
+                client.DownloadString(string.Format(
+                    @"https://api1.origin.com/ecommerce2/consolidatedentitlements/{0}?machine_hash=1", userId));
             var data = Serialization.FromJson<AccountEntitlementsResponse>(stringData);
             return data.entitlements;
         }
@@ -54,7 +61,9 @@ namespace OriginLibrary.Services
                 client.Headers.Add("MultiplayerId", multiplayerId);
             }
 
-            var stringData = client.DownloadString(string.Format(@"https://api1.origin.com/atom/users/{0}/games/{1}/usage", userId, masterTitleId));
+            var stringData =
+                client.DownloadString(string.Format(@"https://api1.origin.com/atom/users/{0}/games/{1}/usage", userId,
+                    masterTitleId));
             return new UsageResponse(stringData);
         }
 

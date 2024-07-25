@@ -57,14 +57,13 @@ namespace XboxLibrary
                     var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
                     if (app != null)
                     {
-                        var installInfo = new GameInstallationData
-                        {
-                            InstallDirectory = app.WorkDir
-                        };
+                        var installInfo = new GameInstallationData { InstallDirectory = app.WorkDir };
 
                         InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                         return;
-                    };
+                    }
+
+                    ;
 
                     await Task.Delay(10000);
                 }

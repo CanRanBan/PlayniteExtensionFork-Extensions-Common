@@ -30,10 +30,7 @@ namespace BattleNetLibrary
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public BattleNetLibrarySettingsViewModel(BattleNetLibrary library, IPlayniteAPI api) : base(library, api)

@@ -17,11 +17,9 @@ namespace OriginLibrary.Models
 
         public class Runtime
         {
-            [XmlElement("launcher")]
-            public List<Launcher> launchers { get; set; }
+            [XmlElement("launcher")] public List<Launcher> launchers { get; set; }
         }
 
-        [XmlElement("runtime")]
-        public Runtime runtime { get; set; }
+        [XmlElement("runtime")] public Runtime runtime { get; set; }
     }
 }

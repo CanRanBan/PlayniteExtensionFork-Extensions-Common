@@ -21,10 +21,7 @@ namespace ItchioLibrary
 
         public static string PrereqsPaths
         {
-            get
-            {
-                return Path.Combine(UserPath, "prereqs");
-            }
+            get { return Path.Combine(UserPath, "prereqs"); }
         }
 
         public static string InstallationPath
@@ -34,7 +31,8 @@ namespace ItchioLibrary
                 var prog = Programs.GetUnistallProgramsList().FirstOrDefault(a => a.DisplayName == "itch");
                 if (prog == null) // Try default path
                 {
-                    var defPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "itch");
+                    var defPath =
+                        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "itch");
                     if (File.Exists(Path.Combine(defPath, "state.json")))
                     {
                         return defPath;
@@ -69,10 +67,7 @@ namespace ItchioLibrary
 
         public static bool IsInstalled
         {
-            get
-            {
-                return InstalledVersion.Major >= 25;
-            }
+            get { return InstalledVersion.Major >= 25; }
         }
 
         public static Version InstalledVersion
@@ -90,7 +85,8 @@ namespace ItchioLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"ItchIoLibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"ItchIoLibraryIcon.ico");
 
         public static void StartClient()
         {

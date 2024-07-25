@@ -63,9 +63,13 @@ namespace UplayLibrary
                 {
                     Name = item.root.name.RemoveTrademarks(),
                     GameId = item.uplay_id.ToString(),
-                    BackgroundImage = item.root.background_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.background_image),
+                    BackgroundImage =
+                        item.root.background_image.IsNullOrEmpty()
+                            ? null
+                            : new MetadataFile(item.root.background_image),
                     Icon = item.root.icon_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.icon_image),
-                    CoverImage = item.root.thumb_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.thumb_image),
+                    CoverImage =
+                        item.root.thumb_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.thumb_image),
                     Source = new MetadataNameProperty("Ubisoft Connect"),
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
@@ -93,7 +97,8 @@ namespace UplayLibrary
                 foreach (var install in installsKey.GetSubKeyNames())
                 {
                     var gameData = installsKey.OpenSubKey(install);
-                    var installDir = (gameData.GetValue("InstallDir") as string)?.Replace('/', Path.DirectorySeparatorChar);
+                    var installDir =
+                        (gameData.GetValue("InstallDir") as string)?.Replace('/', Path.DirectorySeparatorChar);
                     if (!installDir.IsNullOrEmpty() && Directory.Exists(installDir))
                     {
                         var newGame = new GameMetadata()

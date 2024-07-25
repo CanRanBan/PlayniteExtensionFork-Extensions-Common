@@ -32,10 +32,7 @@ namespace ItchioLibrary
             var features = new HashSet<MetadataProperty>();
             var gameData = new GameMetadata()
             {
-                Links = new List<Link>(),
-                Tags = tags,
-                Genres = genres,
-                Features = features
+                Links = new List<Link>(), Tags = tags, Genres = genres, Features = features
             };
 
             var itchGame = butler.GetGame(Convert.ToInt32(game.GameId));
@@ -76,7 +73,8 @@ namespace ItchioLibrary
                 // Other info
                 var infoPanel = gamePage.QuerySelector(".game_info_panel_widget");
                 var fields = infoPanel.QuerySelectorAll("tr");
-                gameData.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + game.Name));
+                gameData.Links.Add(new Link("PCGamingWiki",
+                    @"http://pcgamingwiki.com/w/index.php?search=" + game.Name));
 
                 foreach (var field in fields)
                 {
@@ -120,13 +118,17 @@ namespace ItchioLibrary
 
                     if (name == "Author")
                     {
-                        gameData.Developers = new HashSet<MetadataProperty> { new MetadataNameProperty(field.ChildNodes[1].TextContent) };
+                        gameData.Developers = new HashSet<MetadataProperty>
+                        {
+                            new MetadataNameProperty(field.ChildNodes[1].TextContent)
+                        };
                     }
 
                     if (name == "Release date")
                     {
                         var strDate = field.QuerySelector("abbr").Attributes["title"].Value.Split('@')[0].Trim();
-                        if (DateTime.TryParseExact(strDate, "d MMMM yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime))
+                        if (DateTime.TryParseExact(strDate, "d MMMM yyyy", CultureInfo.InvariantCulture,
+                                DateTimeStyles.None, out var dateTime))
                         {
                             gameData.ReleaseDate = new ReleaseDate(dateTime);
                         }

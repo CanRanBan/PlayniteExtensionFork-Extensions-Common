@@ -72,7 +72,8 @@ namespace UplayLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"UbisoftConnectLibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"UbisoftConnectLibraryIcon.ico");
 
         public static bool GetGameRequiresUplay(Game game)
         {
@@ -81,7 +82,8 @@ namespace UplayLibrary
                 return false;
             }
 
-            return new SafeFileEnumerator(game.InstallDirectory, "uplay_*_loader*", SearchOption.AllDirectories).Any() ||
+            return new SafeFileEnumerator(game.InstallDirectory, "uplay_*_loader*", SearchOption.AllDirectories)
+                       .Any() ||
                    new SafeFileEnumerator(game.InstallDirectory, "upc_*_loader*", SearchOption.AllDirectories).Any();
         }
 
@@ -92,7 +94,8 @@ namespace UplayLibrary
 
         public static List<ProductInformation> GetLocalProductCache()
         {
-            var initErrorMessage = "Ubisoft Connect client was not initialized, please start the client at least once to generate user library data.";
+            var initErrorMessage =
+                "Ubisoft Connect client was not initialized, please start the client at least once to generate user library data.";
             var products = new List<ProductInformation>();
             var cachePath = ConfigurationsCachePath;
             if (!File.Exists(cachePath))

@@ -32,6 +32,7 @@ namespace Steam
         private readonly WebApiClient webApiClient;
         private readonly SteamTagNamer tagNamer;
         private readonly SharedSteamSettings settings;
+
         private static readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
@@ -40,7 +41,8 @@ namespace Steam
 
         private static readonly string[] childGameTypes = new[] { "Demo", "Beta", "Tool", "Video" };
 
-        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer, SharedSteamSettings settings)
+        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer,
+            SharedSteamSettings settings)
         {
             this.apiClient = apiClient;
             this.webApiClient = webApiClient;
@@ -205,7 +207,8 @@ namespace Steam
 
             // Background Image
             var bannerBk = string.Format(@"https://steamcdn-a.akamaihd.net/steam/apps/{0}/library_hero.jpg", appId);
-            var storeBk = string.Format(@"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated_v6b.jpg", appId);
+            var storeBk = string.Format(@"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated_v6b.jpg",
+                appId);
 
             switch (backgroundSource)
             {
@@ -219,24 +222,30 @@ namespace Steam
                     {
                         metadata.BackgroundImage = new MetadataFile(bk);
                     }
+
                     break;
                 case BackgroundSource.StoreScreenshot:
                     if (metadata.StoreDetails != null)
                     {
-                        metadata.BackgroundImage = new MetadataFile(Regex.Replace(metadata.StoreDetails.screenshots.First().path_full, "\\?.*$", ""));
+                        metadata.BackgroundImage =
+                            new MetadataFile(Regex.Replace(metadata.StoreDetails.screenshots.First().path_full,
+                                "\\?.*$", ""));
                     }
+
                     break;
                 case BackgroundSource.StoreBackground:
                     if (HttpDownloader.GetResponseCode(storeBk, CancellationToken.None, out var _).IsSuccess())
                     {
                         metadata.BackgroundImage = new MetadataFile(storeBk);
                     }
+
                     break;
                 case BackgroundSource.Banner:
                     if (HttpDownloader.GetResponseCode(bannerBk, CancellationToken.None, out var _).IsSuccess())
                     {
                         metadata.BackgroundImage = new MetadataFile(bannerBk);
                     }
+
                     break;
                 default:
                     break;
@@ -270,22 +279,29 @@ namespace Steam
 
             metadata.Links = new List<Link>()
             {
-                new Link(ResourceProvider.GetString(LOC.SteamLinksCommunityHub), $"https://steamcommunity.com/app/{appId}"),
-                new Link(ResourceProvider.GetString(LOC.SteamLinksDiscussions), $"https://steamcommunity.com/app/{appId}/discussions/"),
-                new Link(ResourceProvider.GetString(LOC.SteamLinksGuides), $"https://steamcommunity.com/app/{appId}/guides/"),
-                new Link(ResourceProvider.GetString("LOCCommonLinksNews"), $"https://store.steampowered.com/news/?appids={appId}"),
-                new Link(ResourceProvider.GetString("LOCCommonLinksStorePage"), $"https://store.steampowered.com/app/{appId}"),
+                new Link(ResourceProvider.GetString(LOC.SteamLinksCommunityHub),
+                    $"https://steamcommunity.com/app/{appId}"),
+                new Link(ResourceProvider.GetString(LOC.SteamLinksDiscussions),
+                    $"https://steamcommunity.com/app/{appId}/discussions/"),
+                new Link(ResourceProvider.GetString(LOC.SteamLinksGuides),
+                    $"https://steamcommunity.com/app/{appId}/guides/"),
+                new Link(ResourceProvider.GetString("LOCCommonLinksNews"),
+                    $"https://store.steampowered.com/news/?appids={appId}"),
+                new Link(ResourceProvider.GetString("LOCCommonLinksStorePage"),
+                    $"https://store.steampowered.com/app/{appId}"),
                 new Link("PCGamingWiki", $"https://pcgamingwiki.com/api/appid.php?appid={appId}")
             };
 
             if (metadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 22) != null)
             {
-                metadata.Links.Add(new Link(ResourceProvider.GetString("LOCCommonLinksAchievements"), GetAchievementsUrl(appId)));
+                metadata.Links.Add(new Link(ResourceProvider.GetString("LOCCommonLinksAchievements"),
+                    GetAchievementsUrl(appId)));
             }
 
             if (metadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 30) != null)
             {
-                metadata.Links.Add(new Link(ResourceProvider.GetString("LOCSteamLinksWorkshop"), GetWorkshopUrl(appId)));
+                metadata.Links.Add(new Link(ResourceProvider.GetString("LOCSteamLinksWorkshop"),
+                    GetWorkshopUrl(appId)));
             }
 
             var features = new HashSet<MetadataProperty>();
@@ -306,19 +322,15 @@ namespace Steam
                 publishers = metadata.StoreDetails.publishers?.Where(a => !a.IsNullOrWhiteSpace());
                 if (publishers.HasItems())
                 {
-                    metadata.Publishers = publishers.
-                        Select(a => new MetadataNameProperty(a)).
-                        Cast<MetadataProperty>().
-                        ToHashSet();
+                    metadata.Publishers = publishers.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>()
+                        .ToHashSet();
                 }
 
                 developers = metadata.StoreDetails.developers?.Where(a => !a.IsNullOrWhiteSpace());
                 if (developers.HasItems())
                 {
-                    metadata.Developers = developers.
-                        Select(a => new MetadataNameProperty(a)).
-                        Cast<MetadataProperty>().
-                        ToHashSet();
+                    metadata.Developers = developers.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>()
+                        .ToHashSet();
                 }
 
                 metadata.Features = features;
@@ -337,13 +349,15 @@ namespace Steam
                             category.description = "Cloud Saves";
                         }
 
-                        features.Add(new MetadataNameProperty(cultInfo.ToTitleCase(category.description.Replace("steam", "", StringComparison.OrdinalIgnoreCase).Trim())));
+                        features.Add(new MetadataNameProperty(cultInfo.ToTitleCase(category.description
+                            .Replace("steam", "", StringComparison.OrdinalIgnoreCase).Trim())));
                     }
                 }
 
                 if (metadata.StoreDetails.genres.HasItems())
                 {
-                    metadata.Genres = metadata.StoreDetails.genres.Select(a => new MetadataNameProperty(a.description)).Cast<MetadataProperty>().ToHashSet();
+                    metadata.Genres = metadata.StoreDetails.genres.Select(a => new MetadataNameProperty(a.description))
+                        .Cast<MetadataProperty>().ToHashSet();
                 }
 
                 if (metadata.StoreDetails.platforms != null)
@@ -387,6 +401,7 @@ namespace Steam
                         features.Add(new MetadataNameProperty("VR Standing"));
                         vrSupport = true;
                     }
+
                     if (vrArea.Name.Contains("roomscale"))
                     {
                         features.Add(new MetadataNameProperty("VR Room-Scale"));
@@ -406,6 +421,7 @@ namespace Steam
                         features.Add(new MetadataNameProperty("VR Gamepad"));
                         vrSupport = true;
                     }
+
                     if ((vrArea.Name == "oculus" && vrArea.Value == "1") ||
                         (vrArea.Name == "steamvr" && vrArea.Value == "1"))
                     {
@@ -425,16 +441,18 @@ namespace Steam
                     {
                         var value = HttpUtility.HtmlDecode(ass["name"].Value);
                         if (publishers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
-                            value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
+                                                 value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
                         {
-                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a publisher name and was skipped");
+                            logger.Debug(
+                                $"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a publisher name and was skipped");
                             break;
                         }
 
                         if (developers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
-                            value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
+                                                 value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
                         {
-                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a developer name and was skipped");
+                            logger.Debug(
+                                $"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a developer name and was skipped");
                             break;
                         }
 
@@ -470,12 +488,14 @@ namespace Steam
                                 logger.Debug($"Tag {tagId} not found. Fetching new ones.");
                                 newTagNames = tagNamer.UpdateAndGetTagNames();
                             }
+
                             if (!newTagNames.TryGetValue(tagId, out name))
                             {
                                 logger.Warn($"Could not find tag name for tag {tagId}");
                                 continue;
                             }
                         }
+
                         name = tagNamer.GetFinalTagName(name, tagId);
                         metadata.Tags.Add(new MetadataNameProperty(name));
                     }
@@ -490,7 +510,8 @@ namespace Steam
                 && uint.TryParse(parentStr, out uint parentId))
             {
                 logger.Debug($"Getting parent metadata for {appId} from {parentId}");
-                var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers, downloadParentMetadata: false);
+                var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers,
+                    downloadParentMetadata: false);
 
                 metadata.Links = parentMetadata.Links; //demo appId urls either redirect to the main game or are broken
                 metadata.CoverImage = metadata.CoverImage ?? parentMetadata.CoverImage;

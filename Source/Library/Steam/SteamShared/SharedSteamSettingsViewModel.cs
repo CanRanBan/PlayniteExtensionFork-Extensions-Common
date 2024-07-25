@@ -84,8 +84,7 @@ namespace SteamLibrary.SteamShared
 
         public Dictionary<string, string> Languages { get; } = new Dictionary<string, string>
         {
-            {"german","Deutsch (German)"},
-            {"english","English"},
+            { "german", "Deutsch (German)" }, { "english", "English" },
         };
 
         public class TagInfo
@@ -100,9 +99,23 @@ namespace SteamLibrary.SteamShared
             }
         }
 
-        public ObservableCollection<TagInfo> OkayTags { get => okayTags; set => SetValue(ref okayTags, value); }
-        public ObservableCollection<TagInfo> BlacklistedTags { get => blacklistedTags; set => SetValue(ref blacklistedTags, value); }
-        public string FixedTagCountString { get => fixedTagCountString; set => SetValue(ref fixedTagCountString, value); }
+        public ObservableCollection<TagInfo> OkayTags
+        {
+            get => okayTags;
+            set => SetValue(ref okayTags, value);
+        }
+
+        public ObservableCollection<TagInfo> BlacklistedTags
+        {
+            get => blacklistedTags;
+            set => SetValue(ref blacklistedTags, value);
+        }
+
+        public string FixedTagCountString
+        {
+            get => fixedTagCountString;
+            set => SetValue(ref fixedTagCountString, value);
+        }
 
         public RelayCommand<IList<object>> WhitelistCommand
         {
@@ -160,6 +173,7 @@ namespace SteamLibrary.SteamShared
         {
             public string Name { get; set; }
             public GameField Field { get; set; }
+
             public NamedField(string name, GameField field)
             {
                 Name = name;

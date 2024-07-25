@@ -115,14 +115,8 @@ namespace Steam.Models
             public Support support_info;
         }
 
-        public bool success
-        {
-            get; set;
-        }
+        public bool success { get; set; }
 
-        public AppDetails data
-        {
-            get; set;
-        }
+        public AppDetails data { get; set; }
     }
 }

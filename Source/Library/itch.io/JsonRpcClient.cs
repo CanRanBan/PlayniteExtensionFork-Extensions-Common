@@ -13,8 +13,7 @@ namespace ItchioLibrary
 {
     public class JsonRpcResponse<TResult> : RpcMessage where TResult : class
     {
-        [SerializationPropertyName("result")]
-        public new TResult Result;
+        [SerializationPropertyName("result")] public new TResult Result;
     }
 
     public class JsonRpcResponse : RpcMessage
@@ -56,34 +55,27 @@ namespace ItchioLibrary
             Id = null;
         }
     }
+
     public class JsonRpcResponseError
     {
-        [SerializationPropertyName("code")]
-        public int Code;
+        [SerializationPropertyName("code")] public int Code;
 
-        [SerializationPropertyName("message")]
-        public string Message;
+        [SerializationPropertyName("message")] public string Message;
     }
 
     public class RpcMessage
     {
-        [SerializationPropertyName("jsonrpc")]
-        public string JsonRpcProtocol = "2.0";
+        [SerializationPropertyName("jsonrpc")] public string JsonRpcProtocol = "2.0";
 
-        [SerializationPropertyName("id")]
-        public int? Id;
+        [SerializationPropertyName("id")] public int? Id;
 
-        [SerializationPropertyName("result")]
-        public object Result;
+        [SerializationPropertyName("result")] public object Result;
 
-        [SerializationPropertyName("method")]
-        public string Method;
+        [SerializationPropertyName("method")] public string Method;
 
-        [SerializationPropertyName("params")]
-        public object Params;
+        [SerializationPropertyName("params")] public object Params;
 
-        [SerializationPropertyName("error")]
-        public JsonRpcResponseError Error;
+        [SerializationPropertyName("error")] public JsonRpcResponseError Error;
 
         public TParams GetParams<TParams>() where TParams : class, new()
         {
@@ -206,18 +198,18 @@ namespace ItchioLibrary
             else if (request.Id != null && !string.IsNullOrEmpty(request.Method))
             {
                 // Request
-                RequestReceived?.BeginInvoke(this, new JsonRpcRequestEventArgs()
-                {
-                    Request = Serialization.FromJson<JsonRpcRequest>(data)
-                }, EventEndCallback<JsonRpcRequestEventArgs>, null);
+                RequestReceived?.BeginInvoke(this,
+                    new JsonRpcRequestEventArgs() { Request = Serialization.FromJson<JsonRpcRequest>(data) },
+                    EventEndCallback<JsonRpcRequestEventArgs>, null);
             }
             else if (request.Id == null)
             {
                 // Notification
-                NotificationReceived?.BeginInvoke(this, new JsonRpcNotificationEventArgs()
-                {
-                    Notification = Serialization.FromJson<JsonRpcNotification>(data)
-                }, EventEndCallback<JsonRpcNotificationEventArgs>, null);
+                NotificationReceived?.BeginInvoke(this,
+                    new JsonRpcNotificationEventArgs()
+                    {
+                        Notification = Serialization.FromJson<JsonRpcNotification>(data)
+                    }, EventEndCallback<JsonRpcNotificationEventArgs>, null);
             }
             else
             {
@@ -320,11 +312,7 @@ namespace ItchioLibrary
 
         public void SendResponse(JsonRpcRequest request, object response)
         {
-            var str = Serialization.ToJson(new JsonRpcResponse
-            {
-                Id = request.Id,
-                Result = response
-            });
+            var str = Serialization.ToJson(new JsonRpcResponse { Id = request.Id, Result = response });
 
             SendData(str);
         }

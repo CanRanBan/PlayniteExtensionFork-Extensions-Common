@@ -26,7 +26,8 @@ namespace ItchioLibrary
             SettingsViewModel = new ItchioLibrarySettingsViewModel(this, api);
         }
 
-        public static bool TryGetGameActions(string installDir, out GameAction playAction, out List<GameAction> otherActions)
+        public static bool TryGetGameActions(string installDir, out GameAction playAction,
+            out List<GameAction> otherActions)
         {
             var fileEnum = new SafeFileEnumerator(installDir, ".itch.toml", SearchOption.AllDirectories);
             if (fileEnum.Any())
@@ -45,7 +46,8 @@ namespace ItchioLibrary
                             {
                                 Name = "Play",
                                 Path = action.path,
-                                WorkingDir = action.path.IsHttpUrl() ? null : ExpandableVariables.InstallationDirectory,
+                                WorkingDir =
+                                    action.path.IsHttpUrl() ? null : ExpandableVariables.InstallationDirectory,
                                 Type = action.path.IsHttpUrl() ? GameActionType.URL : GameActionType.File,
                                 Arguments = action.args?.Any() == true ? string.Join(" ", action.args) : null
                             };
@@ -56,7 +58,8 @@ namespace ItchioLibrary
                             {
                                 Name = action.name,
                                 Path = action.path,
-                                WorkingDir = action.path.IsHttpUrl() ? null : ExpandableVariables.InstallationDirectory,
+                                WorkingDir =
+                                    action.path.IsHttpUrl() ? null : ExpandableVariables.InstallationDirectory,
                                 Type = action.path.IsHttpUrl() ? GameActionType.URL : GameActionType.File,
                                 Arguments = action.args?.Any() == true ? string.Join(" ", action.args) : null
                             });
@@ -109,7 +112,8 @@ namespace ItchioLibrary
                         Name = cave.game.title.RemoveTrademarks(),
                         InstallDirectory = installDir,
                         IsInstalled = true,
-                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
+                        CoverImage =
+                            cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
                     if (cave.game.publishedAt != null)
@@ -147,16 +151,13 @@ namespace ItchioLibrary
                         var collections = butler.GetCollection(profile.id);
                         foreach (var collection in collections.items)
                         {
-                            var fetchRecords = butler.GetGameRecords(profile.id, GameRecordsSource.Collection, new Dictionary<string, object>
-                            {
-                                { "collectionId", collection.id },
-                                { "limit", collection.gamesCount },
-                                { "filters", new Dictionary<string, object>
-                                    {
-                                        { "owned", false }
-                                    }
-                                }
-                            });
+                            var fetchRecords = butler.GetGameRecords(profile.id, GameRecordsSource.Collection,
+                                new Dictionary<string, object>
+                                {
+                                    { "collectionId", collection.id },
+                                    { "limit", collection.gamesCount },
+                                    { "filters", new Dictionary<string, object> { { "owned", false } } }
+                                });
                             foreach (var record in fetchRecords.records)
                             {
                                 ItchioGame game;
@@ -185,13 +186,18 @@ namespace ItchioLibrary
                                     Source = new MetadataNameProperty("itch.io"),
                                     GameId = game.id.ToString(),
                                     Name = game.title.RemoveTrademarks(),
-                                    CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
-                                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                    CoverImage =
+                                        game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
+                                    Platforms = new HashSet<MetadataProperty>
+                                    {
+                                        new MetadataSpecProperty("pc_windows")
+                                    }
                                 };
                                 if (game.publishedAt != null)
                                 {
                                     metadata.ReleaseDate = new ReleaseDate((DateTime)game.publishedAt);
                                 }
+
                                 games.Add(metadata);
                             }
                         }
@@ -225,7 +231,8 @@ namespace ItchioLibrary
                             Source = new MetadataNameProperty("itch.io"),
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
-                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
+                            CoverImage =
+                                key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
                             Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
                         if (key.game.publishedAt != null)

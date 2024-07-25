@@ -44,7 +44,8 @@ namespace RockstarGamesLibrary
                         return;
                     }
 
-                    var installedGame = RockstarGamesLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                    var installedGame = RockstarGamesLibrary.GetInstalledGames()
+                        .FirstOrDefault(a => a.GameId == Game.GameId);
                     if (installedGame != null)
                     {
                         var installInfo = new GameInstallationData
@@ -129,7 +130,8 @@ namespace RockstarGamesLibrary
                 procMon = new ProcessMonitor();
                 procMon.TreeStarted += ProcMon_TreeStarted;
                 procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                ProcessStarter.StartProcess(RockstarGames.ClientExecPath, $"-launchTitleInFolder \"{Game.InstallDirectory}\"");
+                ProcessStarter.StartProcess(RockstarGames.ClientExecPath,
+                    $"-launchTitleInFolder \"{Game.InstallDirectory}\"");
                 _ = procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
             }
             else

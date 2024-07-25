@@ -33,7 +33,8 @@ namespace UplayLibrary
             {
                 // If multiple UI processes are running then we can close them gracefully.
                 // Only one running means that Uply is closed to tray and we have to kill it.
-                var coreRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainProc.Id}", null, out var stdOut1, out var stdErr1);
+                var coreRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainProc.Id}", null,
+                    out var stdOut1, out var stdErr1);
                 if (coreRes != 0)
                 {
                     logger.Error($"Failed to close Ubisoft Connect UI processes: {coreRes}, {stdErr1}");
@@ -43,7 +44,8 @@ namespace UplayLibrary
                 Thread.Sleep(3000);
             }
 
-            var mainRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null, out var stdOut, out var stdErr);
+            var mainRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null,
+                out var stdOut, out var stdErr);
             if (mainRes != 0)
             {
                 logger.Error($"Failed to close Ubisoft Connect client: {mainRes}, {stdErr}");

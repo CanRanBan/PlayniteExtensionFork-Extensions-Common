@@ -27,12 +27,14 @@ namespace OriginLibrary
                 Description = storeMetadata.StoreDetails.i18n.longDescription,
                 Links = new List<Link>()
                 {
-                    new Link(resources.GetString("LOCCommonLinksStorePage"), @"https://www.origin.com/store" + storeMetadata.StoreDetails.offerPath),
+                    new Link(resources.GetString("LOCCommonLinksStorePage"),
+                        @"https://www.origin.com/store" + storeMetadata.StoreDetails.offerPath),
                     new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + game.Name)
                 }
             };
 
-            var releaseDate = storeMetadata.StoreDetails.platforms.FirstOrDefault(a => a.platform == "PCWIN")?.releaseDate;
+            var releaseDate = storeMetadata.StoreDetails.platforms.FirstOrDefault(a => a.platform == "PCWIN")
+                ?.releaseDate;
             if (releaseDate != null)
             {
                 gameInfo.ReleaseDate = new ReleaseDate(releaseDate.Value);
@@ -40,28 +42,33 @@ namespace OriginLibrary
 
             if (!storeMetadata.StoreDetails.publisherFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Publishers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.publisherFacetKey) };
+                gameInfo.Publishers = new HashSet<MetadataProperty>()
+                {
+                    new MetadataNameProperty(storeMetadata.StoreDetails.publisherFacetKey)
+                };
             }
 
             if (!storeMetadata.StoreDetails.developerFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Developers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.developerFacetKey) };
+                gameInfo.Developers = new HashSet<MetadataProperty>()
+                {
+                    new MetadataNameProperty(storeMetadata.StoreDetails.developerFacetKey)
+                };
             }
 
             if (!storeMetadata.StoreDetails.genreFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Genres = storeMetadata.StoreDetails.genreFacetKey?.
-                    Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
-                    Select(a => new MetadataNameProperty(a)).
-                    Cast<MetadataProperty>().
-                    ToHashSet();
+                gameInfo.Genres = storeMetadata.StoreDetails.genreFacetKey
+                    ?.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet();
             }
 
             gameInfo.CoverImage = storeMetadata.CoverImage;
             gameInfo.BackgroundImage = storeMetadata.BackgroundImage;
             if (!string.IsNullOrEmpty(storeMetadata.StoreDetails.i18n.gameForumURL))
             {
-                gameInfo.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"), storeMetadata.StoreDetails.i18n.gameForumURL));
+                gameInfo.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"),
+                    storeMetadata.StoreDetails.i18n.gameForumURL));
             }
 
             if (!string.IsNullOrEmpty(storeMetadata.StoreDetails.i18n.gameManualURL))
@@ -74,16 +81,15 @@ namespace OriginLibrary
 
         public OriginGameMetadata DownloadGameMetadata(string id)
         {
-            var data = new OriginGameMetadata()
-            {
-                StoreDetails = OriginApiClient.GetGameStoreData(id)
-            };
+            var data = new OriginGameMetadata() { StoreDetails = OriginApiClient.GetGameStoreData(id) };
 
             data.CoverImage = new MetadataFile(data.StoreDetails.imageServer + data.StoreDetails.i18n.packArtLarge);
             if (!string.IsNullOrEmpty(data.StoreDetails.offerPath))
             {
                 data.StoreMetadata = OriginApiClient.GetStoreMetadata(data.StoreDetails.offerPath);
-                var bkData = data.StoreMetadata?.gamehub.components.items?.FirstOrDefault(a => a.ContainsKey("origin-store-pdp-hero"));
+                var bkData =
+                    data.StoreMetadata?.gamehub.components.items?.FirstOrDefault(a =>
+                        a.ContainsKey("origin-store-pdp-hero"));
                 if (bkData != null)
                 {
                     dynamic test = bkData["origin-store-pdp-hero"];

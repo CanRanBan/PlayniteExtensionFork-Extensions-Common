@@ -14,17 +14,41 @@ namespace SteamLibrary.SteamShared
         private bool setTagCategoryAsPrefix = false;
         private string tagPrefix = string.Empty;
 
-        public bool LimitTagsToFixedAmount { get { return limitTagsToFixedAmount; } set { SetValue(ref limitTagsToFixedAmount, value); } }
+        public bool LimitTagsToFixedAmount
+        {
+            get { return limitTagsToFixedAmount; }
+            set { SetValue(ref limitTagsToFixedAmount, value); }
+        }
 
-        public int FixedTagCount { get { return fixedTagCount; } set { SetValue(ref fixedTagCount, value); } }
+        public int FixedTagCount
+        {
+            get { return fixedTagCount; }
+            set { SetValue(ref fixedTagCount, value); }
+        }
 
-        public bool UseTagPrefix { get { return useTagPrefix; } set { SetValue(ref useTagPrefix, value); } }
+        public bool UseTagPrefix
+        {
+            get { return useTagPrefix; }
+            set { SetValue(ref useTagPrefix, value); }
+        }
 
-        public bool SetTagCategoryAsPrefix { get { return setTagCategoryAsPrefix; } set { SetValue(ref setTagCategoryAsPrefix, value); } }
+        public bool SetTagCategoryAsPrefix
+        {
+            get { return setTagCategoryAsPrefix; }
+            set { SetValue(ref setTagCategoryAsPrefix, value); }
+        }
 
-        public string TagPrefix { get { return tagPrefix; } set { SetValue(ref tagPrefix, value); } }
+        public string TagPrefix
+        {
+            get { return tagPrefix; }
+            set { SetValue(ref tagPrefix, value); }
+        }
 
-        public string LanguageKey { get => languageKey; set => SetValue(ref languageKey, value); }
+        public string LanguageKey
+        {
+            get => languageKey;
+            set => SetValue(ref languageKey, value);
+        }
 
         public bool DownloadVerticalCovers { get; set; } = true;
 

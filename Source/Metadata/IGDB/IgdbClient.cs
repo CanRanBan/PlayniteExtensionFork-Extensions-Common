@@ -34,11 +34,7 @@ namespace IGDBMetadata
                 endpoint += '/';
             }
 
-            httpClient = new HttpClient
-            {
-                Timeout = new TimeSpan(0, 0, 30),
-                BaseAddress = new Uri(endpoint)
-            };
+            httpClient = new HttpClient { Timeout = new TimeSpan(0, 0, 30), BaseAddress = new Uri(endpoint) };
         }
 
         public void Dispose()

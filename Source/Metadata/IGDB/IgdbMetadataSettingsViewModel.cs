@@ -5,12 +5,9 @@ namespace IGDBMetadata
 {
     public enum MultiImagePriority
     {
-        [Description("LOCFirst")]
-        First,
-        [Description("LOCRandom")]
-        Random,
-        [Description("LOCUserSelect")]
-        Select
+        [Description("LOCFirst")] First,
+        [Description("LOCRandom")] Random,
+        [Description("LOCUserSelect")] Select
     }
 
     public class IgdbMetadataSettings

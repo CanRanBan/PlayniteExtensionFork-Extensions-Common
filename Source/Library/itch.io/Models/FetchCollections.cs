@@ -8,6 +8,7 @@ namespace ItchioLibrary.Models
         /// Requested collections.
         /// </summary>
         public List<Collection> items;
+
         /// <summary>
         /// True if the info was from local DB and it should be re-queried using “Fresh”.
         /// </summary>

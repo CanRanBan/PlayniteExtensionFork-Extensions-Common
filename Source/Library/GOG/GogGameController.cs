@@ -85,10 +85,7 @@ namespace GogLibrary
                     if (games.ContainsKey(Game.GameId))
                     {
                         var game = games[Game.GameId];
-                        var installInfo = new GameInstallationData()
-                        {
-                            InstallDirectory = game.InstallDirectory
-                        };
+                        var installInfo = new GameInstallationData() { InstallDirectory = game.InstallDirectory };
 
                         InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                         return;

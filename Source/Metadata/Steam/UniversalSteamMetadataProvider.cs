@@ -49,7 +49,8 @@ namespace UniversalSteamMetadata
             MetadataField.Tags,
         };
 
-        public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin, IDownloader downloader)
+        public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin,
+            IDownloader downloader)
         {
             this.options = options;
             this.plugin = plugin;
@@ -277,7 +278,9 @@ namespace UniversalSteamMetadata
 
             try
             {
-                var metadataProvider = new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(plugin, plugin.SettingsViewModel.Settings, downloader), plugin.SettingsViewModel.Settings);
+                var metadataProvider = new MetadataProvider(apiClient, webApiClient,
+                    new SteamTagNamer(plugin, plugin.SettingsViewModel.Settings, downloader),
+                    plugin.SettingsViewModel.Settings);
                 if (BuiltinExtensions.GetExtensionFromId(options.GameData.PluginId) == BuiltinExtension.SteamLibrary)
                 {
                     var appId = uint.Parse(options.GameData.GameId);
@@ -311,12 +314,12 @@ namespace UniversalSteamMetadata
                             {
                                 try
                                 {
-                                    var store = webApiClient.GetStoreAppDetail(appId, plugin.SettingsViewModel.Settings.LanguageKey);
-                                    return new List<GenericItemOption> { new StoreSearchResult
+                                    var store = webApiClient.GetStoreAppDetail(appId,
+                                        plugin.SettingsViewModel.Settings.LanguageKey);
+                                    return new List<GenericItemOption>
                                     {
-                                        GameId = appId,
-                                        Name = store.name
-                                    }};
+                                        new StoreSearchResult { GameId = appId, Name = store.name }
+                                    };
                                 }
                                 catch (Exception e)
                                 {
@@ -362,7 +365,8 @@ namespace UniversalSteamMetadata
 
         internal uint MatchFun(string matchName, List<StoreSearchResult> list)
         {
-            var res = list.FirstOrDefault(a => string.Equals(matchName, a.Name, StringComparison.InvariantCultureIgnoreCase));
+            var res = list.FirstOrDefault(a =>
+                string.Equals(matchName, a.Name, StringComparison.InvariantCultureIgnoreCase));
             if (res != null)
             {
                 return res.GameId;
@@ -444,7 +448,8 @@ namespace UniversalSteamMetadata
             {
                 if (!string.IsNullOrEmpty(a.Name) && a.Name.Contains(":"))
                 {
-                    return string.Equals(normalizedName, a.Name.Split(':')[0], StringComparison.InvariantCultureIgnoreCase);
+                    return string.Equals(normalizedName, a.Name.Split(':')[0],
+                        StringComparison.InvariantCultureIgnoreCase);
                 }
 
                 return false;

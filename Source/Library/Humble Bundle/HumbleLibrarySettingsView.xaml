@@ -16,7 +16,7 @@
     <StackPanel Margin="20">
         <CheckBox Name="CheckHumbleConnectAccount"
                   IsChecked="{Binding Settings.ConnectAccount}"
-                  Content="{DynamicResource LOCHumbleSettingsConnectAccount}"/>
+                  Content="{DynamicResource LOCHumbleSettingsConnectAccount}" />
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,0"
                     IsEnabled="{Binding IsChecked, ElementName=CheckHumbleConnectAccount}">
@@ -30,18 +30,18 @@
                       ToolTip="{DynamicResource LOCHumbleGeneralLibraryTooltip}" />
             <StackPanel IsEnabled="{Binding IsChecked, ElementName=HumbleImportGeneralLibrary}">
                 <CheckBox Margin="20,10,0,0" Name="HumbleThirdPartyImport"
-                      IsChecked="{Binding Settings.IgnoreThirdPartyStoreGames}"
-                      Content="{DynamicResource LOCHumbleIgnoreThirdPartyStoreGames}"
-                      ToolTip="{DynamicResource LOCHumbleIgnoreThirdPartyStoreGamesTooltip}"/>
+                          IsChecked="{Binding Settings.IgnoreThirdPartyStoreGames}"
+                          Content="{DynamicResource LOCHumbleIgnoreThirdPartyStoreGames}"
+                          ToolTip="{DynamicResource LOCHumbleIgnoreThirdPartyStoreGamesTooltip}" />
                 <CheckBox Margin="40,13,0,0"
-                      IsChecked="{Binding Settings.ImportThirdPartyDrmFree}"
-                      IsEnabled="{Binding IsChecked, ElementName=HumbleThirdPartyImport}"
-                      Content="{DynamicResource LOCHumbleImportThirdPartyDrmFree}"
-                      ToolTip="{DynamicResource LOCHumbleImportThirdPartyDrmFreeTooltip}"/>
+                          IsChecked="{Binding Settings.ImportThirdPartyDrmFree}"
+                          IsEnabled="{Binding IsChecked, ElementName=HumbleThirdPartyImport}"
+                          Content="{DynamicResource LOCHumbleImportThirdPartyDrmFree}"
+                          ToolTip="{DynamicResource LOCHumbleImportThirdPartyDrmFreeTooltip}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <Button Content="{DynamicResource LOCHumbleAuthenticateLabel}" HorizontalAlignment="Left"
-                        Command="{Binding LoginCommand}" Margin="0,5,5,5"/>
+                        Command="{Binding LoginCommand}" Margin="0,5,5,5" />
                 <TextBlock VerticalAlignment="Center" Margin="10,5,5,5">
                     <TextBlock.Tag>
                         <PriorityBinding>
@@ -71,7 +71,7 @@
         <CheckBox Margin="0,10,0,0"
                   IsChecked="{Binding Settings.LaunchViaHumbleApp}"
                   Content="{DynamicResource LOCHumbleAlwaysUseLaucnherToStart}"
-                  ToolTip="{DynamicResource LOCHumbleAlwaysUseLaucnherToStartTooltip}"/>
+                  ToolTip="{DynamicResource LOCHumbleAlwaysUseLaucnherToStartTooltip}" />
 
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Humble-Store-troubleshooting"

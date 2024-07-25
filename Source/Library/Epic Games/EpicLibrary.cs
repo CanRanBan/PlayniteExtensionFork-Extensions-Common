@@ -50,7 +50,8 @@ namespace EpicLibrary
                 }
 
                 // DLC
-                if (manifest.AppName != manifest.MainGameAppName && (manifest.AppCategories?.Any(a => a == "addons/launchable") == false))
+                if (manifest.AppName != manifest.MainGameAppName &&
+                    (manifest.AppCategories?.Any(a => a == "addons/launchable") == false))
                 {
                     continue;
                 }
@@ -111,7 +112,9 @@ namespace EpicLibrary
                     break;
                 }
 
-                var cacheFile = Paths.GetSafePathName($"{gameAsset.@namespace}_{gameAsset.catalogItemId}_{gameAsset.buildVersion}.json");
+                var cacheFile =
+                    Paths.GetSafePathName(
+                        $"{gameAsset.@namespace}_{gameAsset.catalogItemId}_{gameAsset.buildVersion}.json");
                 cacheFile = Path.Combine(cacheDir, cacheFile);
                 var catalogItem = accountApi.GetCatalogItem(gameAsset.@namespace, gameAsset.catalogItemId, cacheFile);
                 if (catalogItem?.categories?.Any(a => a.path == "applications") != true)
@@ -119,7 +122,8 @@ namespace EpicLibrary
                     continue;
                 }
 
-                if ((catalogItem?.mainGameItem != null) && (catalogItem.categories?.Any(a => a.path == "addons/launchable") == false))
+                if ((catalogItem?.mainGameItem != null) &&
+                    (catalogItem.categories?.Any(a => a.path == "addons/launchable") == false))
                 {
                     continue;
                 }
@@ -129,7 +133,8 @@ namespace EpicLibrary
                     continue;
                 }
 
-                if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
+                if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) &&
+                    (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
                 {
                     continue;
                 }

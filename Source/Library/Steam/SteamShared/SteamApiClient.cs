@@ -17,21 +17,17 @@ namespace Steam
         private bool isRunning = false;
 
         private bool isConnected = false;
+
         public bool IsConnected
         {
-            get
-            {
-                return isConnected;
-            }
+            get { return isConnected; }
         }
 
         private bool isLoggedIn = false;
+
         public bool IsLoggedIn
         {
-            get
-            {
-                return isLoggedIn;
-            }
+            get { return isLoggedIn; }
         }
 
         public SteamApiClient(SharedSteamSettings settings)
@@ -49,6 +45,7 @@ namespace Steam
 
         private AutoResetEvent onConnectedEvent = new AutoResetEvent(false);
         private EResult onConnectedResult;
+
         private void onConnected(SteamKit2.SteamClient.ConnectedCallback callback)
         {
             onConnectedResult = callback.Result;
@@ -56,6 +53,7 @@ namespace Steam
         }
 
         private AutoResetEvent onDisconnectedEvent = new AutoResetEvent(false);
+
         private void onDisconnected(SteamKit2.SteamClient.DisconnectedCallback callback)
         {
             isRunning = false;

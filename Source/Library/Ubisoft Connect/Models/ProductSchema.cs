@@ -33,7 +33,6 @@ namespace UplayLibrary.Models
             public bool overlay_shop_enabled;
             public bool legacy_ticket_enabled;
             public List<Executable> executables;
-
         }
 
         public class StartGame

@@ -16,6 +16,7 @@ namespace GogLibrary
         public bool UseVerticalCovers { get; set; } = true;
         public string Locale { get; set; } = "en";
     }
+
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
     {
         public bool IsFirstRunUse { get; set; }
@@ -34,10 +35,7 @@ namespace GogLibrary
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public GogLibrarySettingsViewModel(GogLibrary library, IPlayniteAPI api) : base(library, api)
@@ -89,12 +87,12 @@ namespace GogLibrary
 
         public Dictionary<string, string> Languages { get; } = new Dictionary<string, string>
         {
-            {"en", "English" },
-            {"de", "Deutsch" },
-            {"fr", "Français" },
-            {"pl", "Polski" },
-            {"ru", "Pусский" },
-            {"zh", "中文(简体)" },
+            { "en", "English" },
+            { "de", "Deutsch" },
+            { "fr", "Français" },
+            { "pl", "Polski" },
+            { "ru", "Pусский" },
+            { "zh", "中文(简体)" },
         };
     }
 }

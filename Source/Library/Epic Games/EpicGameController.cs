@@ -50,14 +50,11 @@ namespace EpicLibrary
                     var app = installed?.FirstOrDefault(a => a.AppName == Game.GameId);
                     if (app != null)
                     {
-                        var installInfo = new GameInstallationData
-                        {
-                            InstallDirectory = app.InstallLocation
-                        };
+                        var installInfo = new GameInstallationData { InstallDirectory = app.InstallLocation };
 
                         InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                         return;
-                    };
+                    }
 
                     await Task.Delay(10000);
                 }

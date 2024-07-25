@@ -45,13 +45,28 @@ namespace SteamLibrary
         public string UserId { get; set; } = string.Empty;
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
-        public bool IsPrivateAccount { get => isPrivateAccount; set => SetValue(ref isPrivateAccount, value); }
+
+        public bool IsPrivateAccount
+        {
+            get => isPrivateAccount;
+            set => SetValue(ref isPrivateAccount, value);
+        }
+
         public bool IgnoreOtherInstalled { get; set; }
-        public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
+
+        public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } =
+            new ObservableCollection<AdditionalSteamAcccount>();
+
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         [Obsolete] public string ApiKey { get; set; }
-        [DontSerialize] public string RuntimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
+
+        [DontSerialize]
+        public string RuntimeApiKey
+        {
+            get => apiKey;
+            set => SetValue(ref apiKey, value);
+        }
     }
 
     public class ApiKeyInfo
@@ -82,7 +97,8 @@ namespace SteamLibrary
 
                         try
                         {
-                            var games = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, false);
+                            var games = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId),
+                                Settings.RuntimeApiKey, false);
                             if (games?.response?.games.HasItems() == true)
                             {
                                 return AuthStatus.Ok;
@@ -121,28 +137,19 @@ namespace SteamLibrary
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public bool IsFirstRunUse { get; set; }
 
         public RelayCommand AddAccountCommand
         {
-            get => new RelayCommand(() =>
-            {
-                Settings.AdditionalAccounts.Add(new AdditionalSteamAcccount());
-            });
+            get => new RelayCommand(() => { Settings.AdditionalAccounts.Add(new AdditionalSteamAcccount()); });
         }
 
         public RelayCommand<AdditionalSteamAcccount> RemoveAccountCommand
         {
-            get => new RelayCommand<AdditionalSteamAcccount>((a) =>
-            {
-                Settings.AdditionalAccounts.Remove(a);
-            });
+            get => new RelayCommand<AdditionalSteamAcccount>((a) => { Settings.AdditionalAccounts.Remove(a); });
         }
 
         public SteamLibrarySettingsViewModel(SteamLibrary library, IPlayniteAPI api) : base(library, api)
@@ -186,7 +193,6 @@ namespace SteamLibrary
 
             try
             {
-
                 var str = Encryption.DecryptFromFile(
                     ApiKeysPath,
                     Encoding.UTF8,
@@ -209,14 +215,12 @@ namespace SteamLibrary
 
         private void SaveKeys()
         {
-            var keys = new ApiKeyInfo
-            {
-                MainAccount = Settings.RuntimeApiKey
-            };
+            var keys = new ApiKeyInfo { MainAccount = Settings.RuntimeApiKey };
 
             if (Settings.AdditionalAccounts.HasItems())
             {
-                foreach (var account in Settings.AdditionalAccounts.Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RuntimeApiKey.IsNullOrWhiteSpace()))
+                foreach (var account in Settings.AdditionalAccounts.Where(a =>
+                             !a.AccountId.IsNullOrWhiteSpace() && !a.RuntimeApiKey.IsNullOrWhiteSpace()))
                 {
                     if (!keys.Accounts.ContainsKey(account.AccountId))
                     {

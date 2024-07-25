@@ -43,13 +43,8 @@ namespace XboxLibrary
             var newGame = new GameMetadata
             {
                 GameId = title.pfn,
-                Name = title.name.
-                Replace("(PC)", "").
-                Replace("(Windows)", "").
-                Replace("for Windows 10", "").
-                Replace("- Windows 10", "").
-                RemoveTrademarks().
-                Trim(),
+                Name = title.name.Replace("(PC)", "").Replace("(Windows)", "").Replace("for Windows 10", "")
+                    .Replace("- Windows 10", "").RemoveTrademarks().Trim(),
                 Source = new MetadataNameProperty("Xbox"),
                 Platforms = GetPlatforms(title.devices, out _, out _),
             };
@@ -73,8 +68,7 @@ namespace XboxLibrary
                 {
                     newGame.Developers = title.detail.developerName.Split(new char[] { '|' })
                         .Select(a => new MetadataNameProperty(a.Trim()))
-                        .Cast<MetadataProperty>().
-                        ToHashSet();
+                        .Cast<MetadataProperty>().ToHashSet();
                 }
             }
 
@@ -131,7 +125,8 @@ namespace XboxLibrary
             File.WriteAllText(filePath, Serialization.ToJson(data));
         }
 
-        private static HashSet<MetadataProperty> GetPlatforms(List<string> devices, out bool containsPC, out bool containsConsole)
+        private static HashSet<MetadataProperty> GetPlatforms(List<string> devices, out bool containsPC,
+            out bool containsConsole)
         {
             containsPC = false;
             containsConsole = false;
@@ -163,6 +158,7 @@ namespace XboxLibrary
                         break;
                 }
             }
+
             return output;
         }
 
@@ -198,7 +194,8 @@ namespace XboxLibrary
             {
                 try
                 {
-                    var minutesPlayedStats = client.GetUserStatsMinutesPlayed(titles.Select(t => t.titleId)).GetAwaiter().GetResult().ToDictionary(stat => stat.titleid, stat => stat.value);
+                    var minutesPlayedStats = client.GetUserStatsMinutesPlayed(titles.Select(t => t.titleId))
+                        .GetAwaiter().GetResult().ToDictionary(stat => stat.titleid, stat => stat.value);
                     foreach (TitleHistoryResponse.Title title in titles)
                     {
                         if (minutesPlayedStats.ContainsKey(title.titleId))
@@ -216,8 +213,8 @@ namespace XboxLibrary
 
             var appDataCache = GetAppDataCache();
             var pcTitles = titles.Where(title => !title.pfn.IsNullOrEmpty() &&
-                    title.type == "Game" &&
-                    title.devices?.Contains("PC") == true).ToList();
+                                                 title.type == "Game" &&
+                                                 title.devices?.Contains("PC") == true).ToList();
 
             if (SettingsViewModel.Settings.ImportInstalledGames)
             {
@@ -250,7 +247,8 @@ namespace XboxLibrary
                             }
                             catch (Exception e)
                             {
-                                Logger.Error(e, $"Failed to get info about installed UWP package {installedApp.AppId}.");
+                                Logger.Error(e,
+                                    $"Failed to get info about installed UWP package {installedApp.AppId}.");
                             }
                         }
 
@@ -340,7 +338,8 @@ namespace XboxLibrary
                 yield break;
             }
 
-            yield return new XboxInstallController(args.Game, SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled);
+            yield return new XboxInstallController(args.Game,
+                SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)

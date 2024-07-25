@@ -53,6 +53,4 @@ namespace EpicLibrary.Models
         public bool endOfSupport;
         public MainGameItem mainGameItem;
     }
-
-
 }

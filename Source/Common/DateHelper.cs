@@ -28,7 +28,8 @@ namespace PlayniteExtensions.Common
             var yearAndMonthFormats = new[] { "MMM yyyy", "MMMM yyyy" };
 
             if (DateTime.TryParseExact(dateString, yearAndMonthFormats, currentCulture, dateTimeStyles, out parsedDate)
-                || DateTime.TryParseExact(dateString, yearAndMonthFormats, invariantCulture, dateTimeStyles, out parsedDate))
+                || DateTime.TryParseExact(dateString, yearAndMonthFormats, invariantCulture, dateTimeStyles,
+                    out parsedDate))
             {
                 return new ReleaseDate(parsedDate.Year, parsedDate.Month);
             }

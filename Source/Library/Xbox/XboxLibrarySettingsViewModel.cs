@@ -21,18 +21,12 @@ namespace XboxLibrary
 
         public bool IsUserLoggedIn
         {
-            get
-            {
-                return new XboxAccountClient(Plugin).GetIsUserLoggedIn().GetAwaiter().GetResult();
-            }
+            get { return new XboxAccountClient(Plugin).GetIsUserLoggedIn().GetAwaiter().GetResult(); }
         }
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>(async (a) =>
-            {
-                await Login();
-            });
+            get => new RelayCommand<object>(async (a) => { await Login(); });
         }
 
         public XboxLibrarySettingsViewModel(XboxLibrary plugin, IPlayniteAPI api) : base(plugin, api)

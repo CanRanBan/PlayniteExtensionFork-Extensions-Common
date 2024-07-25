@@ -22,11 +22,7 @@ namespace HumbleLibrary
             get
             {
                 using (var view = PlayniteApi.WebViews.CreateOffscreenView(
-                    new WebViewSettings
-                    {
-                        JavaScriptEnabled = false,
-                        UserAgent = Plugin.UserAgent
-                    }))
+                           new WebViewSettings { JavaScriptEnabled = false, UserAgent = Plugin.UserAgent }))
                 {
                     var api = new HumbleAccountClient(view);
                     return api.GetIsUserLoggedIn();
@@ -36,10 +32,7 @@ namespace HumbleLibrary
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public HumbleLibrarySettingsViewModel(HumbleLibrary plugin, IPlayniteAPI api) : base(plugin, api)
@@ -60,11 +53,9 @@ namespace HumbleLibrary
             try
             {
                 using (var view = PlayniteApi.WebViews.CreateView(new WebViewSettings
-                {
-                    WindowWidth = 490,
-                    WindowHeight = 670,
-                    UserAgent = Plugin.UserAgent
-                }))
+                       {
+                           WindowWidth = 490, WindowHeight = 670, UserAgent = Plugin.UserAgent
+                       }))
                 {
                     var api = new HumbleAccountClient(view);
                     api.Login();

@@ -279,7 +279,7 @@ namespace XboxLibrary.Services
                 SetAuthenticationHeaders(client.DefaultRequestHeaders, tokens);
                 var response = await client.GetAsync(
                     string.Format(@"https://titlehub.xboxlive.com/users/xuid({0})/titles/titlehistory/decoration/{1}",
-                    tokens.DisplayClaims.xui[0].xid, "detail"));
+                        tokens.DisplayClaims.xui[0].xid, "detail"));
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     throw new Exception("User is not authenticated.");
@@ -306,10 +306,9 @@ namespace XboxLibrary.Services
                 {
                     arrangebyfield = "xuid",
                     stats = titleIds.Select(titleId => new UserStatsRequest.Stats
-                    {
-                        name = "MinutesPlayed",
-                        titleid = titleId
-                    }
+                        {
+                            name = "MinutesPlayed", titleid = titleId
+                        }
                     ).ToList(),
                     xuids = new List<string> { tokens.DisplayClaims.xui[0].xid }
                 };
@@ -340,13 +339,12 @@ namespace XboxLibrary.Services
                 SetAuthenticationHeaders(client.DefaultRequestHeaders, tokens);
                 var requestData = new Dictionary<string, List<string>>
                 {
-                    { "pfns", new List<string> { pfn } },
-                    { "windowsPhoneProductIds", new List<string>() },
+                    { "pfns", new List<string> { pfn } }, { "windowsPhoneProductIds", new List<string>() },
                 };
 
                 var response = await client.PostAsync(
-                           @"https://titlehub.xboxlive.com/titles/batch/decoration/detail",
-                           new StringContent(Serialization.ToJson(requestData), Encoding.UTF8, "application/json"));
+                    @"https://titlehub.xboxlive.com/titles/batch/decoration/detail",
+                    new StringContent(Serialization.ToJson(requestData), Encoding.UTF8, "application/json"));
 
                 if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {

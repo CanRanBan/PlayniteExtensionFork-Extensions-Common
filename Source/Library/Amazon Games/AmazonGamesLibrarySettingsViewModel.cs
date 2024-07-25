@@ -15,7 +15,8 @@ namespace AmazonGamesLibrary
         public bool StartGamesWithoutLauncher { get; set; } = false;
     }
 
-    public class AmazonGamesLibrarySettingsViewModel : PluginSettingsViewModel<AmazonGamesLibrarySettings, AmazonGamesLibrary>
+    public class
+        AmazonGamesLibrarySettingsViewModel : PluginSettingsViewModel<AmazonGamesLibrarySettings, AmazonGamesLibrary>
     {
         public bool IsFirstRunUse { get; set; }
 
@@ -38,10 +39,7 @@ namespace AmazonGamesLibrary
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>(async (a) =>
-            {
-                await Login();
-            });
+            get => new RelayCommand<object>(async (a) => { await Login(); });
         }
 
         public AmazonGamesLibrarySettingsViewModel(AmazonGamesLibrary library, IPlayniteAPI api) : base(library, api)

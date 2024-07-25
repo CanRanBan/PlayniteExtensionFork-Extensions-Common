@@ -75,7 +75,8 @@ namespace GogLibrary
                     TrackingMode = TrackingMode.Directory,
                     Name = ResourceProvider.GetString(LOC.GOGStartUsingClient).Format("Galaxy"),
                     TrackingPath = installEntry.InstallDirectory,
-                    Arguments = string.Format(@"/launchViaAutostart /gameId={0} /command=runGame /path=""{1}""", args.Game.GameId, installEntry.InstallDirectory),
+                    Arguments = string.Format(@"/launchViaAutostart /gameId={0} /command=runGame /path=""{1}""",
+                        args.Game.GameId, installEntry.InstallDirectory),
                     Path = Gog.ClientInstallationPath
                 };
             }
@@ -85,7 +86,10 @@ namespace GogLibrary
                 {
                     yield return new AutomaticPlayController(args.Game)
                     {
-                        Type = task.Type == GameActionType.URL ? AutomaticPlayActionType.Url : AutomaticPlayActionType.File,
+                        Type =
+                            task.Type == GameActionType.URL
+                                ? AutomaticPlayActionType.Url
+                                : AutomaticPlayActionType.File,
                         TrackingMode = TrackingMode.Process,
                         Arguments = task.Arguments,
                         Path = task.Path,
@@ -122,7 +126,8 @@ namespace GogLibrary
 
             try
             {
-                var playTasks = gameTaskData.playTasks?.Where(a => a.isPrimary).Select(a => a.ConvertToGenericTask(installDir)).ToList();
+                var playTasks = gameTaskData.playTasks?.Where(a => a.isPrimary)
+                    .Select(a => a.ConvertToGenericTask(installDir)).ToList();
                 return playTasks ?? new List<GameAction>();
             }
             catch (Exception e)
@@ -254,7 +259,8 @@ namespace GogLibrary
                 {
                     foreach (LibraryGameResponse libGame in libGames)
                     {
-                        libGame.stats = libGamesStats?.FirstOrDefault(x => x.game.id.Equals(libGame.game.id))?.stats ?? null;
+                        libGame.stats = libGamesStats?.FirstOrDefault(x => x.game.id.Equals(libGame.game.id))?.stats ??
+                                        null;
                     }
                 }
                 else
@@ -284,7 +290,9 @@ namespace GogLibrary
                 // Better solution would require adding JSON.NET dependency.
                 if (game.stats?.GetType().Name == "JObject")
                 {
-                    var stats = ((dynamic)game.stats).ToObject<Dictionary<string, LibraryGameResponse.Stats>>() as Dictionary<string, LibraryGameResponse.Stats>;
+                    var stats =
+                        ((dynamic)game.stats).ToObject<Dictionary<string, LibraryGameResponse.Stats>>() as
+                        Dictionary<string, LibraryGameResponse.Stats>;
                     if (stats.Keys?.Any() == true)
                     {
                         var acc = stats.Keys.First();

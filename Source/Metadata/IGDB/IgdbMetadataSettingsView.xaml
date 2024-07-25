@@ -15,13 +15,13 @@
 
     <StackPanel Margin="20">
         <CheckBox Content="{DynamicResource LOCIgdbUseScreenshotIfNecessary}"
-                  IsChecked="{Binding Settings.UseScreenshotsIfNecessary}"/>
+                  IsChecked="{Binding Settings.UseScreenshotsIfNecessary}" />
 
         <CheckBox Content="{DynamicResource LOCIgdbCoverAsIcon}" Margin="0,15,0,0"
-                  IsChecked="{Binding Settings.UseCoverAsIcon}"/>
+                  IsChecked="{Binding Settings.UseCoverAsIcon}" />
 
         <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-            <TextBlock Text="{DynamicResource LOCIgdbMultipleArtworkOptionsTitle}" VerticalAlignment="Center"/>
+            <TextBlock Text="{DynamicResource LOCIgdbMultipleArtworkOptionsTitle}" VerticalAlignment="Center" />
             <ComboBox SelectedValue="{Binding Settings.ImageSelectionPriority}"
                       Margin="5,0,0,0">
                 <ComboBox.ItemsSource>
@@ -33,7 +33,7 @@
                 </ComboBox.ItemsSource>
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Converter={StaticResource ObjectToStringConverter}}"/>
+                        <TextBlock Text="{Binding Converter={StaticResource ObjectToStringConverter}}" />
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>

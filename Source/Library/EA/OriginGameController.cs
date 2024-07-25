@@ -41,7 +41,8 @@ namespace OriginLibrary
             var manifest = origin.GetLocalInstallerManifest(Game.GameId);
             if (manifest?.publishing == null)
             {
-                logger.Error($"No publishing manifest found for Origin game {Game.GameId}, stopping installation check.");
+                logger.Error(
+                    $"No publishing manifest found for Origin game {Game.GameId}, stopping installation check.");
                 return;
             }
 
@@ -55,7 +56,8 @@ namespace OriginLibrary
                         return;
                     }
 
-                    var executablePath = origin.GetPathFromPlatformPath(platform.fulfillmentAttributes.installCheckOverride);
+                    var executablePath =
+                        origin.GetPathFromPlatformPath(platform.fulfillmentAttributes.installCheckOverride);
                     if (!executablePath?.CompletePath.IsNullOrEmpty() != null)
                     {
                         if (File.Exists(executablePath.CompletePath))
@@ -210,7 +212,8 @@ namespace OriginLibrary
         public async void StartRunningWatcher()
         {
             // Solves issues with game process being started/shutdown multiple times during startup via Origin
-            if (Origin.GetGameRequiresOrigin(Game.InstallDirectory) || Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
+            if (Origin.GetGameRequiresOrigin(Game.InstallDirectory) ||
+                Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
             {
                 await Task.Delay(40_000);
             }

@@ -40,11 +40,14 @@ namespace SteamLibrary
             var gameId = game.ToSteamGameID();
             if (gameId.IsMod)
             {
-                return SteamLibrary.GetInstalledModFromFolder(game.InstallDirectory, ModInfo.GetModTypeOfGameID(gameId));
+                return SteamLibrary.GetInstalledModFromFolder(game.InstallDirectory,
+                    ModInfo.GetModTypeOfGameID(gameId));
             }
             else
             {
-                return new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(library, library.SettingsViewModel.Settings, new Downloader()), library.SettingsViewModel.Settings).GetGameMetadata(
+                return new MetadataProvider(apiClient, webApiClient,
+                    new SteamTagNamer(library, library.SettingsViewModel.Settings, new Downloader()),
+                    library.SettingsViewModel.Settings).GetGameMetadata(
                     gameId.AppID,
                     library.SettingsViewModel.Settings.BackgroundSource,
                     library.SettingsViewModel.Settings.DownloadVerticalCovers);

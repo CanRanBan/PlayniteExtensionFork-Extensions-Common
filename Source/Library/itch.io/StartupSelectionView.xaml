@@ -17,7 +17,8 @@
                         CommandParameter="{Binding}">
                     <Button.Content>
                         <StackPanel Orientation="Horizontal" Margin="10,10,10,5">
-                            <TextBlock Text="&#xec74;" FontFamily="{DynamicResource FontIcoFont}" VerticalAlignment="Center" />
+                            <TextBlock Text="&#xec74;" FontFamily="{DynamicResource FontIcoFont}"
+                                       VerticalAlignment="Center" />
                             <TextBlock Text="{Binding name}" VerticalAlignment="Center" Margin="5,0,0,0" />
                         </StackPanel>
                     </Button.Content>

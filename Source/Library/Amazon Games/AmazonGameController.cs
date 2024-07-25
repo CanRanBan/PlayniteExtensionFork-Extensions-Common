@@ -31,7 +31,8 @@ namespace AmazonGamesLibrary
         {
             if (!AmazonGames.IsInstalled)
             {
-                ProcessStarter.StartUrl(@"https://www.amazongames.com/en-us/support/prime-gaming/articles/download-and-install-the-amazon-games-app");
+                ProcessStarter.StartUrl(
+                    @"https://www.amazongames.com/en-us/support/prime-gaming/articles/download-and-install-the-amazon-games-app");
             }
             else if (!AmazonGames.IsRunning)
             {

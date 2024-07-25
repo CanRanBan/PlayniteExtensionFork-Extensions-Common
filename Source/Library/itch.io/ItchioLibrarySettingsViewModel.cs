@@ -13,17 +13,20 @@ namespace ItchioLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool ImportFreeGamesFromCollections { get; set; } = false;
-        public ObservableConcurrentDictionary<GameClassification, bool> ImportGameClassification { get; set; } = new ObservableConcurrentDictionary<GameClassification, bool> {
-            {GameClassification.game, true},
-            {GameClassification.tool, true},
-            {GameClassification.assets, false},
-            {GameClassification.book, false},
-            {GameClassification.comic, false},
-            {GameClassification.game_mod, false},
-            {GameClassification.physical_game, false},
-            {GameClassification.soundtrack, false},
-            {GameClassification.other, false},
-        };
+
+        public ObservableConcurrentDictionary<GameClassification, bool> ImportGameClassification { get; set; } =
+            new ObservableConcurrentDictionary<GameClassification, bool>
+            {
+                { GameClassification.game, true },
+                { GameClassification.tool, true },
+                { GameClassification.assets, false },
+                { GameClassification.book, false },
+                { GameClassification.comic, false },
+                { GameClassification.game_mod, false },
+                { GameClassification.physical_game, false },
+                { GameClassification.soundtrack, false },
+                { GameClassification.other, false },
+            };
     }
 
     public class GameClassificationItem
@@ -52,24 +55,17 @@ namespace ItchioLibrary
 
         public RelayCommand<GameClassification> ToggleGameClassificationCommand
         {
-            get => new RelayCommand<GameClassification>((gc) =>
-            {
-                ToggleGameClassification(gc);
-            });
+            get => new RelayCommand<GameClassification>((gc) => { ToggleGameClassification(gc); });
         }
 
         private void ToggleGameClassification(GameClassification gc)
         {
             Settings.ImportGameClassification[gc] = !Settings.ImportGameClassification[gc];
-
         }
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public ItchioLibrarySettingsViewModel(ItchioLibrary library, IPlayniteAPI api) : base(library, api)

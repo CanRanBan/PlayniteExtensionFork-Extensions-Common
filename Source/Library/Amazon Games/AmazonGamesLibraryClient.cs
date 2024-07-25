@@ -44,11 +44,13 @@ namespace AmazonGamesLibrary
             if (mainUiProc == null)
             {
                 logger.Info("Amazon Games UI process is no longer running, this shouldn't happen.");
-                procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null, out var stdOut, out stdErr);
+                procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null,
+                    out var stdOut, out stdErr);
             }
             else
             {
-                procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainUiProc.Id}", null, out var stdOut, out stdErr);
+                procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainUiProc.Id}", null,
+                    out var stdOut, out stdErr);
             }
 
             if (procRes != 0)

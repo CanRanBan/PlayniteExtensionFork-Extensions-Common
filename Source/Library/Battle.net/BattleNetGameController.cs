@@ -33,7 +33,8 @@ namespace BattleNetLibrary
             {
                 if (product.ProductId.StartsWith("W3C", StringComparison.OrdinalIgnoreCase))
                 {
-                    ProcessStarter.StartUrl(@"https://us.forums.blizzard.com/en/warcraft3/t/classic-warcraft-iii-official-installers-official-patches/21415");
+                    ProcessStarter.StartUrl(
+                        @"https://us.forums.blizzard.com/en/warcraft3/t/classic-warcraft-iii-official-installers-official-patches/21415");
                 }
                 else
                 {
@@ -74,10 +75,7 @@ namespace BattleNetLibrary
                     }
                     else
                     {
-                        var installInfo = new GameInstallationData()
-                        {
-                            InstallDirectory = install.InstallLocation
-                        };
+                        var installInfo = new GameInstallationData() { InstallDirectory = install.InstallLocation };
 
                         InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                         return;
@@ -209,7 +207,8 @@ namespace BattleNetLibrary
 
             try
             {
-                ProcessStarter.StartProcess(BattleNet.ClientExecPath, string.Format("--exec=\"launch {0}\"", Game.GameId));
+                ProcessStarter.StartProcess(BattleNet.ClientExecPath,
+                    string.Format("--exec=\"launch {0}\"", Game.GameId));
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {

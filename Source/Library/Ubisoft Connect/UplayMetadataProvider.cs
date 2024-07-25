@@ -27,12 +27,10 @@ namespace UplayLibrary
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var gameInfo = new GameMetadata
-            {
-                Links = new List<Link>()
-            };
+            var gameInfo = new GameMetadata { Links = new List<Link>() };
 
-            gameInfo.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + gameInfo.Name));
+            gameInfo.Links.Add(new Link("PCGamingWiki",
+                @"http://pcgamingwiki.com/w/index.php?search=" + gameInfo.Name));
             var prod = productInfo?.FirstOrDefault(a => a.uplay_id.ToString() == game.GameId);
             if (prod != null)
             {
@@ -53,7 +51,8 @@ namespace UplayLibrary
             }
             else
             {
-                var program = Programs.GetUnistallProgramsList().FirstOrDefault(a => a.RegistryKeyName == "Uplay Install " + game.GameId);
+                var program = Programs.GetUnistallProgramsList()
+                    .FirstOrDefault(a => a.RegistryKeyName == "Uplay Install " + game.GameId);
                 if (program != null)
                 {
                     if (!string.IsNullOrEmpty(program.DisplayIcon) && File.Exists(program.DisplayIcon))

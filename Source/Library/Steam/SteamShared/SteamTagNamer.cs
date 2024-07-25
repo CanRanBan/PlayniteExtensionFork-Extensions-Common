@@ -16,7 +16,10 @@ namespace SteamLibrary.SteamShared
     public class SteamTagNamer
     {
         private static string extensionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        private const string getTagListApiTemplate = "https://api.steampowered.com/IStoreService/GetTagList/v1?language={0}&have_version_hash={1}";
+
+        private const string getTagListApiTemplate =
+            "https://api.steampowered.com/IStoreService/GetTagList/v1?language={0}&have_version_hash={1}";
+
         private const string steamSharedFolder = "SteamShared";
         private readonly Plugin plugin;
         private readonly SharedSteamSettings settings;
@@ -31,7 +34,8 @@ namespace SteamLibrary.SteamShared
             this.settings = settings;
             this.downloader = downloader;
 
-            var tagCategoriesFilePath = Path.Combine(extensionFolder, "TagData", "Categories", "TagIdCategoryData.json");
+            var tagCategoriesFilePath =
+                Path.Combine(extensionFolder, "TagData", "Categories", "TagIdCategoryData.json");
             var tagsIdsWithCategories = Serialization.FromJsonFile<List<TagIdCategory>>(tagCategoriesFilePath);
             tagCategoriesDictionary = new Dictionary<int, TagCategory>();
             foreach (var tag in tagsIdsWithCategories)
@@ -90,6 +94,7 @@ namespace SteamLibrary.SteamShared
                     return new Dictionary<int, string>();
                 }
             }
+
             var content = GetFileContents(fileName);
 
             return content.response.tags.ToDictionary(x => x.tagid, x => x.name);

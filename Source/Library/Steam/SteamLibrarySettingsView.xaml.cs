@@ -18,13 +18,16 @@ namespace SteamLibrary
     public static class PasswordBoxAssistant
     {
         public static readonly DependencyProperty BoundPassword =
-            DependencyProperty.RegisterAttached("BoundPassword", typeof(string), typeof(PasswordBoxAssistant), new PropertyMetadata(string.Empty, OnBoundPasswordChanged));
+            DependencyProperty.RegisterAttached("BoundPassword", typeof(string), typeof(PasswordBoxAssistant),
+                new PropertyMetadata(string.Empty, OnBoundPasswordChanged));
 
         public static readonly DependencyProperty BindPassword = DependencyProperty.RegisterAttached(
-            "BindPassword", typeof(bool), typeof(PasswordBoxAssistant), new PropertyMetadata(false, OnBindPasswordChanged));
+            "BindPassword", typeof(bool), typeof(PasswordBoxAssistant),
+            new PropertyMetadata(false, OnBindPasswordChanged));
 
         private static readonly DependencyProperty UpdatingPassword =
-            DependencyProperty.RegisterAttached("UpdatingPassword", typeof(bool), typeof(PasswordBoxAssistant), new PropertyMetadata(false));
+            DependencyProperty.RegisterAttached("UpdatingPassword", typeof(bool), typeof(PasswordBoxAssistant),
+                new PropertyMetadata(false));
 
         private static void OnBoundPasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

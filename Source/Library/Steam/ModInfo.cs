@@ -27,8 +27,7 @@ namespace SteamLibrary
 
         static private readonly Dictionary<ModType, string> infoFileName = new Dictionary<ModType, string>()
         {
-            { ModType.HL, "liblist.gam"},
-            { ModType.HL2, "gameinfo.txt"}
+            { ModType.HL, "liblist.gam" }, { ModType.HL2, "gameinfo.txt" }
         };
 
         // HL mods all use Half-Life as the base app. HL2 mods are split across multiple
@@ -37,10 +36,7 @@ namespace SteamLibrary
 
         public bool IsInstalled
         {
-            get
-            {
-                return File.Exists(Path.Combine(InstallFolder, infoFileName[modType]));
-            }
+            get { return File.Exists(Path.Combine(InstallFolder, infoFileName[modType])); }
         }
 
         private ModInfo(ModType type, string installFolder)
@@ -169,7 +165,8 @@ namespace SteamLibrary
                 modInfo.Categories.Add("Multi-Player");
             }
 
-            modInfo.IconPath = FindIcon(modInfo.InstallFolder, gameInfo["icon"] == KeyValue.Invalid ? null : gameInfo["icon"].Value);
+            modInfo.IconPath = FindIcon(modInfo.InstallFolder,
+                gameInfo["icon"] == KeyValue.Invalid ? null : gameInfo["icon"].Value);
         }
 
         static private void PopulateModInfoFromLibList(ref ModInfo modInfo, string path)

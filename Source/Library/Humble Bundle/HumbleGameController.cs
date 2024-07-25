@@ -59,7 +59,8 @@ namespace HumbleLibrary
                             client.Timeout = new TimeSpan(0, 0, 10);
                             client.DefaultRequestHeaders.Add("User-Agent", library.UserAgent);
                             var machineName = Game.GameId.Substring(0, Game.GameId.LastIndexOf('_'));
-                            await client.PostAsync("https://humblebundle.com/api/v1/analytics/humbleapp/request/" + machineName, null);
+                            await client.PostAsync(
+                                "https://humblebundle.com/api/v1/analytics/humbleapp/request/" + machineName, null);
                         }
                     }
                     catch (Exception e)

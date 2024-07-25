@@ -117,18 +117,15 @@ namespace ItchioLibrary.Models
         /// <summary>
         /// ArchitecturesAll represents any processor architecture
         /// </summary>
-        [EnumMember(Value = "all")]
-        all,
+        [EnumMember(Value = "all")] all,
 
         ///Architectures386 represents 32-bit processor architectures
-        [EnumMember(Value = "386")]
-        x86,
+        [EnumMember(Value = "386")] x86,
 
         /// <summary>
         /// ArchitecturesAmd64 represents 64-bit processor architectures
         /// </summary>
-        [EnumMember(Value = "amd64")]
-        x64
+        [EnumMember(Value = "amd64")] x64
     }
 
     public class Platforms

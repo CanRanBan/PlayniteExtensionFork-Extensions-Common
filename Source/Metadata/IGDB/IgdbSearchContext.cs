@@ -32,6 +32,7 @@ namespace IGDBMetadata
         public static string GetSearchItemDescription(Igdb.Game game)
         {
             var desc = string.Empty;
+
             void addDescPart(string part)
             {
                 if (desc.IsNullOrWhiteSpace())
@@ -53,11 +54,9 @@ namespace IGDBMetadata
                 addDescPart($"{game.platforms_expanded?.FirstOrDefault()?.name} port");
             }
 
-            var developers = game.involved_companies_expanded?.
-                Where(a => a.developer && !a.supporting && !a.porting && a.company_expanded != null).
-                Select(a => a.company_expanded.name).
-                Distinct().
-                ToList();
+            var developers = game.involved_companies_expanded
+                ?.Where(a => a.developer && !a.supporting && !a.porting && a.company_expanded != null)
+                .Select(a => a.company_expanded.name).Distinct().ToList();
             if (developers.HasItems())
             {
                 addDescPart(string.Join(", ", developers!));
@@ -76,7 +75,8 @@ namespace IGDBMetadata
             try
             {
                 var result = new List<SearchItem>();
-                foreach (var game in client.SearchGames(new Igdb.SearchRequest(args.SearchTerm)).GetAwaiter().GetResult())
+                foreach (var game in client.SearchGames(new Igdb.SearchRequest(args.SearchTerm)).GetAwaiter()
+                             .GetResult())
                 {
                     var item = new SearchItem(
                         GetSearchItemName(game),
@@ -96,7 +96,10 @@ namespace IGDBMetadata
             }
             catch (Exception e)
             {
-                return new List<SearchItem> { new SearchItem("Failed to search for games", null) { Description = e.Message } };
+                return new List<SearchItem>
+                {
+                    new SearchItem("Failed to search for games", null) { Description = e.Message }
+                };
             }
         }
     }

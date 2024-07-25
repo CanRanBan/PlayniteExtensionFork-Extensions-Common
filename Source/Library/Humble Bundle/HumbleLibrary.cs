@@ -30,7 +30,8 @@ namespace HumbleLibrary
     {
         public static bool SupportsHumbleApp(this Game game)
         {
-            return game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase) || game.GameId.EndsWith("_collection", StringComparison.OrdinalIgnoreCase);
+            return game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase) ||
+                   game.GameId.EndsWith("_collection", StringComparison.OrdinalIgnoreCase);
         }
     }
 
@@ -42,14 +43,19 @@ namespace HumbleLibrary
         public HumbleLibrary(IPlayniteAPI api) : base(
             "Humble Bundle",
             Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
-            new LibraryPluginProperties { CanShutdownClient = false, HasCustomizedGameImport = true, HasSettings = true },
+            new LibraryPluginProperties
+            {
+                CanShutdownClient = false, HasCustomizedGameImport = true, HasSettings = true
+            },
             new HumbleClient(),
-            Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"HumbleBundleLibraryIcon.ico"),
+            Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources",
+                @"HumbleBundleLibraryIcon.ico"),
             (_) => new HumbleLibrarySettingsView(),
             api)
         {
             SettingsViewModel = new HumbleLibrarySettingsViewModel(this, PlayniteApi);
-            UserAgent = $"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Playnite/{api.ApplicationInfo.ApplicationVersion.ToString(2)}";
+            UserAgent =
+                $"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Playnite/{api.ApplicationInfo.ApplicationVersion.ToString(2)}";
         }
 
         public List<InstalledTroveGame> GetInstalledGames()
@@ -77,7 +83,8 @@ namespace HumbleLibrary
             }
 
             var games = new List<InstalledTroveGame>();
-            foreach (var entry in appConfig.GameCollection4.Where(a => a.status == "downloaded" || a.status == "installed"))
+            foreach (var entry in appConfig.GameCollection4.Where(a =>
+                         a.status == "downloaded" || a.status == "installed"))
             {
                 string exePath = string.Empty;
                 if (!entry.filePath.IsNullOrEmpty())
@@ -87,7 +94,8 @@ namespace HumbleLibrary
                 else
                 {
                     // This is for installs created by older Humble App versions
-                    exePath = Paths.FixSeparators(Path.Combine(entry.downloadFilePath, entry.machineName, entry.executablePath));
+                    exePath = Paths.FixSeparators(Path.Combine(entry.downloadFilePath, entry.machineName,
+                        entry.executablePath));
                 }
 
                 var installDir = Path.GetDirectoryName(exePath);
@@ -145,8 +153,12 @@ namespace HumbleLibrary
                                 Name = troveGame.human_name.RemoveTrademarks(),
                                 GameId = troveGame.machine_name,
                                 Description = troveGame.description_text,
-                                Publishers = troveGame.publishers?.Select(a => new MetadataNameProperty(a.publisher_name)).Cast<MetadataProperty>().ToHashSet(),
-                                Developers = troveGame.developers?.Select(a => new MetadataNameProperty(a.developer_name)).Cast<MetadataProperty>().ToHashSet(),
+                                Publishers =
+                                    troveGame.publishers?.Select(a => new MetadataNameProperty(a.publisher_name))
+                                        .Cast<MetadataProperty>().ToHashSet(),
+                                Developers =
+                                    troveGame.developers?.Select(a => new MetadataNameProperty(a.developer_name))
+                                        .Cast<MetadataProperty>().ToHashSet(),
                                 Source = new MetadataNameProperty("Humble Bundle"),
                                 Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             };
@@ -174,11 +186,7 @@ namespace HumbleLibrary
             var libraryGames = new List<Game>();
             var orders = new List<Order>();
             using (var view = PlayniteApi.WebViews.CreateOffscreenView(
-                new WebViewSettings
-                {
-                    JavaScriptEnabled = false,
-                    UserAgent = UserAgent
-                }))
+                       new WebViewSettings { JavaScriptEnabled = false, UserAgent = UserAgent }))
             {
                 var api = new HumbleAccountClient(view);
                 var keys = api.GetLibraryKeys();
@@ -204,14 +212,18 @@ namespace HumbleLibrary
 
                         if (product.downloads?.Any(a => a.platform == "windows") == true)
                         {
-                            if (SettingsViewModel.Settings.IgnoreThirdPartyStoreGames && order.tpkd_dict?.all_tpks.HasItems() == true)
+                            if (SettingsViewModel.Settings.IgnoreThirdPartyStoreGames &&
+                                order.tpkd_dict?.all_tpks.HasItems() == true)
                             {
                                 var exst = allTpks.FirstOrDefault(a =>
                                     !a.human_name.IsNullOrEmpty() &&
                                     (a.human_name.Equals(product.human_name, StringComparison.OrdinalIgnoreCase) ||
-                                    Regex.IsMatch(a.human_name, Regex.Escape(product.human_name) + @".+\sKey$", RegexOptions.IgnoreCase) ||
-                                    Regex.IsMatch(a.human_name, Regex.Escape(product.human_name) + @".*\s\(?Steam\)?$", RegexOptions.IgnoreCase) ||
-                                    Regex.IsMatch(a.human_name + @"\s*+$", Regex.Escape(product.human_name), RegexOptions.IgnoreCase)));
+                                     Regex.IsMatch(a.human_name, Regex.Escape(product.human_name) + @".+\sKey$",
+                                         RegexOptions.IgnoreCase) ||
+                                     Regex.IsMatch(a.human_name, Regex.Escape(product.human_name) + @".*\s\(?Steam\)?$",
+                                         RegexOptions.IgnoreCase) ||
+                                     Regex.IsMatch(a.human_name + @"\s*+$", Regex.Escape(product.human_name),
+                                         RegexOptions.IgnoreCase)));
 
                                 if (exst != null && !SettingsViewModel.Settings.ImportThirdPartyDrmFree)
                                 {
@@ -252,16 +264,18 @@ namespace HumbleLibrary
                                 continue;
                             }
 
-                            var alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.PluginId == Id && a.GameId == gameId);
+                            var alreadyImported =
+                                PlayniteApi.Database.Games.FirstOrDefault(a => a.PluginId == Id && a.GameId == gameId);
                             if (alreadyImported == null)
                             {
-                                importedGames.Add(PlayniteApi.Database.ImportGame(new GameMetadata()
-                                {
-                                    Name = product.human_name.RemoveTrademarks(),
-                                    GameId = gameId,
-                                    Icon = product.icon.IsNullOrEmpty() ? null : new MetadataFile(product.icon),
-                                    Source = new MetadataNameProperty("Humble Bundle")
-                                }, this));
+                                importedGames.Add(PlayniteApi.Database.ImportGame(
+                                    new GameMetadata()
+                                    {
+                                        Name = product.human_name.RemoveTrademarks(),
+                                        GameId = gameId,
+                                        Icon = product.icon.IsNullOrEmpty() ? null : new MetadataFile(product.icon),
+                                        Source = new MetadataNameProperty("Humble Bundle")
+                                    }, this));
                             }
                         }
                     }
@@ -289,12 +303,16 @@ namespace HumbleLibrary
                                 troveGame.InstallDirectory = installed.InstallDirectory;
                             }
 
-                            var alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.PluginId == Id && a.GameId == troveGame.GameId);
+                            var alreadyImported =
+                                PlayniteApi.Database.Games.FirstOrDefault(a =>
+                                    a.PluginId == Id && a.GameId == troveGame.GameId);
                             if (alreadyImported == null)
                             {
                                 // Need to check for old pre-Humble App trove IDs and fix them
                                 var oldId = GetOldTroveGameId(troveGame.TroveData);
-                                alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.PluginId == Id && a.GameId == oldId);
+                                alreadyImported =
+                                    PlayniteApi.Database.Games.FirstOrDefault(
+                                        a => a.PluginId == Id && a.GameId == oldId);
                                 if (alreadyImported != null)
                                 {
                                     Logger.Warn($"{alreadyImported.GameId} -> {troveGame.GameId}");
@@ -314,7 +332,9 @@ namespace HumbleLibrary
                             }
                             else
                             {
-                                if (installed != null && (alreadyImported.IsInstalled != troveGame.IsInstalled || alreadyImported.InstallDirectory != troveGame.InstallDirectory))
+                                if (installed != null && (alreadyImported.IsInstalled != troveGame.IsInstalled ||
+                                                          alreadyImported.InstallDirectory !=
+                                                          troveGame.InstallDirectory))
                                 {
                                     alreadyImported.IsInstalled = troveGame.IsInstalled;
                                     alreadyImported.InstallDirectory = troveGame.InstallDirectory;

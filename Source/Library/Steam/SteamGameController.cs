@@ -174,9 +174,10 @@ namespace SteamLibrary
             }
 
             if (!gameId.IsMod && !gameId.IsShortcut
-                && (
-                    (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Desktop && settings.ShowSteamLaunchMenuInDesktopMode)
-                ))
+                              && (
+                                  (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Desktop &&
+                                   settings.ShowSteamLaunchMenuInDesktopMode)
+                              ))
             {
                 ProcessStarter.StartProcess(steamExe, $"-silent \"steam://launch/{Game.GameId}/Dialog\"");
             }

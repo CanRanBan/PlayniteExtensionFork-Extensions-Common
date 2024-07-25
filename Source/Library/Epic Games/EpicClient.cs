@@ -27,7 +27,8 @@ namespace EpicLibrary
                 return;
             }
 
-            var procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null, out var stdOut, out var stdErr);
+            var procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null,
+                out var stdOut, out var stdErr);
             if (procRes != 0)
             {
                 logger.Error($"Failed to close Epic client: {procRes}, {stdErr}");

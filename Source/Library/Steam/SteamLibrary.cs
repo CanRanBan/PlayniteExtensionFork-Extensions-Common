@@ -53,7 +53,10 @@ namespace SteamLibrary
         internal SteamServicesClient ServicesClient;
         internal TopPanelItem TopPanelFriendsButton;
 
-        private static readonly string[] firstPartyModPrefixes = new string[] { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
+        private static readonly string[] firstPartyModPrefixes = new string[]
+        {
+            "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve"
+        };
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -94,12 +97,7 @@ namespace SteamLibrary
 
         internal static GameAction CreatePlayTask(GameID gameId)
         {
-            return new GameAction()
-            {
-                Name = "Play",
-                Type = GameActionType.URL,
-                Path = @"steam://rungameid/" + gameId
-            };
+            return new GameAction() { Name = "Play", Type = GameActionType.URL, Path = @"steam://rungameid/" + gameId };
         }
 
         internal static GameMetadata GetInstalledGameFromFile(string path)
@@ -110,7 +108,8 @@ namespace SteamLibrary
                 kv.ReadAsText(fs);
             }
 
-            if (!kv["StateFlags"].Value.IsNullOrEmpty() && Enum.TryParse<AppStateFlags>(kv["StateFlags"].Value, out var appState))
+            if (!kv["StateFlags"].Value.IsNullOrEmpty() &&
+                Enum.TryParse<AppStateFlags>(kv["StateFlags"].Value, out var appState))
             {
                 if (!appState.HasFlag(AppStateFlags.FullyInstalled))
                 {
@@ -180,7 +179,8 @@ namespace SteamLibrary
 
                     if (game.InstallDirectory.IsNullOrEmpty() || game.InstallDirectory.Contains(@"steamapps\music"))
                     {
-                        logger.Info($"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
+                        logger.Info(
+                            $"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
                         continue;
                     }
 
@@ -201,7 +201,9 @@ namespace SteamLibrary
             var games = new List<GameMetadata>();
             var dirInfo = new DirectoryInfo(path);
 
-            foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix))).Select(a => a.FullName))
+            foreach (var folder in dirInfo.GetDirectories()
+                         .Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix)))
+                         .Select(a => a.FullName))
             {
                 try
                 {
@@ -262,7 +264,8 @@ namespace SteamLibrary
                 IsInstalled = true,
                 Developers = new HashSet<MetadataProperty>() { new MetadataNameProperty(modInfo.Developer) },
                 Links = modInfo.Links,
-                Tags = modInfo.Categories?.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet(),
+                Tags = modInfo.Categories?.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>()
+                    .ToHashSet(),
                 Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
@@ -359,7 +362,8 @@ namespace SteamLibrary
                     }
                     else if (child.Children.HasItems())
                     {
-                        var path = child.Children.FirstOrDefault(a => a.Name?.Equals("path", StringComparison.OrdinalIgnoreCase) == true);
+                        var path = child.Children.FirstOrDefault(a =>
+                            a.Name?.Equals("path", StringComparison.OrdinalIgnoreCase) == true);
                         if (!path.Value.IsNullOrEmpty())
                         {
                             dbs.Add(path.Value);
@@ -447,7 +451,9 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
+                return GetLibraryGames(userId,
+                    GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response
+                        ?.games);
             }
             else
             {
@@ -457,7 +463,8 @@ namespace SteamLibrary
 
         internal GetOwnedGamesResult GetPrivateOwnedGames(ulong userId, string apiKey, bool freeSub)
         {
-            var libraryUrl = @"https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={0}&include_appinfo=1&include_played_free_games=1&format=json&steamid={1}&skip_unvetted_apps=0";
+            var libraryUrl =
+                @"https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={0}&include_appinfo=1&include_played_free_games=1&format=json&steamid={1}&skip_unvetted_apps=0";
             if (freeSub)
             {
                 libraryUrl += "&include_free_sub=1";
@@ -470,7 +477,8 @@ namespace SteamLibrary
             }
         }
 
-        internal List<GameMetadata> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames, bool includePlayTime = true)
+        internal List<GameMetadata> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames,
+            bool includePlayTime = true)
         {
             if (ownedGames == null)
             {
@@ -512,7 +520,8 @@ namespace SteamLibrary
                     newGame.Playtime = (ulong)(game.playtime_forever * 60);
                 }
 
-                if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity) && newGame.Playtime > 0)
+                if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity) &&
+                    newGame.Playtime > 0)
                 {
                     newGame.LastActivity = gameLastActivity;
                 }
@@ -527,7 +536,8 @@ namespace SteamLibrary
         {
             var id = new SteamID(steamId);
             var result = new Dictionary<string, DateTime>();
-            var vdf = Path.Combine(Steam.InstallationPath, "userdata", id.AccountID.ToString(), "config", "localconfig.vdf");
+            var vdf = Path.Combine(Steam.InstallationPath, "userdata", id.AccountID.ToString(), "config",
+                "localconfig.vdf");
             if (!FileSystem.FileExists(vdf))
             {
                 return result;
@@ -552,12 +562,7 @@ namespace SteamLibrary
                     string[] parts = app.Name.Split('_');
                     if (uint.TryParse(parts[0], out uint appId) && uint.TryParse(parts[1], out uint modId))
                     {
-                        var gid = new GameID()
-                        {
-                            AppID = appId,
-                            AppType = GameID.GameType.GameMod,
-                            ModID = modId
-                        };
+                        var gid = new GameID() { AppID = appId, AppType = GameID.GameType.GameMod, ModID = modId };
                         gameId = gid;
                     }
                     else
@@ -652,8 +657,10 @@ namespace SteamLibrary
                             {
                                 try
                                 {
-                                    var accGames = GetPrivateOwnedGames(id, account.RuntimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
-                                    var parsedGames = GetLibraryGames(id, accGames.response.games, account.ImportPlayTime);
+                                    var accGames = GetPrivateOwnedGames(id, account.RuntimeApiKey,
+                                        SettingsViewModel.Settings.IncludeFreeSubGames);
+                                    var parsedGames = GetLibraryGames(id, accGames.response.games,
+                                        account.ImportPlayTime);
                                     foreach (var accGame in parsedGames)
                                     {
                                         if (!libraryGames.Any(a => a.GameId == accGame.GameId))
@@ -664,7 +671,8 @@ namespace SteamLibrary
                                 }
                                 catch
                                 {
-                                    throw new Exception($"Failed to import games from {account.AccountId} Steam account.");
+                                    throw new Exception(
+                                        $"Failed to import games from {account.AccountId} Steam account.");
                                 }
                             }
                             else
@@ -676,7 +684,8 @@ namespace SteamLibrary
 
                     Logger.Debug($"Found {libraryGames.Count} library Steam games.");
 
-                    if (SettingsViewModel.Settings.IgnoreOtherInstalled && SettingsViewModel.Settings.AdditionalAccounts.HasItems())
+                    if (SettingsViewModel.Settings.IgnoreOtherInstalled &&
+                        SettingsViewModel.Settings.AdditionalAccounts.HasItems())
                     {
                         foreach (var installedGameId in installedGames.Keys.ToList())
                         {

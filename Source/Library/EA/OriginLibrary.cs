@@ -202,11 +202,7 @@ namespace OriginLibrary
             catch (WebException exc) when ((exc.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
             {
                 logger.Warn($"EA manifest {id} not found on EA server, generating fake manifest.");
-                manifest = new GameLocalDataResponse
-                {
-                    offerId = id,
-                    offerType = fakeOfferType
-                };
+                manifest = new GameLocalDataResponse { offerId = id, offerType = fakeOfferType };
             }
 
             FileSystem.PrepareSaveFile(manifestCacheFile);
@@ -247,18 +243,11 @@ namespace OriginLibrary
                 var paths = GetPathFromPlatformPath(launcher.filePath);
                 if (paths.CompletePath.Contains(@"://"))
                 {
-                    return new GameAction
-                    {
-                        Type = GameActionType.URL,
-                        Path = paths.CompletePath
-                    };
+                    return new GameAction { Type = GameActionType.URL, Path = paths.CompletePath };
                 }
                 else
                 {
-                    var action = new GameAction
-                    {
-                        Type = GameActionType.File
-                    };
+                    var action = new GameAction { Type = GameActionType.File };
                     if (paths.Path.IsNullOrEmpty())
                     {
                         action.Path = paths.CompletePath;
@@ -320,11 +309,7 @@ namespace OriginLibrary
             var installManifest = GetLocalInstallerManifest(gameId);
             if (installManifest.offerType == fakeOfferType)
             {
-                return new GameAction
-                {
-                    Type = GameActionType.URL,
-                    Path = Origin.LibraryOpenUri
-                };
+                return new GameAction { Type = GameActionType.URL, Path = Origin.LibraryOpenUri };
             }
             else
             {
@@ -334,7 +319,8 @@ namespace OriginLibrary
 
         public string GetInstallDirectory(GameLocalDataResponse localData)
         {
-            var platform = localData.publishing.softwareList.software.FirstOrDefault(a => a.softwarePlatform == "PCWIN");
+            var platform =
+                localData.publishing.softwareList.software.FirstOrDefault(a => a.softwarePlatform == "PCWIN");
             if (platform == null)
             {
                 return null;
@@ -359,7 +345,8 @@ namespace OriginLibrary
             }
         }
 
-        public Dictionary<string, GameMetadata> GetInstalledGames(CancellationToken cancelToken, List<GameMetadata> userGames)
+        public Dictionary<string, GameMetadata> GetInstalledGames(CancellationToken cancelToken,
+            List<GameMetadata> userGames)
         {
             var games = new Dictionary<string, GameMetadata>();
             foreach (var userGame in userGames)
@@ -390,7 +377,9 @@ namespace OriginLibrary
                         continue;
                     }
 
-                    newGame.Name = StringExtensions.NormalizeGameName(localData.localizableAttributes?.displayName ?? localData.i18n?.displayName ?? localData.itemName);
+                    newGame.Name = StringExtensions.NormalizeGameName(localData.localizableAttributes?.displayName ??
+                                                                      localData.i18n?.displayName ??
+                                                                      localData.itemName);
                     var installDir = GetInstallDirectory(localData);
                     if (installDir.IsNullOrEmpty())
                     {
@@ -466,7 +455,9 @@ namespace OriginLibrary
                         var localData = GetLocalInstallerManifest(game.offerId);
                         if (localData != null)
                         {
-                            gameName = StringExtensions.NormalizeGameName(localData.localizableAttributes?.displayName ?? localData.i18n?.displayName ?? localData.itemName);
+                            gameName = StringExtensions.NormalizeGameName(
+                                localData.localizableAttributes?.displayName ??
+                                localData.i18n?.displayName ?? localData.itemName);
                         }
                     }
                     catch (Exception e) when (!Environment.IsDebugBuild)

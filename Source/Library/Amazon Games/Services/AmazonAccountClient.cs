@@ -18,7 +18,10 @@ namespace AmazonGamesLibrary.Services
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private AmazonGamesLibrary library;
-        private const string loginUrl = @"https://www.amazon.com/ap/signin?openid.ns=http://specs.openid.net/auth/2.0&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.mode=checkid_setup&openid.oa2.scope=device_auth_access&openid.ns.oa2=http://www.amazon.com/ap/ext/oauth/2&openid.oa2.response_type=token&openid.oa2.client_id=device:6330386435633439383366623032393938313066303133343139383335313266234132554D56484F58375550345637&language=en_US&marketPlaceId=ATVPDKIKX0DER&openid.return_to=https://www.amazon.com&openid.pape.max_auth_age=0&openid.assoc_handle=amzn_sonic_games_launcher&pageId=amzn_sonic_games_launcher";
+
+        private const string loginUrl =
+            @"https://www.amazon.com/ap/signin?openid.ns=http://specs.openid.net/auth/2.0&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.mode=checkid_setup&openid.oa2.scope=device_auth_access&openid.ns.oa2=http://www.amazon.com/ap/ext/oauth/2&openid.oa2.response_type=token&openid.oa2.client_id=device:6330386435633439383366623032393938313066303133343139383335313266234132554D56484F58375550345637&language=en_US&marketPlaceId=ATVPDKIKX0DER&openid.return_to=https://www.amazon.com&openid.pape.max_auth_age=0&openid.assoc_handle=amzn_sonic_games_launcher&pageId=amzn_sonic_games_launcher";
+
         private readonly string tokensPath;
 
         public AmazonAccountClient(AmazonGamesLibrary library)
@@ -109,21 +112,22 @@ namespace AmazonGamesLibrary.Services
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/2.1.5699.1");
-                client.DefaultRequestHeaders.Add("X-Amz-Target", "com.amazonaws.gearbox.softwaredistribution.service.model.SoftwareDistributionService.GetEntitlementsV2");
+                client.DefaultRequestHeaders.Add("X-Amz-Target",
+                    "com.amazonaws.gearbox.softwaredistribution.service.model.SoftwareDistributionService.GetEntitlementsV2");
                 client.DefaultRequestHeaders.Add("x-amzn-token", token.access_token);
 
                 string nextToken = null;
                 var reqData = new EntitlementsRequest
                 {
                     // not sure what key this is but it's some key from Amazon.Fuel.Plugin.Entitlement.dll
-                    keyId = "d5dc8b8b-86c8-4fc4-ae93-18c0def5314d",
-                    hardwareHash = Guid.NewGuid().ToString("N")
+                    keyId = "d5dc8b8b-86c8-4fc4-ae93-18c0def5314d", hardwareHash = Guid.NewGuid().ToString("N")
                 };
 
                 do
                 {
                     reqData.nextToken = nextToken;
-                    var strCont = new StringContent(Serialization.ToJson(reqData, true), Encoding.UTF8, "application/json");
+                    var strCont = new StringContent(Serialization.ToJson(reqData, true), Encoding.UTF8,
+                        "application/json");
                     strCont.Headers.TryAddWithoutValidation("Expect", "100-continue");
                     strCont.Headers.TryAddWithoutValidation("Content-Encoding", "amz-1.0");
 
@@ -189,7 +193,9 @@ namespace AmazonGamesLibrary.Services
                     strcont);
 
                 var authResponseContent = await authResponse.Content.ReadAsStringAsync();
-                var authData = Serialization.FromJson<DeviceRegistrationResponse.Response.Success.Tokens.Bearer>(authResponseContent);
+                var authData =
+                    Serialization.FromJson<DeviceRegistrationResponse.Response.Success.Tokens.Bearer>(
+                        authResponseContent);
                 token.access_token = authData.access_token;
                 Encryption.EncryptToFile(
                     tokensPath,

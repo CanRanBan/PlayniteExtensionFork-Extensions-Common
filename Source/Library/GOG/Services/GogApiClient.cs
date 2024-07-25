@@ -21,7 +21,9 @@ namespace GogLibrary.Services
 
             try
             {
-                data = HttpDownloader.DownloadString(gameUrl, new List<System.Net.Cookie>() { new System.Net.Cookie("gog_lc", Gog.EnStoreLocaleString) }).Split('\n');
+                data = HttpDownloader.DownloadString(gameUrl,
+                        new List<System.Net.Cookie>() { new System.Net.Cookie("gog_lc", Gog.EnStoreLocaleString) })
+                    .Split('\n');
             }
             catch (WebException)
             {
@@ -67,7 +69,8 @@ namespace GogLibrary.Services
 
             try
             {
-                var stringData = HttpDownloader.DownloadString(string.Format(baseUrl, id, locale), new List<Cookie>() { new Cookie("gog_lc", Gog.EnStoreLocaleString) });
+                var stringData = HttpDownloader.DownloadString(string.Format(baseUrl, id, locale),
+                    new List<Cookie>() { new Cookie("gog_lc", Gog.EnStoreLocaleString) });
                 return Serialization.FromJson<ProductApiDetail>(stringData);
             }
             catch (WebException exc)

@@ -94,7 +94,8 @@ namespace AmazonGamesLibrary
 
                 if (!gameConfig.Main.WorkingSubdirOverride.IsNullOrEmpty())
                 {
-                    controller.WorkingDir = Path.Combine(args.Game.InstallDirectory, gameConfig.Main.WorkingSubdirOverride);
+                    controller.WorkingDir =
+                        Path.Combine(args.Game.InstallDirectory, gameConfig.Main.WorkingSubdirOverride);
                 }
                 else if (gameConfig.Main.Command.Contains("scummvm.exe", StringComparison.OrdinalIgnoreCase))
                 {
@@ -118,7 +119,8 @@ namespace AmazonGamesLibrary
                 return games;
             }
 
-            using (var sql = Playnite.SDK.Data.SQLite.OpenDatabase(installSqlPath, Playnite.SDK.Data.SqliteOpenFlags.ReadOnly))
+            using (var sql = Playnite.SDK.Data.SQLite.OpenDatabase(installSqlPath,
+                       Playnite.SDK.Data.SqliteOpenFlags.ReadOnly))
             {
                 foreach (var program in sql.Query<InstallGameInfo>(@"SELECT * FROM DbSet WHERE Installed = 1;"))
                 {

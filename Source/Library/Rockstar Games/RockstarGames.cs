@@ -18,66 +18,22 @@ namespace RockstarGamesLibrary
     {
         public static readonly List<RockstarGame> Games = new List<RockstarGame>
         {
+            new RockstarGame { Name = "Grand Theft Auto V", Executable = "PlayGTAV.exe", TitleId = "gta5" },
+            new RockstarGame { Name = "Red Dead Redemption 2", Executable = "RDR2.exe", TitleId = "rdr2" },
+            new RockstarGame { Name = "L.A. Noire", Executable = "LANoire.exe", TitleId = "lanoire" },
+            new RockstarGame { Name = "Max Payne 3", Executable = "MaxPayne3.exe", TitleId = "mp3" },
             new RockstarGame
             {
-                Name = "Grand Theft Auto V",
-                Executable = "PlayGTAV.exe",
-                TitleId = "gta5"
+                Name = "L.A. Noire: The VR Case Files", Executable = "LANoireVR.exe", TitleId = "lanoirevr"
             },
             new RockstarGame
             {
-                Name = "Red Dead Redemption 2",
-                Executable = "RDR2.exe",
-                TitleId = "rdr2"
+                Name = "Grand Theft Auto: San Andreas", Executable = "gta_sa.exe", TitleId = "gtasa"
             },
-            new RockstarGame
-            {
-                Name = "L.A. Noire",
-                Executable = "LANoire.exe",
-                TitleId = "lanoire"
-            },
-            new RockstarGame
-            {
-                Name = "Max Payne 3",
-                Executable = "MaxPayne3.exe",
-                TitleId = "mp3"
-            },
-            new RockstarGame
-            {
-                Name = "L.A. Noire: The VR Case Files",
-                Executable = "LANoireVR.exe",
-                TitleId = "lanoirevr"
-            },
-            new RockstarGame
-            {
-                Name = "Grand Theft Auto: San Andreas",
-                Executable = "gta_sa.exe",
-                TitleId = "gtasa"
-            },
-            new RockstarGame
-            {
-                Name = "Grand Theft Auto III",
-                Executable = "gta3.exe",
-                TitleId = "gta3"
-            },
-            new RockstarGame
-            {
-                Name = "Grand Theft Auto: Vice City",
-                Executable = "gta-vc.exe",
-                TitleId = "gtavc"
-            },
-            new RockstarGame
-            {
-                Name = "Bully: Scholarship Edition",
-                Executable = "Bully.exe",
-                TitleId = "bully"
-            },
-            new RockstarGame
-            {
-                Name = "Grand Theft Auto IV",
-                Executable = "GTAIV.exe",
-                TitleId = "gta4"
-            },
+            new RockstarGame { Name = "Grand Theft Auto III", Executable = "gta3.exe", TitleId = "gta3" },
+            new RockstarGame { Name = "Grand Theft Auto: Vice City", Executable = "gta-vc.exe", TitleId = "gtavc" },
+            new RockstarGame { Name = "Bully: Scholarship Edition", Executable = "Bully.exe", TitleId = "bully" },
+            new RockstarGame { Name = "Grand Theft Auto IV", Executable = "GTAIV.exe", TitleId = "gta4" },
             new RockstarGame
             {
                 Name = "Grand Theft Auto III: The Definitive Edition",
@@ -100,10 +56,7 @@ namespace RockstarGamesLibrary
 
         public static bool IsRunning
         {
-            get
-            {
-                return RunningProcessesCount > 0;
-            }
+            get { return RunningProcessesCount > 0; }
         }
 
         public static int RunningProcessesCount
@@ -128,7 +81,8 @@ namespace RockstarGamesLibrary
         {
             get
             {
-                var progs = Programs.GetUnistallProgramsList().FirstOrDefault(a => a.DisplayName == "Rockstar Games Launcher" == true);
+                var progs = Programs.GetUnistallProgramsList()
+                    .FirstOrDefault(a => a.DisplayName == "Rockstar Games Launcher" == true);
                 if (progs == null)
                 {
                     return string.Empty;
@@ -149,7 +103,8 @@ namespace RockstarGamesLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"RockstarGamesLibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"RockstarGamesLibraryIcon.ico");
 
         public static void StartClient()
         {

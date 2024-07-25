@@ -97,7 +97,8 @@ namespace GogLibrary.Services
             }
             catch (Exception e)
             {
-                logger.Error(e, $"Failed to library from new API for account {account.username}, falling back to legacy.");
+                logger.Error(e,
+                    $"Failed to library from new API for account {account.username}, falling back to legacy.");
                 logger.Debug(stringLibContent);
                 return GetOwnedGames();
             }
@@ -106,7 +107,8 @@ namespace GogLibrary.Services
         public List<LibraryGameResponse> GetOwnedGames()
         {
             var games = new List<LibraryGameResponse>();
-            var baseUrl = @"https://www.gog.com/account/getFilteredProducts?hiddenFlag=0&mediaType=1&page={0}&sortBy=title";
+            var baseUrl =
+                @"https://www.gog.com/account/getFilteredProducts?hiddenFlag=0&mediaType=1&page={0}&sortBy=title";
             webView.NavigateAndWait(string.Format(baseUrl, 1));
             var gamesList = webView.GetPageText();
 
@@ -121,10 +123,7 @@ namespace GogLibrary.Services
             {
                 game = new LibraryGameResponse.Game()
                 {
-                    id = a.id.ToString(),
-                    title = a.title,
-                    url = a.url,
-                    image = a.image
+                    id = a.id.ToString(), title = a.title, url = a.url, image = a.image
                 }
             }));
 
@@ -139,10 +138,7 @@ namespace GogLibrary.Services
                     {
                         game = new LibraryGameResponse.Game()
                         {
-                            id = a.id.ToString(),
-                            title = a.title,
-                            url = a.url,
-                            image = a.image
+                            id = a.id.ToString(), title = a.title, url = a.url, image = a.image
                         }
                     }));
                 }

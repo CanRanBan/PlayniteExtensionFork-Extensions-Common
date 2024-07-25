@@ -17,18 +17,12 @@ namespace EpicLibrary
     {
         public bool IsUserLoggedIn
         {
-            get
-            {
-                return new EpicAccountClient(PlayniteApi, Plugin.TokensPath).GetIsUserLoggedIn();
-            }
+            get { return new EpicAccountClient(PlayniteApi, Plugin.TokensPath).GetIsUserLoggedIn(); }
         }
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public EpicLibrarySettingsViewModel(EpicLibrary library, IPlayniteAPI api) : base(library, api)

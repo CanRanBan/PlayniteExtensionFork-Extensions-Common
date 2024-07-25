@@ -12,8 +12,10 @@ namespace HumbleLibrary
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private static string humbleExeName = "Humble App.exe";
+
         public static string HumbleConfigPath =>
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Humble App", "config.json");
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Humble App",
+                "config.json");
 
         public override string Icon => GetIcon();
         public override bool IsInstalled => GetIsClientInstalled();

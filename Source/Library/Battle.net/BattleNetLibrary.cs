@@ -46,7 +46,8 @@ namespace BattleNetLibrary
                         continue;
                     }
 
-                    var match = Regex.Match(prog.UninstallString, string.Format(@"Battle\.net.*--uid={0}.*\s", app.InternalId), RegexOptions.IgnoreCase);
+                    var match = Regex.Match(prog.UninstallString,
+                        string.Format(@"Battle\.net.*--uid={0}.*\s", app.InternalId), RegexOptions.IgnoreCase);
                     if (match.Success)
                     {
                         return prog;
@@ -76,7 +77,9 @@ namespace BattleNetLibrary
                     }
 
                     var iId = match.Groups[1].Value;
-                    var product = BattleNetGames.Games.FirstOrDefault(a => a.Type == BNetAppType.Default && iId.StartsWith(a.InternalId, StringComparison.OrdinalIgnoreCase));
+                    var product = BattleNetGames.Games.FirstOrDefault(a =>
+                        a.Type == BNetAppType.Default &&
+                        iId.StartsWith(a.InternalId, StringComparison.OrdinalIgnoreCase));
                     if (product == null)
                     {
                         continue;
@@ -103,9 +106,11 @@ namespace BattleNetLibrary
                         games.Add(game.GameId, game);
                     }
                 }
-                else if (prog.Publisher == "Blizzard Entertainment" && BattleNetGames.Games.Any(a => a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId))
+                else if (prog.Publisher == "Blizzard Entertainment" && BattleNetGames.Games.Any(a =>
+                             a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId))
                 {
-                    var products = BattleNetGames.Games.Where(a => a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId);
+                    var products = BattleNetGames.Games.Where(a =>
+                        a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId);
                     foreach (var product in products)
                     {
                         var exe = Path.Combine(prog.InstallLocation, product.ClassicExecutable);
@@ -150,7 +155,8 @@ namespace BattleNetLibrary
             foreach (var product in productInstallData)
             {
                 var gameEntry = BattleNetGames.Games.FirstOrDefault(
-                    a => a.Type == BNetAppType.Default && string.Equals(a.InternalId, product.InternalId, StringComparison.OrdinalIgnoreCase));
+                    a => a.Type == BNetAppType.Default && string.Equals(a.InternalId, product.InternalId,
+                        StringComparison.OrdinalIgnoreCase));
                 if (gameEntry == null)
                 {
                     // product.db also includes info about battle.net client components, not just games
@@ -197,12 +203,14 @@ namespace BattleNetLibrary
                         var gameInfo = BattleNetGames.Games.FirstOrDefault(a => a.ApiId == product.titleId);
                         if (gameInfo == null)
                         {
-                            Logger.Warn($"Unknown game found on the account: {product.localizedGameName}/{product.titleId}, skipping import.");
+                            Logger.Warn(
+                                $"Unknown game found on the account: {product.localizedGameName}/{product.titleId}, skipping import.");
                             continue;
                         }
 
                         // To avoid duplicates like multiple WoW accounts
-                        if (!games.Any(a => string.Equals(a.GameId, gameInfo.ProductId, StringComparison.OrdinalIgnoreCase)))
+                        if (!games.Any(a =>
+                                string.Equals(a.GameId, gameInfo.ProductId, StringComparison.OrdinalIgnoreCase)))
                         {
                             games.Add(new GameMetadata()
                             {
@@ -222,7 +230,8 @@ namespace BattleNetLibrary
                     var w3Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("warcraft-iii"));
                     if (w3Games.Any())
                     {
-                        var w3 = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "W3C", StringComparison.OrdinalIgnoreCase));
+                        var w3 = BattleNetGames.Games.FirstOrDefault(a =>
+                            string.Equals(a.ProductId, "W3C", StringComparison.OrdinalIgnoreCase));
                         games.Add(new GameMetadata()
                         {
                             Source = new MetadataNameProperty("Battle.net"),
@@ -233,7 +242,8 @@ namespace BattleNetLibrary
 
                         if (w3Games.Count() == 2)
                         {
-                            var w3x = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "W3CX", StringComparison.OrdinalIgnoreCase));
+                            var w3x = BattleNetGames.Games.FirstOrDefault(a =>
+                                string.Equals(a.ProductId, "W3CX", StringComparison.OrdinalIgnoreCase));
                             games.Add(new GameMetadata()
                             {
                                 Source = new MetadataNameProperty("Battle.net"),
@@ -248,7 +258,8 @@ namespace BattleNetLibrary
                     var d2Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("diablo-ii"));
                     if (d2Games.Any())
                     {
-                        var d2 = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "D2", StringComparison.OrdinalIgnoreCase));
+                        var d2 = BattleNetGames.Games.FirstOrDefault(a =>
+                            string.Equals(a.ProductId, "D2", StringComparison.OrdinalIgnoreCase));
                         games.Add(new GameMetadata()
                         {
                             Source = new MetadataNameProperty("Battle.net"),
@@ -259,7 +270,8 @@ namespace BattleNetLibrary
 
                         if (d2Games.Count() == 2)
                         {
-                            var d2x = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "D2X", StringComparison.OrdinalIgnoreCase));
+                            var d2x = BattleNetGames.Games.FirstOrDefault(a =>
+                                string.Equals(a.ProductId, "D2X", StringComparison.OrdinalIgnoreCase));
                             games.Add(new GameMetadata()
                             {
                                 Source = new MetadataNameProperty("Battle.net"),

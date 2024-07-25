@@ -27,7 +27,8 @@ namespace OriginLibrary
                 return;
             }
 
-            var procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainProc.Id}", null, out var stdOut, out var stdErr);
+            var procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainProc.Id}", null,
+                out var stdOut, out var stdErr);
             if (procRes != 0)
             {
                 logger.Error($"Failed to close EA app: {procRes}, {stdErr}");

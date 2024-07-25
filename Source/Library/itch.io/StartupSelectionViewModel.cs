@@ -23,10 +23,7 @@ namespace ItchioLibrary
 
         public RelayCommand CancelCommand
         {
-            get => new RelayCommand(() =>
-            {
-                window.Close();
-            });
+            get => new RelayCommand(() => { window.Close(); });
         }
 
         public StartupSelectionViewModel(Window window, List<PickActionAction> actions)

@@ -10,10 +10,7 @@ namespace BattleNetLibrary
     {
         public static bool IsRunning
         {
-            get
-            {
-                return RunningProcessesCount > 0;
-            }
+            get { return RunningProcessesCount > 0; }
         }
 
         public static int RunningProcessesCount
@@ -38,7 +35,8 @@ namespace BattleNetLibrary
         {
             get
             {
-                var progs = Programs.GetUnistallProgramsList().FirstOrDefault(a => a.UninstallString?.Contains("-uid=battle.net") == true);
+                var progs = Programs.GetUnistallProgramsList()
+                    .FirstOrDefault(a => a.UninstallString?.Contains("-uid=battle.net") == true);
                 if (progs == null)
                 {
                     return string.Empty;
@@ -59,7 +57,8 @@ namespace BattleNetLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"BattleNetLibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"BattleNetLibraryIcon.ico");
 
         public static void StartClient()
         {

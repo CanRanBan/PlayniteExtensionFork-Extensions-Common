@@ -17,10 +17,7 @@ namespace OriginLibrary
 
         public static bool IsRunning
         {
-            get
-            {
-                return Process.GetProcessesByName(Path.GetFileNameWithoutExtension(ClientExecPath))?.Any() == true;
-            }
+            get { return Process.GetProcessesByName(Path.GetFileNameWithoutExtension(ClientExecPath))?.Any() == true; }
         }
 
         public static string ClientExecPath
@@ -74,7 +71,8 @@ namespace OriginLibrary
             }
         }
 
-        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources", @"EALibraryIcon.ico");
+        public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+            @"Resources", @"EALibraryIcon.ico");
 
         public static void StartClient()
         {

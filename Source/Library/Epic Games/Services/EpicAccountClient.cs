@@ -36,14 +36,21 @@ namespace EpicLibrary.Services
         private ILogger logger = LogManager.GetLogger();
         private IPlayniteAPI api;
         private string tokensPath;
-        private readonly string loginUrl = "https://www.epicgames.com/id/login?redirectUrl=https%3A//www.epicgames.com/id/api/redirect%3FclientId%3D34a02cf8f4414e29b15921876da36f9a%26responseType%3Dcode";
+
+        private readonly string loginUrl =
+            "https://www.epicgames.com/id/login?redirectUrl=https%3A//www.epicgames.com/id/api/redirect%3FclientId%3D34a02cf8f4414e29b15921876da36f9a%26responseType%3Dcode";
+
         private readonly string oauthUrl = @"";
         private readonly string accountUrl = @"";
         private readonly string assetsUrl = @"";
         private readonly string catalogUrl = @"";
         private readonly string playtimeUrl = @"";
-        private const string authEncodedString = "MzRhMDJjZjhmNDQxNGUyOWIxNTkyMTg3NmRhMzZmOWE6ZGFhZmJjY2M3Mzc3NDUwMzlkZmZlNTNkOTRmYzc2Y2Y=";
-        private const string userAgent = @"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Vivaldi/5.5.2805.50";
+
+        private const string authEncodedString =
+            "MzRhMDJjZjhmNDQxNGUyOWIxNTkyMTg3NmRhMzZmOWE6ZGFhZmJjY2M3Mzc3NDUwMzlkZmZlNTNkOTRmYzc2Y2Y=";
+
+        private const string userAgent =
+            @"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Vivaldi/5.5.2805.50";
 
         public EpicAccountClient(IPlayniteAPI api, string tokensPath)
         {
@@ -61,11 +68,16 @@ namespace EpicLibrary.Services
                 try
                 {
                     var config = IniParser.Parse(File.ReadAllLines(EpicLauncher.PortalConfigPath));
-                    oauthUrl = string.Format(oauthUrlMask, config["Portal.OnlineSubsystemMcp.OnlineIdentityMcp Prod"]["Domain"].TrimEnd('/'));
-                    accountUrl = string.Format(accountUrlMask, config["Portal.OnlineSubsystemMcp.OnlineIdentityMcp Prod"]["Domain"].TrimEnd('/'));
-                    assetsUrl = string.Format(assetsUrlMask, config["Portal.OnlineSubsystemMcp.BaseServiceMcp Prod"]["Domain"].TrimEnd('/'));
-                    catalogUrl = string.Format(catalogUrlMask, config["Portal.OnlineSubsystemMcp.OnlineCatalogServiceMcp Prod"]["Domain"].TrimEnd('/'));
-                    playtimeUrl = string.Format(playtimeUrlMask, config["Portal.OnlineSubsystemMcp.OnlineLibraryServiceMcp Prod"]["Domain"].TrimEnd('/'), "{0}");
+                    oauthUrl = string.Format(oauthUrlMask,
+                        config["Portal.OnlineSubsystemMcp.OnlineIdentityMcp Prod"]["Domain"].TrimEnd('/'));
+                    accountUrl = string.Format(accountUrlMask,
+                        config["Portal.OnlineSubsystemMcp.OnlineIdentityMcp Prod"]["Domain"].TrimEnd('/'));
+                    assetsUrl = string.Format(assetsUrlMask,
+                        config["Portal.OnlineSubsystemMcp.BaseServiceMcp Prod"]["Domain"].TrimEnd('/'));
+                    catalogUrl = string.Format(catalogUrlMask,
+                        config["Portal.OnlineSubsystemMcp.OnlineCatalogServiceMcp Prod"]["Domain"].TrimEnd('/'));
+                    playtimeUrl = string.Format(playtimeUrlMask,
+                        config["Portal.OnlineSubsystemMcp.OnlineLibraryServiceMcp Prod"]["Domain"].TrimEnd('/'), "{0}");
                     loadedFromConfig = true;
                 }
                 catch (Exception e) when (!Debugger.IsAttached)
@@ -90,12 +102,12 @@ namespace EpicLibrary.Services
             var apiRedirectContent = string.Empty;
 
             using (var view = api.WebViews.CreateView(new WebViewSettings
-            {
-                WindowWidth = 580,
-                WindowHeight = 700,
-                // This is needed otherwise captcha won't pass
-                UserAgent = userAgent
-            }))
+                   {
+                       WindowWidth = 580,
+                       WindowHeight = 700,
+                       // This is needed otherwise captcha won't pass
+                       UserAgent = userAgent
+                   }))
             {
                 view.LoadingChanged += async (s, e) =>
                 {
@@ -135,7 +147,8 @@ namespace EpicLibrary.Services
             {
                 httpClient.DefaultRequestHeaders.Clear();
                 httpClient.DefaultRequestHeaders.Add("Authorization", "basic " + authEncodedString);
-                using (var content = new StringContent($"grant_type=authorization_code&code={authorizationCode}&token_type=eg1"))
+                using (var content =
+                       new StringContent($"grant_type=authorization_code&code={authorizationCode}&token_type=eg1"))
                 {
                     content.Headers.Clear();
                     content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
@@ -161,7 +174,8 @@ namespace EpicLibrary.Services
 
             try
             {
-                var account = InvokeRequest<AccountResponse>(accountUrl + tokens.account_id, tokens).GetAwaiter().GetResult().Item2;
+                var account = InvokeRequest<AccountResponse>(accountUrl + tokens.account_id, tokens).GetAwaiter()
+                    .GetResult().Item2;
                 return account.id == tokens.account_id;
             }
             catch (Exception e)
@@ -175,7 +189,8 @@ namespace EpicLibrary.Services
                         return false;
                     }
 
-                    var account = InvokeRequest<AccountResponse>(accountUrl + tokens.account_id, tokens).GetAwaiter().GetResult().Item2;
+                    var account = InvokeRequest<AccountResponse>(accountUrl + tokens.account_id, tokens).GetAwaiter()
+                        .GetResult().Item2;
                     return account.id == tokens.account_id;
                 }
                 else
@@ -215,7 +230,8 @@ namespace EpicLibrary.Services
             {
                 try
                 {
-                    result = Serialization.FromJson<Dictionary<string, CatalogItem>>(FileSystem.ReadStringFromFile(cachePath));
+                    result = Serialization.FromJson<Dictionary<string, CatalogItem>>(
+                        FileSystem.ReadStringFromFile(cachePath));
                 }
                 catch (Exception e)
                 {
@@ -225,8 +241,10 @@ namespace EpicLibrary.Services
 
             if (result == null)
             {
-                var url = string.Format("{0}/bulk/items?id={1}&country=US&locale=en-US&includeMainGameDetails=true", nameSpace, id);
-                var catalogResponse = InvokeRequest<Dictionary<string, CatalogItem>>(catalogUrl + url, loadTokens()).GetAwaiter().GetResult();
+                var url = string.Format("{0}/bulk/items?id={1}&country=US&locale=en-US&includeMainGameDetails=true",
+                    nameSpace, id);
+                var catalogResponse = InvokeRequest<Dictionary<string, CatalogItem>>(catalogUrl + url, loadTokens())
+                    .GetAwaiter().GetResult();
                 result = catalogResponse.Item2;
                 FileSystem.WriteStringToFile(cachePath, catalogResponse.Item1);
             }
@@ -247,7 +265,8 @@ namespace EpicLibrary.Services
             {
                 httpClient.DefaultRequestHeaders.Clear();
                 httpClient.DefaultRequestHeaders.Add("Authorization", "basic " + authEncodedString);
-                using (var content = new StringContent($"grant_type=refresh_token&refresh_token={refreshToken}&token_type=eg1"))
+                using (var content =
+                       new StringContent($"grant_type=refresh_token&refresh_token={refreshToken}&token_type=eg1"))
                 {
                     content.Headers.Clear();
                     content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
@@ -272,7 +291,8 @@ namespace EpicLibrary.Services
                 var response = await httpClient.GetAsync(url);
                 var str = await response.Content.ReadAsStringAsync();
 
-                if (Serialization.TryFromJson<ErrorResponse>(str, out var error) && !string.IsNullOrEmpty(error.errorCode))
+                if (Serialization.TryFromJson<ErrorResponse>(str, out var error) &&
+                    !string.IsNullOrEmpty(error.errorCode))
                 {
                     throw new TokenException(error.errorCode);
                 }
@@ -345,7 +365,8 @@ namespace EpicLibrary.Services
                     }
 
                     cookieContainer.Add(new Uri("https://www.epicgames.com"), new Cookie("EPIC_COUNTRY", country));
-                    resp = httpClient.PostAsync("https://www.epicgames.com/id/api/exchange/generate", null).GetAwaiter().GetResult();
+                    resp = httpClient.PostAsync("https://www.epicgames.com/id/api/exchange/generate", null).GetAwaiter()
+                        .GetResult();
                     var respContent = resp.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                     return Serialization.FromJson<Dictionary<string, string>>(respContent)["code"];
                 }

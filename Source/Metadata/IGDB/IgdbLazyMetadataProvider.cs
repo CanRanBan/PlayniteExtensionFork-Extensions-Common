@@ -22,37 +22,40 @@ namespace IGDBMetadata
         private readonly IgdbMetadataPlugin plugin;
         private Igdb.Game GameData;
 
-        private readonly static Dictionary<AgeRatingRatingEnum, string> pegiRatingToStr = new Dictionary<AgeRatingRatingEnum, string>()
-        {
-            [AgeRatingRatingEnum.THREE] = "3",
-            [AgeRatingRatingEnum.SEVEN] = "7",
-            [AgeRatingRatingEnum.TWELVE] = "12",
-            [AgeRatingRatingEnum.SIXTEEN] = "16",
-            [AgeRatingRatingEnum.EIGHTEEN] = "18"
-        };
+        private readonly static Dictionary<AgeRatingRatingEnum, string> pegiRatingToStr =
+            new Dictionary<AgeRatingRatingEnum, string>()
+            {
+                [AgeRatingRatingEnum.THREE] = "3",
+                [AgeRatingRatingEnum.SEVEN] = "7",
+                [AgeRatingRatingEnum.TWELVE] = "12",
+                [AgeRatingRatingEnum.SIXTEEN] = "16",
+                [AgeRatingRatingEnum.EIGHTEEN] = "18"
+            };
 
-        private readonly static Dictionary<WebsiteCategoryEnum, string> websiteCategoryToStr = new Dictionary<WebsiteCategoryEnum, string>()
-        {
-            [WebsiteCategoryEnum.WEBSITE_ANDROID] = "Android",
-            [WebsiteCategoryEnum.WEBSITE_DISCORD] = "Discord",
-            [WebsiteCategoryEnum.WEBSITE_EPICGAMES] = "Epic",
-            [WebsiteCategoryEnum.WEBSITE_FACEBOOK] = "Facebook",
-            [WebsiteCategoryEnum.WEBSITE_GOG] = "GOG",
-            [WebsiteCategoryEnum.WEBSITE_INSTAGRAM] = "Instagram",
-            [WebsiteCategoryEnum.WEBSITE_IPAD] = "iPad",
-            [WebsiteCategoryEnum.WEBSITE_IPHONE] = "iPhone",
-            [WebsiteCategoryEnum.WEBSITE_ITCH] = "Itch",
-            [WebsiteCategoryEnum.WEBSITE_OFFICIAL] = "Official",
-            [WebsiteCategoryEnum.WEBSITE_REDDIT] = "Reddit",
-            [WebsiteCategoryEnum.WEBSITE_STEAM] = "Steam",
-            [WebsiteCategoryEnum.WEBSITE_TWITCH] = "Twitch",
-            [WebsiteCategoryEnum.WEBSITE_TWITTER] = "Twitter",
-            [WebsiteCategoryEnum.WEBSITE_WIKIA] = "Wikia",
-            [WebsiteCategoryEnum.WEBSITE_WIKIPEDIA] = "Wikipedia",
-            [WebsiteCategoryEnum.WEBSITE_YOUTUBE] = "YouTube",
-        };
+        private readonly static Dictionary<WebsiteCategoryEnum, string> websiteCategoryToStr =
+            new Dictionary<WebsiteCategoryEnum, string>()
+            {
+                [WebsiteCategoryEnum.WEBSITE_ANDROID] = "Android",
+                [WebsiteCategoryEnum.WEBSITE_DISCORD] = "Discord",
+                [WebsiteCategoryEnum.WEBSITE_EPICGAMES] = "Epic",
+                [WebsiteCategoryEnum.WEBSITE_FACEBOOK] = "Facebook",
+                [WebsiteCategoryEnum.WEBSITE_GOG] = "GOG",
+                [WebsiteCategoryEnum.WEBSITE_INSTAGRAM] = "Instagram",
+                [WebsiteCategoryEnum.WEBSITE_IPAD] = "iPad",
+                [WebsiteCategoryEnum.WEBSITE_IPHONE] = "iPhone",
+                [WebsiteCategoryEnum.WEBSITE_ITCH] = "Itch",
+                [WebsiteCategoryEnum.WEBSITE_OFFICIAL] = "Official",
+                [WebsiteCategoryEnum.WEBSITE_REDDIT] = "Reddit",
+                [WebsiteCategoryEnum.WEBSITE_STEAM] = "Steam",
+                [WebsiteCategoryEnum.WEBSITE_TWITCH] = "Twitch",
+                [WebsiteCategoryEnum.WEBSITE_TWITTER] = "Twitter",
+                [WebsiteCategoryEnum.WEBSITE_WIKIA] = "Wikia",
+                [WebsiteCategoryEnum.WEBSITE_WIKIPEDIA] = "Wikipedia",
+                [WebsiteCategoryEnum.WEBSITE_YOUTUBE] = "YouTube",
+            };
 
         private List<MetadataField> availableFields;
+
         public override List<MetadataField> AvailableFields
         {
             get
@@ -141,7 +144,8 @@ namespace IGDBMetadata
                         var index = GlobalRandom.Next(0, possibleBackgrounds.Count - 1);
                         selected = possibleBackgrounds[index];
                     }
-                    else if (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
+                    else if (settings.ImageSelectionPriority == MultiImagePriority.Select &&
+                             plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
                     {
                         selected = GetBackgroundManually(possibleBackgrounds);
                     }
@@ -156,11 +160,13 @@ namespace IGDBMetadata
             {
                 if (selected is Artwork artwork)
                 {
-                    return new MetadataFile(GetImageUrl(artwork.url, artwork.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
+                    return new MetadataFile(GetImageUrl(artwork.url,
+                        artwork.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
                 }
                 else if (selected is Screenshot screenshot)
                 {
-                    return new MetadataFile(GetImageUrl(screenshot.url, screenshot.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
+                    return new MetadataFile(GetImageUrl(screenshot.url,
+                        screenshot.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
                 }
             }
 
@@ -184,7 +190,8 @@ namespace IGDBMetadata
                 return base.GetCoverImage(args);
             }
 
-            return new MetadataFile(GetImageUrl(GameData.cover_expanded.url, GameData.cover_expanded.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
+            return new MetadataFile(GetImageUrl(GameData.cover_expanded.url,
+                GameData.cover_expanded.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
         }
 
         public override MetadataFile GetIcon(GetMetadataFieldArgs args)
@@ -224,11 +231,8 @@ namespace IGDBMetadata
                 return base.GetDevelopers(args);
             }
 
-            return GameData.involved_companies_expanded?.
-                Where(a => a.developer && a.company_expanded != null).
-                Select(a => new MetadataNameProperty(a.company_expanded.name)).
-                ToList();
-
+            return GameData.involved_companies_expanded?.Where(a => a.developer && a.company_expanded != null)
+                .Select(a => new MetadataNameProperty(a.company_expanded.name)).ToList();
         }
 
         public override IEnumerable<MetadataProperty> GetPublishers(GetMetadataFieldArgs args)
@@ -238,10 +242,8 @@ namespace IGDBMetadata
                 return base.GetPublishers(args);
             }
 
-            return GameData.involved_companies_expanded?.
-                Where(a => a.publisher && a.company_expanded != null).
-                Select(a => new MetadataNameProperty(a.company_expanded.name)).
-                ToList();
+            return GameData.involved_companies_expanded?.Where(a => a.publisher && a.company_expanded != null)
+                .Select(a => new MetadataNameProperty(a.company_expanded.name)).ToList();
         }
 
         public override IEnumerable<MetadataProperty> GetGenres(GetMetadataFieldArgs args)
@@ -273,17 +275,15 @@ namespace IGDBMetadata
 
             if (plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority == AgeRatingOrg.ESRB)
             {
-                return GameData.age_ratings_expanded.
-                    Where(a => a.category == AgeRatingCategoryEnum.ESRB).
-                    Select(a => new MetadataNameProperty($"ESRB {a.rating}")).
-                    ToList();
+                return GameData.age_ratings_expanded.Where(a => a.category == AgeRatingCategoryEnum.ESRB)
+                    .Select(a => new MetadataNameProperty($"ESRB {a.rating}")).ToList();
             }
             else if (plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority == AgeRatingOrg.PEGI)
             {
-                return GameData.age_ratings_expanded.
-                    Where(a => a.category == AgeRatingCategoryEnum.PEGI).
-                    Select(a => new MetadataNameProperty("PEGI " + (pegiRatingToStr.TryGetValue(a.rating, out var val) ? val : "None"))).
-                    ToList();
+                return GameData.age_ratings_expanded.Where(a => a.category == AgeRatingCategoryEnum.PEGI).Select(a =>
+                        new MetadataNameProperty("PEGI " +
+                                                 (pegiRatingToStr.TryGetValue(a.rating, out var val) ? val : "None")))
+                    .ToList();
             }
 
             return base.GetAgeRatings(args);
@@ -306,7 +306,8 @@ namespace IGDBMetadata
                 return base.GetReleaseDate(args);
             }
 
-            return new Playnite.SDK.Models.ReleaseDate(DateTimeOffset.FromUnixTimeSeconds(GameData.first_release_date).DateTime);
+            return new Playnite.SDK.Models.ReleaseDate(DateTimeOffset.FromUnixTimeSeconds(GameData.first_release_date)
+                .DateTime);
         }
 
         public override IEnumerable<MetadataProperty> GetFeatures(GetMetadataFieldArgs args)
@@ -316,7 +317,8 @@ namespace IGDBMetadata
                 return base.GetFeatures(args);
             }
 
-            var features = GameData.game_modes_expanded.Select(a => new MetadataNameProperty(cultInfo.TextInfo.ToTitleCase(a.name))).ToList();
+            var features = GameData.game_modes_expanded
+                .Select(a => new MetadataNameProperty(cultInfo.TextInfo.ToTitleCase(a.name))).ToList();
             if (GameData.player_perspectives_expanded?.FirstOrDefault(a => a.name == "Virtual Reality") != null)
             {
                 features.Add(new MetadataNameProperty("VR"));
@@ -332,10 +334,8 @@ namespace IGDBMetadata
                 return base.GetLinks(args);
             }
 
-            return GameData.websites_expanded.
-                Where(a => !a.url.IsNullOrEmpty()).
-                Select(a => new Link(websiteCategoryToStr.TryGetValue(a.category, out var val) ? val : "Uknown", a.url)).
-                ToList();
+            return GameData.websites_expanded.Where(a => !a.url.IsNullOrEmpty()).Select(a =>
+                new Link(websiteCategoryToStr.TryGetValue(a.category, out var val) ? val : "Uknown", a.url)).ToList();
         }
 
         private List<MetadataField> GetAvailableFields()
@@ -370,7 +370,8 @@ namespace IGDBMetadata
                 {
                     fields.Add(MetadataField.BackgroundImage);
                 }
-                else if (GameData.screenshots_expanded.HasItems() && plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
+                else if (GameData.screenshots_expanded.HasItems() &&
+                         plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
                 {
                     fields.Add(MetadataField.BackgroundImage);
                 }

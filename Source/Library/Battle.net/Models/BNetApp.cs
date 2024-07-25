@@ -8,6 +8,7 @@ namespace BattleNetLibrary.Models
         Default,
         Classic
     }
+
     public class BNetApp
     {
         public string ProductId;

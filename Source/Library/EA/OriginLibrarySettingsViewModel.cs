@@ -28,10 +28,7 @@ namespace OriginLibrary
 
         public RelayCommand<object> LoginCommand
         {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
+            get => new RelayCommand<object>((a) => { Login(); });
         }
 
         public OriginLibrarySettingsViewModel(OriginLibrary library, IPlayniteAPI api) : base(library, api)
