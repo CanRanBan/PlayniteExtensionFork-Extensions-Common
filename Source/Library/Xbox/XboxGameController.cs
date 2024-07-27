@@ -63,8 +63,6 @@ namespace XboxLibrary
                         return;
                     }
 
-                    ;
-
                     await Task.Delay(10000);
                 }
             });

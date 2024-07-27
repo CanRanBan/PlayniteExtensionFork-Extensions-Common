@@ -45,15 +45,11 @@ namespace GogLibrary
                     storeData.GameDetails.links.forum));
             }
 
-            ;
-
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.product_card))
             {
                 storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksStorePage"),
                     storeData.GameDetails.links.product_card));
             }
-
-            ;
 
             storeData.Links.Add(new Link("PCGamingWiki",
                 @"http://pcgamingwiki.com/w/index.php?search=" + storeData.GameDetails.title));
