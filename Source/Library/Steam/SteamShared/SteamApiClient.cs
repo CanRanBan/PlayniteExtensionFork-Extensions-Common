@@ -44,11 +44,9 @@ namespace Steam
         }
 
         private AutoResetEvent onConnectedEvent = new AutoResetEvent(false);
-        private EResult onConnectedResult;
 
         private void onConnected(SteamKit2.SteamClient.ConnectedCallback callback)
         {
-            onConnectedResult = callback.Result;
             onConnectedEvent.Set();
         }
 
@@ -173,7 +171,8 @@ namespace Steam
             {
                 SteamApps.PICSProductInfoCallback productInfo;
                 AsyncJobMultiple<SteamApps.PICSProductInfoCallback>.ResultSet resultSet = null;
-                var productJob = steamApps.PICSGetProductInfo(id, package: null, onlyPublic: false);
+                SteamApps.PICSRequest appId = new SteamApps.PICSRequest(id);
+                var productJob = steamApps.PICSGetProductInfo(appId, package: null);
 
                 // Workardound for rare case where PICSGetProductInfo would get stuck if there's some issue with computer's network.
                 // For example if PC is woken up from sleep.
