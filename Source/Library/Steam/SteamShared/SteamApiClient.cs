@@ -95,15 +95,7 @@ namespace Steam
             await Task.Run(() =>
             {
                 onConnectedEvent.WaitOne(10000);
-                if (onConnectedResult != EResult.OK)
-                {
-                    isConnected = false;
-                    result = onConnectedResult;
-                }
-                else
-                {
-                    isConnected = true;
-                }
+                isConnected = true;
             });
 
             return result;
