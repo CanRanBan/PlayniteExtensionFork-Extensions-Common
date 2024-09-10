@@ -112,7 +112,8 @@ namespace AmazonGamesLibrary.Services
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/3.0.9124.0");
-                client.DefaultRequestHeaders.Add("X-Amz-Target", "com.amazon.animusdistributionservice.entitlement.AnimusEntitlementsService.GetEntitlements");
+                client.DefaultRequestHeaders.Add("X-Amz-Target",
+                    "com.amazon.animusdistributionservice.entitlement.AnimusEntitlementsService.GetEntitlements");
                 client.DefaultRequestHeaders.Add("x-amzn-token", token.access_token);
 
                 string nextToken = null;
