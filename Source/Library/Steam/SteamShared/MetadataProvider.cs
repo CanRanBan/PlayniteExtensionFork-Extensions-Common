@@ -500,6 +500,9 @@ namespace Steam
                         metadata.Tags.Add(new MetadataNameProperty(name));
                     }
                 }
+
+                var compatibility = GetSteamDeckCompatibility(metadata.ProductDetails);
+                AddProperty(metadata, settings.SteamDeckCompatibilityField, compatibility);
             }
 
             string appType = metadata.ProductDetails?["common"]["type"]?.Value;
@@ -527,9 +530,6 @@ namespace Steam
                     metadata.Tags = parentMetadata.Tags;
                 }
             }
-
-            var compatibility = GetSteamDeckCompatibility(metadata.ProductDetails);
-            AddProperty(metadata, settings.SteamDeckCompatibilityField, compatibility);
 
             return metadata;
         }

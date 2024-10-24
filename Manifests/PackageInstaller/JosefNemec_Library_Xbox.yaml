@@ -1,6 +1,6 @@
 AddonId: JosefNemec_Library_Xbox
 Packages:
-  - Version: 2.14.1
+  - Version: 2.15.1
     RequiredApiVersion: 6.9.0
     ReleaseDate: 2024-xx-xx
     PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Library_Xbox_v2.14.1/JosefNemec_Library_Xbox_v2.14.1.pext

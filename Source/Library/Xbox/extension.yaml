@@ -1,7 +1,7 @@
 Id: JosefNemec_Library_Xbox
 Name: Xbox Library
 Author: Josef Nemec
-Version: 2.14.1
+Version: 2.15.1
 Module: XboxLibrary.dll
 Type: GameLibrary
 Icon: Resources\XboxLibraryIcon.ico

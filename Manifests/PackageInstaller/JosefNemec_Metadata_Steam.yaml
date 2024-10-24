@@ -1,6 +1,6 @@
 AddonId: JosefNemec_Metadata_Steam
 Packages:
-  - Version: 2.15.1
+  - Version: 2.16.1
     RequiredApiVersion: 6.9.0
     ReleaseDate: 2024-xx-xx
     PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Metadata_Steam_v2.15.1/JosefNemec_Metadata_Steam_v2.15.1.pext
