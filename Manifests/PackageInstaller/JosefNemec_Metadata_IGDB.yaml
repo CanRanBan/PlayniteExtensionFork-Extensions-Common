@@ -1,8 +1,0 @@
-AddonId: JosefNemec_Metadata_IGDB
-Packages:
-  - Version: 2.10.1
-    RequiredApiVersion: 6.9.0
-    ReleaseDate: 2024-xx-xx
-    PackageUrl: https://github.com/CanRanBan/PlayniteExtensionFork-Extensions-Common/releases/download/Metadata_IGDB_v2.10.1/JosefNemec_Metadata_IGDB_v2.10.1.pext
-    Changelog:
-      - 'Unreleased'
