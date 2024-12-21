@@ -1,7 +1,7 @@
 Id: JosefNemec_Library_RockstarGames
 Name: Rockstar Games Library
 Author: Josef Nemec
-Version: 2.8.1
+Version: 2.9.1
 Module: RockstarGamesLibrary.dll
 Type: GameLibrary
 Icon: Resources\RockstarGamesLibraryIcon.ico

@@ -19,6 +19,7 @@ namespace RockstarGamesLibrary
         public static readonly List<RockstarGame> Games = new List<RockstarGame>
         {
             new RockstarGame { Name = "Grand Theft Auto V", Executable = "PlayGTAV.exe", TitleId = "gta5" },
+            new RockstarGame { Name = "Red Dead Redemption", Executable = "RDR.exe", TitleId = "rdr" },
             new RockstarGame { Name = "Red Dead Redemption 2", Executable = "RDR2.exe", TitleId = "rdr2" },
             new RockstarGame { Name = "L.A. Noire", Executable = "LANoire.exe", TitleId = "lanoire" },
             new RockstarGame { Name = "Max Payne 3", Executable = "MaxPayne3.exe", TitleId = "mp3" },
