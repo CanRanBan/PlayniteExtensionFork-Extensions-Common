@@ -204,7 +204,7 @@
       <Version>1.1.135</Version>
     </PackageReference>
     <PackageReference Include="protobuf-net">
-      <Version>3.2.45</Version>
+      <Version>3.2.46</Version>
     </PackageReference>
     <PackageReference Include="SteamKit2">
       <Version>2.5.0</Version>
